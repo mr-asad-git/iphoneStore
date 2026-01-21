@@ -1,7 +1,9 @@
 :root {
   --color-light-gray: #F5F5F5;
   --font-color: #FAFAFA;
-  --card-color: #DB4444
+  --card-color: #DB4444;
+  --green-color: #00FF66;
+  --heading-color: #FAFAFA;
 }
 
 @font-face {

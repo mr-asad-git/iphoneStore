@@ -32,20 +32,102 @@
      <!-- _-_-_-_-_ Main Nav Code  _-_-_-_-_ -->
 
 <div class="mainNav w-full border-b border-gray-200">
-  <div class="flex items-center justify-between px-4 py-3 sm:px-16 sm:py-6">
-    <p class="font-Inter font-bold text-xl sm:text-2xl">Exclusive</p>
-    <button id="menuToggle" class="sm:hidden p-2 rounded hover:bg-gray-100 cursor-pointer" aria-expanded="false">
-      <svg id="iconMenu" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-           viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"/>
-      </svg>    
-      <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none"
-           viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M6 18L18 6M6 6l12 12"/>
-      </svg>
+  <div class="flex items-center justify-between px-4 py-3 sm:px-[12%] sm:py-6">
+    <p class="font-Inter font-bold text-[27px] sm:text-2xl">Exclusive</p>
+    <div class="flex items-center gap-3 sm:hidden">
+      <div class="rounded bg-[var(--color-light-gray)] p-1">
+        <div class="flex items-center gap-2">
+          <input type="text" class="outline-none w-[8rem] h-[2rem] bg-[var(--color-light-gray)] indent-2 text-xs placeholder-black"
+                 placeholder="Search">
+          <img src="assets/images/mainNav/search.svg" alt="Search">
+        </div>
+      </div>
+      <button><img class="h-6 w-6" src="assets/images/mainNav/cart.svg" alt="Cart"></button>
+       <!-- Profile Button -->
+<div class="relative inline-block">
+  <button id="profileToggle" class="flex items-center">
+    <img class="h-8 w-8" src="assets/images/mainNav/user.svg" alt="Profile">
+  </button>
+
+  <!-- Desktop Dropdown Menu -->
+  <div id="profileDropdown" 
+       class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg z-50">
+    <ul class="flex flex-col">
+      <li>
+        <button class="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+          <img class="h-5 w-5" src="assets/images/mainNav/account.svg" alt="">
+          <span>My Account</span>
+        </button>
+      </li>
+      <li>
+        <button class="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+          <img class="h-5 w-5" src="assets/images/mainNav/login.svg" alt="">
+          <span>Login / Register</span>
+        </button>
+      </li>
+      <li>
+        <button class="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+          <img class="h-5 w-5" src="assets/images/mainNav/cart.svg" alt="">
+          <span>Cart</span>
+        </button>
+      </li>
+      <li>
+        <button class="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+          <img class="h-5 w-5" src="assets/images/mainNav/wishlist.svg" alt="">
+          <span>Wishlist</span>
+        </button>
+      </li>
+      <li>
+        <button class="flex items-center gap-2 p-2 hover:bg-gray-100 rounded">
+          <img class="h-5 w-5" src="assets/images/mainNav/settings.svg" alt="">
+          <span>Settings</span>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Mobile Overlay Menu -->
+<div id="profileMenu" 
+     class="hidden fixed inset-0 bg-black/40 backdrop-blur-md flex justify-center items-center z-50">
+  <div class="menu-box bg-white rounded-lg shadow-lg w-[90%] sm:w-[400px] p-6 flex flex-col gap-4">
+    <!-- Same options as dropdown -->
+    <button class="flex items-center gap-3 p-2 hover:bg-gray-100 rounded">
+      <img class="h-6 w-6" src="assets/images/mainNav/account.svg" alt="">
+      <span>My Account</span>
     </button>
+    <button class="flex items-center gap-3 p-2 hover:bg-gray-100 rounded">
+      <img class="h-6 w-6" src="assets/images/mainNav/login.svg" alt="">
+      <span>Login / Register</span>
+    </button>
+    <button class="flex items-center gap-3 p-2 hover:bg-gray-100 rounded">
+      <img class="h-6 w-6" src="assets/images/mainNav/cart.svg" alt="">
+      <span>Cart</span>
+    </button>
+    <button class="flex items-center gap-3 p-2 hover:bg-gray-100 rounded">
+      <img class="h-6 w-6" src="assets/images/mainNav/wishlist.svg" alt="">
+      <span>Wishlist</span>
+    </button>
+    <button class="flex items-center gap-3 p-2 hover:bg-gray-100 rounded">
+      <img class="h-6 w-6" src="assets/images/mainNav/settings.svg" alt="">
+      <span>Settings</span>
+    </button>
+    <button id="closeMenu" class="mt-4 bg-black text-white py-2 rounded">Close</button>
+  </div>
+</div>
+      <button id="menuToggle" class="p-2 rounded hover:bg-gray-100 cursor-pointer" aria-expanded="false">
+        <svg id="iconMenu" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>    
+        <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
 
     <div class="hidden sm:flex sm:items-center sm:gap-10">
       <ul class="flex items-center gap-10">
@@ -62,226 +144,205 @@
         </div>
       </div>
       <div class="flex items-center gap-5">
-        <button><img class="h-5 w-5" src="assets/images/mainNav/favourite.svg" alt=""></button>
-        <button><img class="h-6 w-6" src="assets/images/mainNav/cart.svg" alt=""></button>
-        <button><img class="h-8 w-8" src="assets/images/mainNav/user.svg" alt=""></button>
+        <button class="hidden sm:block"><img class="h-5 w-5" src="assets/images/mainNav/favourite.svg" alt="Wishlist"></button>
+        <button><img class="h-6 w-6" src="assets/images/mainNav/cart.svg" alt="Cart"></button>
+        <button><img class="h-8 w-8" src="assets/images/mainNav/user.svg" alt="Profile"></button>
       </div>
     </div>
   </div>
 </div>
 
 <div id="mobileMenu"
-     class="hidden absolute top-24 right-0 inset-0 z-50 flex flex-col w-full h-[40vh] justify-between backdrop-blur-md bg-white/30 p-6">
-  
-  <div class="rounded-lg bg-white/40 backdrop-blur-sm p-2 shadow-sm">
-    <div class="flex items-center gap-3">
-      <input type="text" class="outline-none w-full bg-transparent indent-2 text-sm placeholder-gray-700"
-             placeholder="Search...">
-      <img src="assets/images/mainNav/search.svg" alt="">
-    </div>
-  </div>
+     class="hidden absolute top-24 right-0 inset-0 z-50 flex flex-col w-full h-[40vh] justify-between backdrop-blur-md bg-white p-6">
 
   <ul class="flex flex-col gap-4 mt-6">
-    <li><a href="#" class="block text-center py-3 rounded-lg bg-white/40 hover:bg-white/60 text-base font-semibold text-gray-800 shadow-sm">Home</a></li>
-    <li><a href="#" class="block text-center py-3 rounded-lg bg-white/40 hover:bg-white/60 text-base font-semibold text-gray-800 shadow-sm">Contact</a></li>
-    <li><a href="#" class="block text-center py-3 rounded-lg bg-white/40 hover:bg-white/60 text-base font-semibold text-gray-800 shadow-sm">About</a></li>
-    <li><a href="#" class="block text-center py-3 rounded-lg bg-white/40 hover:bg-white/60 text-base font-semibold text-gray-800 shadow-sm">Sign Up</a></li>
+    <li class="border-gray-200 border-b-2 p-2"><a href="#" class="block py-3 text-base font-semibold text-gray-800">Home</a></li>
+    <li class="border-gray-200 border-b-2 p-2"><a href="#" class="block py-3 text-base font-semibold text-gray-800">Contact</a></li>
+    <li class="border-gray-200 border-b-2 p-2"><a href="#" class="block py-3 text-base font-semibold text-gray-800">About</a></li>
+    <li class="border-gray-200 border-b-2 p-2"><a href="#" class="block py-3 text-base font-semibold text-gray-800">Sign Up</a></li>
   </ul>
-
-  <div class="flex justify-around mt-6">
-    <div class="rounded-full backdrop-blur-md bg-white/30 p-4 shadow-md">
-      <img class="h-5 w-5" src="assets/images/mainNav/favourite.svg" alt="">
-    </div>
-    <div class="rounded-full backdrop-blur-md bg-white/30 p-4 shadow-md">
-      <img class="h-5 w-5" src="assets/images/mainNav/cart.svg" alt="">
-    </div>
-    <div class="rounded-full backdrop-blur-md bg-white/30 p-4 shadow-md">
-      <img class="h-5 w-5" src="assets/images/mainNav/user.svg" alt="">
-    </div>
-  </div>
 </div>
 
 
      <!-- _-_-_-_-_ Hero Section _-_-_-_-_ -->
 
-     <section class="heroSection w-full">
-  <div class="hero-wrap flex flex-col sm:flex-row justify-center items-start text-xs sm:text-sm tracking-wide leading-7 sm:leading-10 gap-6 px-4 sm:px-0">
+     <section class="heroSection w-full hidden lg:block">
+        <div class="hero-wrap flex flex-col sm:flex-row justify-center items-start text-xs sm:text-sm tracking-wide leading-7 sm:leading-10 gap-6 px-4 sm:px-0">
+            <div class="cat-div w-full sm:w-[260px]">
+                
+            <div class="hidden sm:flex flex-col font-[Poppins] font-600 w-full sm:w-[80%] sm:border-r-2 pt-[30px]">
+                <div class="cat hover:bg-[var(--color-light-gray)] flex justify-between items-center sm:pl-[18px]">
+                <a href="#" class="font-[Poppins] text-[16px] font-700">Woman's Fashion</a>
+                <img class="h-5 w-5 mr-2" src="assets/images/hero/category/right.svg" alt="">
+                </div>
+                <div class="cat hover:bg-[var(--color-light-gray)] flex justify-between items-center sm:pl-[18px]">
+                <a href="#" class="font-[Poppins] text-[16px] font-700">Men's Fashion</a>
+                <img class="h-5 w-5 mr-2" src="assets/images/hero/category/right.svg" alt="">
+                </div>
+                <a href="#" class="hover:bg-[var(--color-light-gray)] font-[Poppins] text-[16px] sm:pl-[18px]">Electronics</a>
+                <a href="#" class="hover:bg-[var(--color-light-gray)] font-[Poppins] text-[16px] sm:pl-[18px]">Home & Lifestyle</a>
+                <a href="#" class="hover:bg-[var(--color-light-gray)] font-[Poppins] text-[16px] sm:pl-[18px]">Medicine</a>
+                <a href="#" class="hover:bg-[var(--color-light-gray)] font-[Poppins] text-[16px] sm:pl-[18px]">Sports & Outdoor</a>
+                <a href="#" class="hover:bg-[var(--color-light-gray)] font-[Poppins] text-[16px] sm:pl-[18px]">Baby's & Toys</a>
+                <a href="#" class="hover:bg-[var(--color-light-gray)] font-[Poppins] text-[16px] sm:pl-[18px]">Groceries & Pets</a>
+                <a href="#" class="hover:bg-[var(--color-light-gray)] font-[Poppins] text-[16px] sm:pl-[18px]">Health & Beauty</a>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 sm:hidden mt-4 px-2">
+                <a href="#" class="rounded-lg bg-white shadow-md p-4 text-center font-[Poppins] font-semibold text-gray-700 hover:bg-gray-100">Woman's Fashion</a>
+                <a href="#" class="rounded-lg bg-white shadow-md p-4 text-center font-[Poppins] font-semibold text-gray-700 hover:bg-gray-100">Men's Fashion</a>
+                <a href="#" class="rounded-lg bg-white shadow-md p-4 text-center font-[Poppins] font-semibold text-gray-700 hover:bg-gray-100">Electronics</a>
+                <a href="#" class="rounded-lg bg-white shadow-md p-4 text-center font-[Poppins] font-semibold text-gray-700 hover:bg-gray-100">Home & Lifestyle</a>
+                <a href="#" class="rounded-lg bg-white shadow-md p-4 text-center font-[Poppins] font-semibold text-gray-700 hover:bg-gray-100">Medicine</a>
+                <a href="#" class="rounded-lg bg-white shadow-md p-4 text-center font-[Poppins] font-semibold text-gray-700 hover:bg-gray-100">Sports & Outdoor</a>
+                <a href="#" class="rounded-lg bg-white shadow-md p-4 text-center font-[Poppins] font-semibold text-gray-700 hover:bg-gray-100">Baby's & Toys</a>
+                <a href="#" class="rounded-lg bg-white shadow-md p-4 text-center font-[Poppins] font-semibold text-gray-700 hover:bg-gray-100">Groceries & Pets</a>
+                <a href="#" class="rounded-lg bg-white shadow-md p-4 text-center font-[Poppins] font-semibold text-gray-700 hover:bg-gray-100">Health & Beauty</a>
+            </div>
+            </div>
 
-    <div class="cat-div w-full sm:w-[260px]">
-      <!-- Desktop categories -->
-      <div class="hidden sm:flex flex-col font-[Poppins] font-600 w-full sm:w-[80%] sm:border-r-2 pt-[30px]">
-        <div class="cat hover:bg-[var(--color-light-gray)] flex justify-between items-center sm:pl-[18px]">
-          <a href="#" class="font-[Poppins] text-[16px] font-700">Woman's Fashion</a>
-          <img class="h-5 w-5 mr-2" src="assets/images/hero/category/right.svg" alt="">
+            <div class="heroImg w-full sm:w-[892px] sm:pt-[30px]">
+            <swiper-container speed="500" pagination="true" autoplay="true" loop="true"
+                class="w-full sm:w-[892px]"
+                style="
+                --swiper-pagination-bullet-inactive-color: gray;
+                --swiper-pagination-bullet-inactive-opacity: 1;
+                --swiper-pagination-color: red;
+                --swiper-pagination-bullet-size: 12px;
+                ">
+                
+                <swiper-slide>
+                <div class="hero-img bg-black w-full h-[48vh] sm:h-[48vh] flex justify-between">
+                    <div class="text-data relative top-[15%] left-[10%] flex flex-col gap-6">
+                    <div class="logo&text flex items-center gap-5">
+                        <img src="assets/images/hero/heroImg/apple.png" alt="">
+                        <p class="font-[Poppins] text-white">iPhone 14 Series</p>
+                    </div>
+                    <div class="desc">
+                        <p class="font-[Poppins] font-bold text-white text-4xl sm:text-5xl flex flex-col gap-4">
+                        <span>Up to 10%</span><span> off Voucher</span>
+                        </p>
+                    </div>
+                    <div class="button-div flex items-center gap-5">
+                        <button class="shop-now text-white underline underline-offset-8 decoration-1">Shop Now</button>
+                        <img src="assets/images/hero/heroImg/arrow-r.png" alt="">
+                    </div>
+                    </div>
+                    <div class="img-data">
+                    <img src="assets/images/hero/heroImg/hero_endframe.png" alt="">
+                    </div>
+                </div>
+                </swiper-slide>
+
+            <swiper-slide>
+                    <div class="hero-img bg-black w-full h-[48vh] flex justify-between">
+                        <div class="text-data relative top-[15%] left-[10%] flex flex-col gap-6">
+                            <div class="logo&text flex items-center gap-5">
+                                <img src="assets/images/hero/heroImg/apple.png" alt="">
+                                <p class="font-[Poppins] font-[400] text-white">iPhone 14 Series</p>
+                            </div>
+                            <div class="desc">
+                                <p class="font-[Poppins] font-700 font-bold text-white text-5xl flex flex-col gap-4"><span>Up to 10%</span><span> off Voucher</span></p>
+                            </div>
+                            <div class="button-div flex items-center gap-5">
+                                <button class="shop-now text-white underline underline-offset-8 decoration-1">Shop Now</button>
+                                <img src="assets/images/hero/heroImg/arrow-r.png" alt="">
+                            </div>
+                        </div>
+                        <div class="img-data ">
+                            <img src="assets/images/hero/heroImg/hero_endframe.png" alt="" srcset="">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide><div class="hero-img bg-black w-full h-[48vh] flex justify-between">
+                        <div class="text-data relative top-[15%] left-[10%] flex flex-col gap-6">
+                            <div class="logo&text flex items-center gap-5">
+                                <img src="assets/images/hero/heroImg/apple.png" alt="">
+                                <p class="font-[Poppins] font-[400] text-white">iPhone 15 Series</p>
+                            </div>
+                            <div class="desc">
+                                <p class="font-[Poppins] font-700 font-bold text-white text-5xl flex flex-col gap-4"><span>Up to 10%</span><span> off Voucher</span></p>
+                            </div>
+                            <div class="button-div flex items-center gap-5">
+                                <button class="shop-now text-white underline underline-offset-8 decoration-1">Shop Now</button>
+                                <img src="assets/images/hero/heroImg/arrow-r.png" alt="">
+                            </div>
+                        </div>
+                        <div class="img-data">
+                            <img src="assets/images/hero/heroImg/hero_endframe.png" alt="" srcset="">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide>
+                    <div class="hero-img bg-black w-full h-[48vh] flex justify-between">
+                        <div class="text-data relative top-[15%] left-[10%] flex flex-col gap-6">
+                            <div class="logo&text flex items-center gap-5">
+                                <img src="assets/images/hero/heroImg/apple.png" alt="">
+                                <p class="font-[Poppins] font-[400] text-white">iPhone 16 Series</p>
+                            </div>
+                            <div class="desc">
+                                <p class="font-[Poppins] font-700 font-bold text-white text-5xl flex flex-col gap-4"><span>Up to 10%</span><span> off Voucher</span></p>
+                            </div>
+                            <div class="button-div flex items-center gap-5">
+                                <button class="shop-now text-white underline underline-offset-8 decoration-1">Shop Now</button>
+                                <img src="assets/images/hero/heroImg/arrow-r.png" alt="">
+                            </div>
+                        </div>
+                        <div class="img-data">
+                            <img src="assets/images/hero/heroImg/hero_endframe.png" alt="" srcset="">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide><div class="hero-img bg-black w-full h-[48vh] flex justify-between">
+                        <div class="text-data relative top-[15%] left-[10%] flex flex-col gap-6">
+                            <div class="logo&text flex items-center gap-5">
+                                <img src="assets/images/hero/heroImg/apple.png" alt="">
+                                <p class="font-[Poppins] font-[400] text-white">iPhone 17 Series</p>
+                            </div>
+                            <div class="desc">
+                                <p class="font-[Poppins] font-700 font-bold text-white text-5xl flex flex-col gap-4"><span>Up to 10%</span><span> off Voucher</span></p>
+                            </div>
+                            <div class="button-div flex items-center gap-5">
+                                <button class="shop-now text-white underline underline-offset-8 decoration-1">Shop Now</button>
+                                <img src="assets/images/hero/heroImg/arrow-r.png" alt="">
+                            </div>
+                        </div>
+                        <div class="img-data">
+                            <img src="assets/images/hero/heroImg/hero_endframe.png" alt="" srcset="">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide><div class="hero-img bg-black w-full h-[48vh] flex justify-between">
+                        <div class="text-data relative top-[15%] left-[10%] flex flex-col gap-6">
+                            <div class="logo&text flex items-center gap-5">
+                                <img src="assets/images/hero/heroImg/apple.png" alt="">
+                                <p class="font-[Poppins] font-[400] text-white">iPhone 18 Series</p>
+                            </div>
+                            <div class="desc">
+                                <p class="font-[Poppins] font-700 font-bold text-white text-5xl flex flex-col gap-4"><span>Up to 10%</span><span> off Voucher</span></p>
+                            </div>
+                            <div class="button-div flex items-center gap-5">
+                                <button class="shop-now text-white underline underline-offset-8 decoration-1">Shop Now</button>
+                                <img src="assets/images/hero/heroImg/arrow-r.png" alt="">
+                            </div>
+                        </div>
+                        <div class="img-data">
+                            <img src="assets/images/hero/heroImg/hero_endframe.png" alt="" srcset="">
+                        </div>
+                    </div>
+                </swiper-slide>
+            </swiper-container>
+            </div>
         </div>
-        <div class="cat hover:bg-[var(--color-light-gray)] flex justify-between items-center sm:pl-[18px]">
-          <a href="#" class="font-[Poppins] text-[16px] font-700">Men's Fashion</a>
-          <img class="h-5 w-5 mr-2" src="assets/images/hero/category/right.svg" alt="">
-        </div>
-        <a href="#" class="hover:bg-[var(--color-light-gray)] font-[Poppins] text-[16px] sm:pl-[18px]">Electronics</a>
-        <a href="#" class="hover:bg-[var(--color-light-gray)] font-[Poppins] text-[16px] sm:pl-[18px]">Home & Lifestyle</a>
-        <a href="#" class="hover:bg-[var(--color-light-gray)] font-[Poppins] text-[16px] sm:pl-[18px]">Medicine</a>
-        <a href="#" class="hover:bg-[var(--color-light-gray)] font-[Poppins] text-[16px] sm:pl-[18px]">Sports & Outdoor</a>
-        <a href="#" class="hover:bg-[var(--color-light-gray)] font-[Poppins] text-[16px] sm:pl-[18px]">Baby's & Toys</a>
-        <a href="#" class="hover:bg-[var(--color-light-gray)] font-[Poppins] text-[16px] sm:pl-[18px]">Groceries & Pets</a>
-        <a href="#" class="hover:bg-[var(--color-light-gray)] font-[Poppins] text-[16px] sm:pl-[18px]">Health & Beauty</a>
-      </div>
-      
-      <div class="grid grid-cols-2 gap-4 sm:hidden mt-4 px-2">
-        <a href="#" class="rounded-lg bg-white shadow-md p-4 text-center font-[Poppins] font-semibold text-gray-700 hover:bg-gray-100">Woman's Fashion</a>
-        <a href="#" class="rounded-lg bg-white shadow-md p-4 text-center font-[Poppins] font-semibold text-gray-700 hover:bg-gray-100">Men's Fashion</a>
-        <a href="#" class="rounded-lg bg-white shadow-md p-4 text-center font-[Poppins] font-semibold text-gray-700 hover:bg-gray-100">Electronics</a>
-        <a href="#" class="rounded-lg bg-white shadow-md p-4 text-center font-[Poppins] font-semibold text-gray-700 hover:bg-gray-100">Home & Lifestyle</a>
-        <a href="#" class="rounded-lg bg-white shadow-md p-4 text-center font-[Poppins] font-semibold text-gray-700 hover:bg-gray-100">Medicine</a>
-        <a href="#" class="rounded-lg bg-white shadow-md p-4 text-center font-[Poppins] font-semibold text-gray-700 hover:bg-gray-100">Sports & Outdoor</a>
-        <a href="#" class="rounded-lg bg-white shadow-md p-4 text-center font-[Poppins] font-semibold text-gray-700 hover:bg-gray-100">Baby's & Toys</a>
-        <a href="#" class="rounded-lg bg-white shadow-md p-4 text-center font-[Poppins] font-semibold text-gray-700 hover:bg-gray-100">Groceries & Pets</a>
-        <a href="#" class="rounded-lg bg-white shadow-md p-4 text-center font-[Poppins] font-semibold text-gray-700 hover:bg-gray-100">Health & Beauty</a>
-      </div>
-    </div>
-
-    <div class="heroImg w-full sm:w-[892px] sm:pt-[30px]">
-      <swiper-container speed="500" pagination="true" autoplay="true" loop="true"
-        class="w-full sm:w-[892px]"
-        style="
-          --swiper-pagination-bullet-inactive-color: gray;
-          --swiper-pagination-bullet-inactive-opacity: 1;
-          --swiper-pagination-color: red;
-          --swiper-pagination-bullet-size: 12px;
-        ">
-        
-        <swiper-slide>
-          <div class="hero-img bg-black w-full h-[48vh] sm:h-[48vh] flex justify-between">
-            <div class="text-data relative top-[15%] left-[10%] flex flex-col gap-6">
-              <div class="logo&text flex items-center gap-5">
-                <img src="assets/images/hero/heroImg/apple.png" alt="">
-                <p class="font-[Poppins] text-white">iPhone 14 Series</p>
-              </div>
-              <div class="desc">
-                <p class="font-[Poppins] font-bold text-white text-4xl sm:text-5xl flex flex-col gap-4">
-                  <span>Up to 10%</span><span> off Voucher</span>
-                </p>
-              </div>
-              <div class="button-div flex items-center gap-5">
-                <button class="shop-now text-white underline underline-offset-8 decoration-1">Shop Now</button>
-                <img src="assets/images/hero/heroImg/arrow-r.png" alt="">
-              </div>
-            </div>
-            <div class="img-data">
-              <img src="assets/images/hero/heroImg/hero_endframe.png" alt="">
-            </div>
-          </div>
-        </swiper-slide>
-
-      <swiper-slide>
-            <div class="hero-img bg-black w-full h-[48vh] flex justify-between">
-                <div class="text-data relative top-[15%] left-[10%] flex flex-col gap-6">
-                    <div class="logo&text flex items-center gap-5">
-                        <img src="assets/images/hero/heroImg/apple.png" alt="">
-                        <p class="font-[Poppins] font-[400] text-white">iPhone 14 Series</p>
-                    </div>
-                    <div class="desc">
-                        <p class="font-[Poppins] font-700 font-bold text-white text-5xl flex flex-col gap-4"><span>Up to 10%</span><span> off Voucher</span></p>
-                    </div>
-                    <div class="button-div flex items-center gap-5">
-                        <button class="shop-now text-white underline underline-offset-8 decoration-1">Shop Now</button>
-                        <img src="assets/images/hero/heroImg/arrow-r.png" alt="">
-                    </div>
-                </div>
-                <div class="img-data ">
-                    <img src="assets/images/hero/heroImg/hero_endframe.png" alt="" srcset="">
-                </div>
-            </div>
-        </swiper-slide>
-        <swiper-slide><div class="hero-img bg-black w-full h-[48vh] flex justify-between">
-                <div class="text-data relative top-[15%] left-[10%] flex flex-col gap-6">
-                    <div class="logo&text flex items-center gap-5">
-                        <img src="assets/images/hero/heroImg/apple.png" alt="">
-                        <p class="font-[Poppins] font-[400] text-white">iPhone 15 Series</p>
-                    </div>
-                    <div class="desc">
-                        <p class="font-[Poppins] font-700 font-bold text-white text-5xl flex flex-col gap-4"><span>Up to 10%</span><span> off Voucher</span></p>
-                    </div>
-                    <div class="button-div flex items-center gap-5">
-                        <button class="shop-now text-white underline underline-offset-8 decoration-1">Shop Now</button>
-                        <img src="assets/images/hero/heroImg/arrow-r.png" alt="">
-                    </div>
-                </div>
-                <div class="img-data">
-                    <img src="assets/images/hero/heroImg/hero_endframe.png" alt="" srcset="">
-                </div>
-            </div>
-        </swiper-slide>
-        <swiper-slide>
-            <div class="hero-img bg-black w-full h-[48vh] flex justify-between">
-                <div class="text-data relative top-[15%] left-[10%] flex flex-col gap-6">
-                    <div class="logo&text flex items-center gap-5">
-                        <img src="assets/images/hero/heroImg/apple.png" alt="">
-                        <p class="font-[Poppins] font-[400] text-white">iPhone 16 Series</p>
-                    </div>
-                    <div class="desc">
-                        <p class="font-[Poppins] font-700 font-bold text-white text-5xl flex flex-col gap-4"><span>Up to 10%</span><span> off Voucher</span></p>
-                    </div>
-                    <div class="button-div flex items-center gap-5">
-                        <button class="shop-now text-white underline underline-offset-8 decoration-1">Shop Now</button>
-                        <img src="assets/images/hero/heroImg/arrow-r.png" alt="">
-                    </div>
-                </div>
-                <div class="img-data">
-                    <img src="assets/images/hero/heroImg/hero_endframe.png" alt="" srcset="">
-                </div>
-            </div>
-        </swiper-slide>
-        <swiper-slide><div class="hero-img bg-black w-full h-[48vh] flex justify-between">
-                <div class="text-data relative top-[15%] left-[10%] flex flex-col gap-6">
-                    <div class="logo&text flex items-center gap-5">
-                        <img src="assets/images/hero/heroImg/apple.png" alt="">
-                        <p class="font-[Poppins] font-[400] text-white">iPhone 17 Series</p>
-                    </div>
-                    <div class="desc">
-                        <p class="font-[Poppins] font-700 font-bold text-white text-5xl flex flex-col gap-4"><span>Up to 10%</span><span> off Voucher</span></p>
-                    </div>
-                    <div class="button-div flex items-center gap-5">
-                        <button class="shop-now text-white underline underline-offset-8 decoration-1">Shop Now</button>
-                        <img src="assets/images/hero/heroImg/arrow-r.png" alt="">
-                    </div>
-                </div>
-                <div class="img-data">
-                    <img src="assets/images/hero/heroImg/hero_endframe.png" alt="" srcset="">
-                </div>
-            </div>
-        </swiper-slide>
-        <swiper-slide><div class="hero-img bg-black w-full h-[48vh] flex justify-between">
-                <div class="text-data relative top-[15%] left-[10%] flex flex-col gap-6">
-                    <div class="logo&text flex items-center gap-5">
-                        <img src="assets/images/hero/heroImg/apple.png" alt="">
-                        <p class="font-[Poppins] font-[400] text-white">iPhone 18 Series</p>
-                    </div>
-                    <div class="desc">
-                        <p class="font-[Poppins] font-700 font-bold text-white text-5xl flex flex-col gap-4"><span>Up to 10%</span><span> off Voucher</span></p>
-                    </div>
-                    <div class="button-div flex items-center gap-5">
-                        <button class="shop-now text-white underline underline-offset-8 decoration-1">Shop Now</button>
-                        <img src="assets/images/hero/heroImg/arrow-r.png" alt="">
-                    </div>
-                </div>
-                <div class="img-data">
-                    <img src="assets/images/hero/heroImg/hero_endframe.png" alt="" srcset="">
-                </div>
-            </div>
-        </swiper-slide>
-      </swiper-container>
-    </div>
-  </div>
 </section>
 
+<div class="all-data flex flex-col gap-[3rem] pt-[1rem] pb-[6rem] sm:gap-[3rem]">
 
      <!-- _-_-_-_-_ Flash Sales Section _-_-_-_-_ -->
 
-    <section class="flash-sales-section mt-[6rem] flex justify-center items-center">
+    <section class="flash-sales-section mt-[20px] sm:mt-[4rem] flex justify-center items-center">
   <div class="flash-wrap w-[90%] sm:w-[75%] flex flex-col gap-[40px]">
 
-    <!-- Flash Sales Text -->
     <div class="flash-text flex flex-col gap-[24px]">
       <div class="highlight flex items-center gap-2">
         <div class="red-box h-[40px] w-[20px] bg-[var(--card-color)] rounded-[3px]"></div>
@@ -290,32 +351,31 @@
 
       <div class="text flex justify-between items-center flex-wrap gap-[16px]">
         <div class="flash-sales-title flex items-center gap-[24px] sm:gap-[87px]">
-          <!-- Title responsive -->
           <h1 class="font-[Inter] font-600 text-[24px] sm:text-[36px] tracking-wider">Flash Sales</h1>
+          <div class="flash-sales-timer items-end flex gap-3 sm:gap-5 font-[Inter] text-[18px] sm:text-[32px] font-[700] font-bold order-2 sm:order-1">
+            <div class="days">
+              <p class="text-[10px] sm:text-[12px]">Days</p>
+              <span id="days">00</span>
+            </div>
+            <span class="text-[var(--card-color)]"> : </span>
+            <div class="hours">
+              <p class="text-[10px] sm:text-[12px]">Hours</p>
+              <span id="hours">00</span>
+            </div>
+            <span class="text-[var(--card-color)]"> : </span>
+            <div class="minutes">
+              <p class="text-[10px] sm:text-[12px]">Minutes</p>
+              <span id="minutes">00</span>
+            </div>
+            <span class="text-[var(--card-color)]"> : </span>
+            <div class="seconds">
+              <p class="text-[10px] sm:text-[12px]">Seconds</p>
+              <span id="seconds">00</span>
+            </div>
+          </div>
+
         </div>
 
-        <!-- Timer (visible always, smaller on mobile) -->
-        <div class="flash-sales-timer flex gap-3 sm:gap-5 font-[Inter] text-[18px] sm:text-[32px] font-[700] font-bold order-2 sm:order-1">
-          <div class="days">
-            <p class="text-[10px] sm:text-[12px]">Days</p>
-            <span id="days">00</span>
-          </div>
-          <span class="text-[var(--card-color)]"> : </span>
-          <div class="hours">
-            <p class="text-[10px] sm:text-[12px]">Hours</p>
-            <span id="hours">00</span>
-          </div>
-          <span class="text-[var(--card-color)]"> : </span>
-          <div class="minutes">
-            <p class="text-[10px] sm:text-[12px]">Minutes</p>
-            <span id="minutes">00</span>
-          </div>
-          <span class="text-[var(--card-color)]"> : </span>
-          <div class="seconds">
-            <p class="text-[10px] sm:text-[12px]">Seconds</p>
-            <span id="seconds">00</span>
-          </div>
-        </div>
 
         <div class="flash-navigation hidden sm:flex items-center gap-3 order-2">
           <button class="prev-btn">
@@ -334,129 +394,210 @@
 
     <div class="flash-sales-card grid grid-cols-2 lg:grid-cols-4 gap-[20px] sm:gap-[40px]">
       
-      <div class="sale-card cursor-pointer transition-all duration-300 hover:shadow-2xl">
-        <div class="card relative h-[200px] sm:h-[250px] w-full bg-[var(--color-light-gray)] flex justify-center items-center">
-          <div class="actions">
-            <div class="sale-tag absolute top-[12px] left-[12px] bg-[var(--card-color)] h-[26px] w-[55px] text-white rounded-[4px] flex justify-center items-center">
-              <span class="font-[400] text-[12px] font-[Poppins]">-40%</span>
-            </div>
-            <div class="action-buttons absolute top-[12px] right-[12px] flex flex-col gap-[8px]">
-              <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/wishlist.svg" alt=""></div></button>
-              <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/view.svg" alt=""></div></button>
-            </div>
-          </div>
-          <div class="card-img flex justify-center items-center w-[140px] sm:w-[190px] h-[140px] sm:h-[180px]">
-            <img src="assets/images/card/cardImages/i1.png" alt="">
-          </div>
-        </div>
-        <div class="card-details flex flex-col gap-[6px] pt-[12px]">
-          <div class="card-title font-[Poppins] text-[14px] sm:text-[16px] text-[#000]">HAVIT HV-G92 Gamepad</div>
-          <div class="card-price font-[Poppins] font-[600] text-[14px] sm:text-[16px] text-[var(--card-color)]">$120 <span class="text-[#000] pl-2 sm:pl-3 line-through">$160</span></div>
-          <div class="card-rate flex items-center gap-[6px]">
-            <div class="stars flex gap-[2px]">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-            </div>
-            <div class="customer-ratio"><p class="font-[Poppins] text-[12px] sm:text-[14px] text-[#000]">(88)</p></div>
-          </div>
-        </div>
+    <div class="sale-card p-3 cursor-pointer transition-all duration-300 hover:shadow-2xl group">
+  
+    <div class="card relative h-[200px] sm:h-[250px] w-full bg-[var(--color-light-gray)] flex justify-center items-center overflow-hidden">
+    
+    <div class="actions">
+      <div class="sale-tag absolute top-[12px] left-[12px] bg-[var(--card-color)] h-[26px] w-[55px] text-white rounded-[4px] flex justify-center items-center">
+        <span class="font-[400] text-[12px] font-[Poppins]">-40%</span>
       </div>
+      <div class="action-buttons absolute top-[12px] right-[12px] flex flex-col gap-[8px]">
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/wishlist.svg" alt=""></div></button>
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/view.svg" alt=""></div></button>
+      </div>
+    </div>
+ 
+    <div class="card-img flex justify-center items-center w-[140px] sm:w-[190px] h-[140px] sm:h-[180px]">
+      <img src="assets/images/card/cardImages/i1.png" alt="">
+    </div>
+ 
+    <a href="#" 
+       class="hidden lg:flex absolute bottom-[-100%] left-0 w-full bg-black text-white sm:justify-center py-2 transition-all duration-300 group-hover:bottom-0">
+      <p class="font-[Poppins] text-[14px] sm:text-[16px]">Add To Cart</p>
+    </a>
+  </div>
+ 
+  <div class="card-details flex flex-col gap-[6px] pt-[12px]">
+    <div class="card-title font-[Poppins] text-[17px] sm:text-[16px] text-[#000]">HAVIT HV-G92 Gamepad</div>
+    <div class="card-price font-[Poppins] font-[600] text-[16px] sm:text-[16px] text-[var(--card-color)]">
+      $120 <span class="text-[#000] text-[14px] sm:text-[16px] pl-2 sm:pl-3 line-through">$160</span>
+    </div>
+    <div class="card-rate flex items-center gap-[6px]">
+      <div class="stars flex gap-[2px]">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+      </div>
+      <div class="customer-ratio"><p class="font-[Poppins] text-[12px] sm:text-[14px] text-[#000]">(88)</p></div>
+    </div>
+  </div>
+ 
+  <div class="card-cart block mt-4 lg:hidden">
+    <div class="best-button flex justify-center">
+      <button>
+        <div class="button h-[38px] sm:h-[56px] rounded-[4px] w-[120px] sm:w-[159px] bg-black flex justify-center items-center sm:mt-[2rem]">
+          <p class="font-[Poppins] text-[14px] sm:text-[16px] text-[#fff]">Add To Cart</p>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
 
-      <div class="sale-card cursor-pointer transition-all duration-300 hover:shadow-2xl">
-        <div class="card relative h-[200px] sm:h-[250px] w-full bg-[var(--color-light-gray)] flex justify-center items-center">
-          <div class="actions">
-            <div class="sale-tag absolute top-[12px] left-[12px] bg-[var(--card-color)] h-[26px] w-[55px] text-white rounded-[4px] flex justify-center items-center">
-              <span class="font-[400] text-[12px] font-[Poppins]">-40%</span>
-            </div>
-            <div class="action-buttons absolute top-[12px] right-[12px] flex flex-col gap-[8px]">
-              <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/wishlist.svg" alt=""></div></button>
-              <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/view.svg" alt=""></div></button>
-            </div>
-          </div>
-          <div class="card-img flex justify-center items-center w-[140px] sm:w-[190px] h-[140px] sm:h-[180px]">
-            <img src="assets/images/card/cardImages/i2.png" alt="">
-          </div>
-        </div>
-        <div class="card-details flex flex-col gap-[6px] pt-[12px]">
-          <div class="card-title font-[Poppins] text-[14px] sm:text-[16px] text-[#000]">AK-900 Wired Keyboard</div>
-          <div class="card-price font-[Poppins] font-[600] text-[14px] sm:text-[16px] text-[var(--card-color)]">$120 <span class="text-[#000] pl-2 sm:pl-3 line-through">$160</span></div>
-          <div class="card-rate flex items-center gap-[6px]">
-            <div class="stars flex gap-[2px]">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-            </div>
-            <div class="customer-ratio"><p class="font-[Poppins] text-[12px] sm:text-[14px] text-[#000]">(88)</p></div>
-          </div>
-        </div>
+      <div class="sale-card p-3 cursor-pointer transition-all duration-300 hover:shadow-2xl group">
+        <div class="card relative h-[200px] sm:h-[250px] w-full bg-[var(--color-light-gray)] flex justify-center items-center overflow-hidden">
+    
+    <div class="actions">
+      <div class="sale-tag absolute top-[12px] left-[12px] bg-[var(--card-color)] h-[26px] w-[55px] text-white rounded-[4px] flex justify-center items-center">
+        <span class="font-[400] text-[12px] font-[Poppins]">-40%</span>
       </div>
+      <div class="action-buttons absolute top-[12px] right-[12px] flex flex-col gap-[8px]">
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/wishlist.svg" alt=""></div></button>
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/view.svg" alt=""></div></button>
+      </div>
+    </div>
+
+    <div class="card-img flex justify-center items-center w-[140px] sm:w-[190px] h-[140px] sm:h-[180px]">
+      <img src="assets/images/card/cardImages/i2.png" alt="">
+    </div>
+
+    <a href="#" 
+       class="hidden lg:flex absolute bottom-[-100%] left-0 w-full bg-black text-white sm:justify-center py-2 transition-all duration-300 group-hover:bottom-0">
+      <p class="font-[Poppins] text-[14px] sm:text-[16px]">Add To Cart</p>
+    </a>
+  </div>
+
+  <div class="card-details flex flex-col gap-[6px] pt-[12px]">
+    <div class="card-title font-[Poppins] text-[17px] sm:text-[16px] text-[#000]">AK-900 Wired Keyboard</div>
+    <div class="card-price font-[Poppins] font-[600] text-[16px] sm:text-[16px] text-[var(--card-color)]">
+      $120 <span class="text-[#000] text-[14px] sm:text-[16px] pl-2 sm:pl-3 line-through">$160</span>
+    </div>
+    <div class="card-rate flex items-center gap-[6px]">
+      <div class="stars flex gap-[2px]">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+      </div>
+      <div class="customer-ratio"><p class="font-[Poppins] text-[12px] sm:text-[14px] text-[#000]">(88)</p></div>
+    </div>
+  </div>
+
+  <div class="card-cart block mt-4 lg:hidden">
+    <div class="best-button flex justify-center">
+      <button>
+        <div class="button h-[38px] sm:h-[56px] rounded-[4px] w-[120px] sm:w-[159px] bg-black flex justify-center items-center sm:mt-[2rem]">
+          <p class="font-[Poppins] text-[14px] sm:text-[16px] text-[#fff]">Add To Cart</p>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
       
-      <div class="sale-card cursor-pointer transition-all duration-300 hover:shadow-2xl">
-        <div class="card relative h-[200px] sm:h-[250px] w-full bg-[var(--color-light-gray)] flex justify-center items-center">
-          <div class="actions">
-            <div class="sale-tag absolute top-[12px] left-[12px] bg-[var(--card-color)] h-[26px] w-[55px] text-white rounded-[4px] flex justify-center items-center">
-              <span class="font-[400] text-[12px] font-[Poppins]">-40%</span>
-            </div>
-            <div class="action-buttons absolute top-[12px] right-[12px] flex flex-col gap-[8px]">
-              <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/wishlist.svg" alt=""></div></button>
-              <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/view.svg" alt=""></div></button>
-            </div>
-          </div>
-          <div class="card-img flex justify-center items-center w-[140px] sm:w-[190px] h-[140px] sm:h-[180px]">
-            <img src="assets/images/card/cardImages/i3.png" alt="">
-          </div>
-        </div>
-        <div class="card-details flex flex-col gap-[6px] pt-[12px]">
-          <div class="card-title font-[Poppins] text-[14px] sm:text-[16px] text-[#000]">IPS LCD Gaming Monitor</div>
-          <div class="card-price font-[Poppins] font-[600] text-[14px] sm:text-[16px] text-[var(--card-color)]">$120 <span class="text-[#000] pl-2 sm:pl-3 line-through">$160</span></div>
-          <div class="card-rate flex items-center gap-[6px]">
-            <div class="stars flex gap-[2px]">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-            </div>
-            <div class="customer-ratio"><p class="font-[Poppins] text-[12px] sm:text-[14px] text-[#000]">(88)</p></div>
-          </div>
-        </div>
+     <div class="sale-card p-3 cursor-pointer transition-all duration-300 hover:shadow-2xl group">
+        <div class="card relative h-[200px] sm:h-[250px] w-full bg-[var(--color-light-gray)] flex justify-center items-center overflow-hidden">
+    
+    <div class="actions">
+      <div class="sale-tag absolute top-[12px] left-[12px] bg-[var(--card-color)] h-[26px] w-[55px] text-white rounded-[4px] flex justify-center items-center">
+        <span class="font-[400] text-[12px] font-[Poppins]">-40%</span>
       </div>
+      <div class="action-buttons absolute top-[12px] right-[12px] flex flex-col gap-[8px]">
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/wishlist.svg" alt=""></div></button>
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/view.svg" alt=""></div></button>
+      </div>
+    </div>
+
+    <div class="card-img flex justify-center items-center w-[140px] sm:w-[190px] h-[140px] sm:h-[180px]">
+      <img src="assets/images/card/cardImages/i3.png" alt="">
+    </div>
+
+    <a href="#" 
+       class="hidden lg:flex absolute bottom-[-100%] left-0 w-full bg-black text-white sm:justify-center py-2 transition-all duration-300 group-hover:bottom-0">
+      <p class="font-[Poppins] text-[14px] sm:text-[16px]">Add To Cart</p>
+    </a>
+  </div>
+
+  <div class="card-details flex flex-col gap-[6px] pt-[12px]">
+    <div class="card-title font-[Poppins] text-[17px] sm:text-[16px] text-[#000]">IPS LCD Gaming Monitor</div>
+    <div class="card-price font-[Poppins] font-[600] text-[16px] sm:text-[16px] text-[var(--card-color)]">
+      $120 <span class="text-[#000] text-[14px] sm:text-[16px] pl-2 sm:pl-3 line-through">$160</span>
+    </div>
+    <div class="card-rate flex items-center gap-[6px]">
+      <div class="stars flex gap-[2px]">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+      </div>
+      <div class="customer-ratio"><p class="font-[Poppins] text-[12px] sm:text-[14px] text-[#000]">(88)</p></div>
+    </div>
+  </div>
+
+  <div class="card-cart block mt-4 lg:hidden">
+    <div class="best-button flex justify-center">
+      <button>
+        <div class="button h-[38px] sm:h-[56px] rounded-[4px] w-[120px] sm:w-[159px] bg-black flex justify-center items-center sm:mt-[2rem]">
+          <p class="font-[Poppins] text-[14px] sm:text-[16px] text-[#fff]">Add To Cart</p>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
       
-      <div class="sale-card cursor-pointer transition-all duration-300 hover:shadow-2xl">
-        <div class="card relative h-[200px] sm:h-[250px] w-full bg-[var(--color-light-gray)] flex justify-center items-center">
-          <div class="actions">
-            <div class="sale-tag absolute top-[12px] left-[12px] bg-[var(--card-color)] h-[26px] w-[55px] text-white rounded-[4px] flex justify-center items-center">
-              <span class="font-[400] text-[12px] font-[Poppins]">-40%</span>
-            </div>
-            <div class="action-buttons absolute top-[12px] right-[12px] flex flex-col gap-[8px]">
-              <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/wishlist.svg" alt=""></div></button>
-              <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/view.svg" alt=""></div></button>
-            </div>
-          </div>
-          <div class="card-img flex justify-center items-center w-[140px] sm:w-[190px] h-[140px] sm:h-[180px]">
-            <img src="assets/images/card/cardImages/i4.png" alt="">
-          </div>
-        </div>
-        <div class="card-details flex flex-col gap-[6px] pt-[12px]">
-          <div class="card-title font-[Poppins] text-[14px] sm:text-[16px] text-[#000]">S-Series Comfort Chair</div>
-          <div class="card-price font-[Poppins] font-[600] text-[14px] sm:text-[16px] text-[var(--card-color)]">$120 <span class="text-[#000] pl-2 sm:pl-3 line-through">$160</span></div>
-          <div class="card-rate flex items-center gap-[6px]">
-            <div class="stars flex gap-[2px]">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-            </div>
-            <div class="customer-ratio"><p class="font-[Poppins] text-[12px] sm:text-[14px] text-[#000]">(88)</p></div>
-          </div>
-        </div>
+      <div class="sale-card p-3 cursor-pointer transition-all duration-300 hover:shadow-2xl group">
+        <div class="card relative h-[200px] sm:h-[250px] w-full bg-[var(--color-light-gray)] flex justify-center items-center overflow-hidden">
+    
+    <div class="actions">
+      <div class="sale-tag absolute top-[12px] left-[12px] bg-[var(--card-color)] h-[26px] w-[55px] text-white rounded-[4px] flex justify-center items-center">
+        <span class="font-[400] text-[12px] font-[Poppins]">-40%</span>
       </div>
+      <div class="action-buttons absolute top-[12px] right-[12px] flex flex-col gap-[8px]">
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/wishlist.svg" alt=""></div></button>
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/view.svg" alt=""></div></button>
+      </div>
+    </div>
+
+    <div class="card-img flex justify-center items-center w-[140px] sm:w-[190px] h-[140px] sm:h-[180px]">
+      <img src="assets/images/card/cardImages/i4.png" alt="">
+    </div>
+
+    <a href="#" 
+       class="hidden lg:flex absolute bottom-[-100%] left-0 w-full bg-black text-white sm:justify-center py-2 transition-all duration-300 group-hover:bottom-0">
+      <p class="font-[Poppins] text-[14px] sm:text-[16px]">Add To Cart</p>
+    </a>
+  </div>
+
+  <div class="card-details flex flex-col gap-[6px] pt-[12px]">
+    <div class="card-title font-[Poppins] text-[17px] sm:text-[16px] text-[#000]">S-Series Comfort Chair</div>
+    <div class="card-price font-[Poppins] font-[600] text-[16px] sm:text-[16px] text-[var(--card-color)]">
+      $120 <span class="text-[#000] text-[14px] sm:text-[16px] pl-2 sm:pl-3 line-through">$160</span>
+    </div>
+    <div class="card-rate flex items-center gap-[6px]">
+      <div class="stars flex gap-[2px]">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+      </div>
+      <div class="customer-ratio"><p class="font-[Poppins] text-[12px] sm:text-[14px] text-[#000]">(88)</p></div>
+    </div>
+  </div>
+
+  <div class="card-cart block mt-4 lg:hidden">
+    <div class="best-button flex justify-center">
+      <button>
+        <div class="button h-[38px] sm:h-[56px] rounded-[4px] w-[120px] sm:w-[159px] bg-black flex justify-center items-center sm:mt-[2rem]">
+          <p class="font-[Poppins] text-[14px] sm:text-[16px] text-[#fff]">Add To Cart</p>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
     </div>
     <div class="flash-button flex justify-center items-center">
       <button>
@@ -466,7 +607,6 @@
       </button>
     </div>
 
-    <!-- Divider -->
     <div class="end flex justify-center items-center">
       <hr class="mt-[2rem] w-[100%]">
     </div>
@@ -476,10 +616,9 @@
 
      <!-- _-_-_-_-_ Browse By Category Section _-_-_-_-_ -->
 
-    <section class="browse-section flex justify-center items-center mt-[6rem]">
+    <section class="browse-section flex justify-center items-center ">
   <div class="browse-wrap flex flex-col gap-[40px] w-[90%] sm:w-[75%]">
-
-    <!-- Heading -->
+ 
     <div class="browse-text flex flex-col gap-[24px]">
       <div class="highlight flex items-center gap-2">
         <div class="red-box h-[40px] w-[20px] bg-[var(--card-color)] rounded-[3px]"></div>
@@ -489,8 +628,7 @@
       <div class="text flex justify-between items-center">
         <div class="browse-sales-title">
           <h1 class="font-[Inter] font-600 text-[24px] sm:text-[36px] tracking-wider">Browse By Category</h1>
-        </div>
-        <!-- Navigation (desktop only) -->
+        </div> 
         <div class="browse-navigation hidden sm:flex items-center gap-3">
           <button>
             <div class="left-arrow h-[46px] w-[46px] rounded-full flex justify-center items-center bg-[var(--color-light-gray)]">
@@ -505,8 +643,7 @@
         </div>
       </div>
     </div>
-
-    <!-- Category Cards -->
+ 
     <div class="browse-by-category-card grid grid-cols-2 sm:flex sm:gap-[30px] gap-4">
       
       <!-- Card -->
@@ -553,8 +690,7 @@
         </div>
       </div>
     </div>
-
-    <!-- Divider -->
+ 
     <div class="end flex justify-center items-center">
       <hr class="mt-[2rem] w-[100%]">
     </div>
@@ -563,7 +699,7 @@
 
      <!-- _-_-_-_-_ Best Selling Section _-_-_-_-_ -->
     
-    <section class="best-selling-section mt-[2rem] flex justify-center items-center">
+    <section class="best-selling-section flex justify-center items-center">
   <div class="best-wrap w-[90%] sm:w-[75%] flex flex-col gap-[24px]">
 
     <div class="best-text flex flex-col flex-wrap gap-[20px]">
@@ -587,125 +723,907 @@
 
     <div class="best-sales-card grid grid-cols-2 mt-[2rem] lg:grid-cols-4 gap-[20px] sm:gap-[40px]">
 
-      <div class="best-sale-card cursor-pointer transition-all duration-300 hover:shadow-2xl">
-        <div class="card relative h-[200px] sm:h-[250px] w-full bg-[var(--color-light-gray)] flex justify-center items-center">
-          <div class="actions">
-            <div class="action-buttons absolute top-[12px] right-[12px] flex flex-col gap-[8px]">
-              <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/wishlist.svg" alt=""></div></button>
-              <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/view.svg" alt=""></div></button>
-            </div>
-          </div>
-          <div class="card-img flex justify-center items-center w-[140px] sm:w-[190px] h-[140px] sm:h-[180px]">
-            <img src="assets/images/card/cardImages/b1.png" alt="">
-          </div>
-        </div>
-        <div class="card-details flex flex-col gap-[6px] pt-[12px]">
-          <div class="card-title font-[Poppins] text-[14px] sm:text-[16px] text-[#000]">The north coat</div>
-          <div class="card-price font-[Poppins] font-[600] text-[14px] sm:text-[16px] text-[var(--card-color)]">$260 <span class="text-[#000] pl-2 sm:pl-3 line-through">$360</span></div>
-          <div class="card-rate flex items-center gap-[6px]">
-            <div class="stars flex gap-[2px]">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-            </div>
-            <div class="customer-ratio"><p class="font-[Poppins] text-[12px] sm:text-[14px] text-[#000]">(65)</p></div>
-          </div>
-        </div>
+      <div class="best-card p-3 cursor-pointer transition-all duration-300 hover:shadow-2xl group">
+  
+    <div class="card relative h-[200px] sm:h-[250px] w-full bg-[var(--color-light-gray)] flex justify-center items-center overflow-hidden">
+    
+    <div class="actions">
+      <!-- <div class="sale-tag absolute top-[12px] left-[12px] bg-[var(--card-color)] h-[26px] w-[55px] text-white rounded-[4px] flex justify-center items-center">
+        <span class="font-[400] text-[12px] font-[Poppins]">-40%</span>
+      </div> -->
+      <div class="action-buttons absolute top-[12px] right-[12px] flex flex-col gap-[8px]">
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/wishlist.svg" alt=""></div></button>
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/view.svg" alt=""></div></button>
       </div>
+    </div>
+ 
+    <div class="card-img flex justify-center items-center w-[140px] sm:w-[190px] h-[140px] sm:h-[180px]">
+      <img src="assets/images/card/cardImages/b1.png" alt="">
+    </div>
+ 
+    <a href="#" 
+       class="hidden lg:flex absolute bottom-[-100%] left-0 w-full bg-black text-white sm:justify-center py-2 transition-all duration-300 group-hover:bottom-0">
+      <p class="font-[Poppins] text-[14px] sm:text-[16px]">Add To Cart</p>
+    </a>
+  </div>
+ 
+  <div class="card-details flex flex-col gap-[6px] pt-[12px]">
+    <div class="card-title font-[Poppins] text-[17px] sm:text-[16px] text-[#000]">The North Coat</div>
+    <div class="card-price font-[Poppins] font-[600] text-[16px] sm:text-[16px] text-[var(--card-color)]">
+      $120 <span class="text-[#000] text-[14px] sm:text-[16px] pl-2 sm:pl-3 line-through">$160</span>
+    </div>
+    <div class="card-rate flex items-center gap-[6px]">
+      <div class="stars flex gap-[2px]">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+      </div>
+      <div class="customer-ratio"><p class="font-[Poppins] text-[12px] sm:text-[14px] text-[#000]">(88)</p></div>
+    </div>
+  </div>
+ 
+  <div class="card-cart block mt-4 lg:hidden">
+    <div class="best-button flex justify-center">
+      <button>
+        <div class="button h-[38px] sm:h-[56px] rounded-[4px] w-[120px] sm:w-[159px] bg-black flex justify-center items-center sm:mt-[2rem]">
+          <p class="font-[Poppins] text-[14px] sm:text-[16px] text-[#fff]">Add To Cart</p>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
 
-      <div class="best-sale-card cursor-pointer transition-all duration-300 hover:shadow-2xl">
-        <div class="card relative h-[200px] sm:h-[250px] w-full bg-[var(--color-light-gray)] flex justify-center items-center">
-          <div class="actions">
-            <div class="action-buttons absolute top-[12px] right-[12px] flex flex-col gap-[8px]">
-              <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/wishlist.svg" alt=""></div></button>
-              <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/view.svg" alt=""></div></button>
-            </div>
-          </div>
-          <div class="card-img flex justify-center items-center w-[140px] sm:w-[190px] h-[140px] sm:h-[180px]">
-            <img src="assets/images/card/cardImages/b2.png" alt="">
-          </div>
-        </div>
-        <div class="card-details flex flex-col gap-[6px] pt-[12px]">
-          <div class="card-title font-[Poppins] text-[14px] sm:text-[16px] text-[#000]">Gucci duffle bag</div>
-          <div class="card-price font-[Poppins] font-[600] text-[14px] sm:text-[16px] text-[var(--card-color)]">$960 <span class="text-[#000] pl-2 sm:pl-3 line-through">$1160</span></div>
-          <div class="card-rate flex items-center gap-[6px]">
-            <div class="stars flex gap-[2px]">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/half-star.svg" alt="">
-            </div>
-            <div class="customer-ratio"><p class="font-[Poppins] text-[12px] sm:text-[14px] text-[#000]">(65)</p></div>
-          </div>
-        </div>
+      <div class="best-card p-3 cursor-pointer transition-all duration-300 hover:shadow-2xl group">
+  
+    <div class="card relative h-[200px] sm:h-[250px] w-full bg-[var(--color-light-gray)] flex justify-center items-center overflow-hidden">
+    
+    <div class="actions">
+      <!-- <div class="sale-tag absolute top-[12px] left-[12px] bg-[var(--card-color)] h-[26px] w-[55px] text-white rounded-[4px] flex justify-center items-center">
+        <span class="font-[400] text-[12px] font-[Poppins]">-40%</span>
+      </div> -->
+      <div class="action-buttons absolute top-[12px] right-[12px] flex flex-col gap-[8px]">
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/wishlist.svg" alt=""></div></button>
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/view.svg" alt=""></div></button>
       </div>
+    </div>
+ 
+    <div class="card-img flex justify-center items-center w-[140px] sm:w-[190px] h-[140px] sm:h-[180px]">
+      <img src="assets/images/card/cardImages/b2.png" alt="">
+    </div>
+ 
+    <a href="#" 
+       class="hidden lg:flex absolute bottom-[-100%] left-0 w-full bg-black text-white sm:justify-center py-2 transition-all duration-300 group-hover:bottom-0">
+      <p class="font-[Poppins] text-[14px] sm:text-[16px]">Add To Cart</p>
+    </a>
+  </div>
+ 
+  <div class="card-details flex flex-col gap-[6px] pt-[12px]">
+    <div class="card-title font-[Poppins] text-[17px] sm:text-[16px] text-[#000]">Gucci duffle bag</div>
+    <div class="card-price font-[Poppins] font-[600] text-[16px] sm:text-[16px] text-[var(--card-color)]">
+      $120 <span class="text-[#000] text-[14px] sm:text-[16px] pl-2 sm:pl-3 line-through">$160</span>
+    </div>
+    <div class="card-rate flex items-center gap-[6px]">
+      <div class="stars flex gap-[2px]">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+      </div>
+      <div class="customer-ratio"><p class="font-[Poppins] text-[12px] sm:text-[14px] text-[#000]">(88)</p></div>
+    </div>
+  </div>
+ 
+  <div class="card-cart block mt-4 lg:hidden">
+    <div class="best-button flex justify-center">
+      <button>
+        <div class="button h-[38px] sm:h-[56px] rounded-[4px] w-[120px] sm:w-[159px] bg-black flex justify-center items-center sm:mt-[2rem]">
+          <p class="font-[Poppins] text-[14px] sm:text-[16px] text-[#fff]">Add To Cart</p>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
 
-      <div class="best-sale-card cursor-pointer transition-all duration-300 hover:shadow-2xl">
-        <div class="card relative h-[200px] sm:h-[250px] w-full bg-[var(--color-light-gray)] flex justify-center items-center">
-          <div class="actions">
-            <div class="action-buttons absolute top-[12px] right-[12px] flex flex-col gap-[8px]">
-              <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/wishlist.svg" alt=""></div></button>
-              <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/view.svg" alt=""></div></button>
-            </div>
-          </div>
-          <div class="card-img flex justify-center items-center w-[140px] sm:w-[190px] h-[140px] sm:h-[180px]">
-            <img src="assets/images/card/cardImages/b3.png" alt="">
-          </div>
-        </div>
-        <div class="card-details flex flex-col gap-[6px] pt-[12px]">
-          <div class="card-title font-[Poppins] text-[14px] sm:text-[16px] text-[#000]">RGB liquid CPU Cooler</div>
-          <div class="card-price font-[Poppins] font-[600] text-[14px] sm:text-[16px] text-[var(--card-color)]">$160 <span class="text-[#000] pl-2 sm:pl-3 line-through">$170</span></div>
-          <div class="card-rate flex items-center gap-[6px]">
-            <div class="stars flex gap-[2px]">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-            </div>
-            <div class="customer-ratio"><p class="font-[Poppins] text-[12px] sm:text-[14px] text-[#000]">(65)</p></div>
-          </div>
-        </div>
+      <div class="best-card p-3 cursor-pointer transition-all duration-300 hover:shadow-2xl group">
+  
+    <div class="card relative h-[200px] sm:h-[250px] w-full bg-[var(--color-light-gray)] flex justify-center items-center overflow-hidden">
+    
+    <div class="actions">
+      <!-- <div class="sale-tag absolute top-[12px] left-[12px] bg-[var(--card-color)] h-[26px] w-[55px] text-white rounded-[4px] flex justify-center items-center">
+        <span class="font-[400] text-[12px] font-[Poppins]">-40%</span>
+      </div> -->
+      <div class="action-buttons absolute top-[12px] right-[12px] flex flex-col gap-[8px]">
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/wishlist.svg" alt=""></div></button>
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/view.svg" alt=""></div></button>
       </div>
+    </div>
+ 
+    <div class="card-img flex justify-center items-center w-[140px] sm:w-[190px] h-[140px] sm:h-[180px]">
+      <img src="assets/images/card/cardImages/b3.png" alt="">
+    </div>
+ 
+    <a href="#" 
+       class="hidden lg:flex absolute bottom-[-100%] left-0 w-full bg-black text-white sm:justify-center py-2 transition-all duration-300 group-hover:bottom-0">
+      <p class="font-[Poppins] text-[14px] sm:text-[16px]">Add To Cart</p>
+    </a>
+  </div>
+ 
+  <div class="card-details flex flex-col gap-[6px] pt-[12px]">
+    <div class="card-title font-[Poppins] text-[17px] sm:text-[16px] text-[#000]">RGB liquid CPU Cooler</div>
+    <div class="card-price font-[Poppins] font-[600] text-[16px] sm:text-[16px] text-[var(--card-color)]">
+      $120 <span class="text-[#000] text-[14px] sm:text-[16px] pl-2 sm:pl-3 line-through">$160</span>
+    </div>
+    <div class="card-rate flex items-center gap-[6px]">
+      <div class="stars flex gap-[2px]">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+      </div>
+      <div class="customer-ratio"><p class="font-[Poppins] text-[12px] sm:text-[14px] text-[#000]">(88)</p></div>
+    </div>
+  </div>
+ 
+  <div class="card-cart block mt-4 lg:hidden">
+    <div class="best-button flex justify-center">
+      <button>
+        <div class="button h-[38px] sm:h-[56px] rounded-[4px] w-[120px] sm:w-[159px] bg-black flex justify-center items-center sm:mt-[2rem]">
+          <p class="font-[Poppins] text-[14px] sm:text-[16px] text-[#fff]">Add To Cart</p>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
 
-      <div class="best-sale-card cursor-pointer transition-all duration-300 hover:shadow-2xl">
-        <div class="card relative h-[200px] sm:h-[250px] w-full bg-[var(--color-light-gray)] flex justify-center items-center">
-          <div class="actions">
-            <div class="action-buttons absolute top-[12px] right-[12px] flex flex-col gap-[8px]">
-              <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/wishlist.svg" alt=""></div></button>
-              <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/view.svg" alt=""></div></button>
-            </div>
-          </div>
-          <div class="card-img flex justify-center items-center w-[140px] sm:w-[190px] h-[140px] sm:h-[180px]">
-            <img src="assets/images/card/cardImages/b4.png" alt="">
-          </div>
-        </div>
-        <div class="card-details flex flex-col gap-[6px] pt-[12px]">
-          <div class="card-title font-[Poppins] text-[14px] sm:text-[16px] text-[#000]">Small BookSelf</div>
-          <div class="card-price font-[Poppins] font-[600] text-[14px] sm:text-[16px] text-[var(--card-color)]">$375 <span class="text-[#000] pl-2 sm:pl-3 line-through">$400</span></div>
-          <div class="card-rate flex items-center gap-[6px]">
-            <div class="stars flex gap-[2px]">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/star.svg" alt="">
-              <img src="assets/images/card/cardImages/half-star.svg" alt="">
-            </div>
-            <div class="customer-ratio"><p class="font-[Poppins] text-[12px] sm:text-[14px] text-[#000]">(99)</p></div>
-          </div>
-        </div>
+      <div class="best-card p-3 cursor-pointer transition-all duration-300 hover:shadow-2xl group">
+  
+    <div class="card relative h-[200px] sm:h-[250px] w-full bg-[var(--color-light-gray)] flex justify-center items-center overflow-hidden">
+    
+    <div class="actions">
+      <!-- <div class="sale-tag absolute top-[12px] left-[12px] bg-[var(--card-color)] h-[26px] w-[55px] text-white rounded-[4px] flex justify-center items-center">
+        <span class="font-[400] text-[12px] font-[Poppins]">-40%</span>
+      </div> -->
+      <div class="action-buttons absolute top-[12px] right-[12px] flex flex-col gap-[8px]">
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/wishlist.svg" alt=""></div></button>
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/view.svg" alt=""></div></button>
       </div>
+    </div>
+ 
+    <div class="card-img flex justify-center items-center w-[140px] sm:w-[190px] h-[140px] sm:h-[180px]">
+      <img src="assets/images/card/cardImages/b4.png" alt="">
+    </div>
+ 
+    <a href="#" 
+       class="hidden lg:flex absolute bottom-[-100%] left-0 w-full bg-black text-white sm:justify-center py-2 transition-all duration-300 group-hover:bottom-0">
+      <p class="font-[Poppins] text-[14px] sm:text-[16px]">Add To Cart</p>
+    </a>
+  </div>
+ 
+  <div class="card-details flex flex-col gap-[6px] pt-[12px]">
+    <div class="card-title font-[Poppins] text-[17px] sm:text-[16px] text-[#000]">Small BookSelf</div>
+    <div class="card-price font-[Poppins] font-[600] text-[16px] sm:text-[16px] text-[var(--card-color)]">
+      $120 <span class="text-[#000] text-[14px] sm:text-[16px] pl-2 sm:pl-3 line-through">$160</span>
+    </div>
+    <div class="card-rate flex items-center gap-[6px]">
+      <div class="stars flex gap-[2px]">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+      </div>
+      <div class="customer-ratio"><p class="font-[Poppins] text-[12px] sm:text-[14px] text-[#000]">(88)</p></div>
+    </div>
+  </div>
+ 
+  <div class="card-cart block mt-4 lg:hidden">
+    <div class="best-button flex justify-center">
+      <button>
+        <div class="button h-[38px] sm:h-[56px] rounded-[4px] w-[120px] sm:w-[159px] bg-black flex justify-center items-center sm:mt-[2rem]">
+          <p class="font-[Poppins] text-[14px] sm:text-[16px] text-[#fff]">Add To Cart</p>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
     </div>
 
     <div class="end flex justify-center items-center">
-      <hr class="mt-[2rem] w-[100%]">
+      <hr class="mt-[2rem] mb-[2rem] w-[100%]">
     </div>
   </div>
 </section>
 
+
+<!-- _-_-_-_-_ Enhance Section _-_-_-_-_ -->
+
+<section class="enhance flex justify-center items-center">
+
+    <div class="enhance-div flex flex-col-reverse lg:flex-row lg:justify-around items-center w-[1170px] h-[650px] py-10 lg:w-[1170px] lg:h-[500px] bg-black">
+        <div class="enhance-text flex flex-col gap-[2rem]">
+            <p class="text-[var(--green-color)] font-[Poppins] font-[600] text-[16px] sm:text-[16px] leading-[20px]">Categories</p>
+            <h1 class="font-[Inter] font-[600] text-[26px] sm:text-[48px] leading-[20px] text-[var(--heading-color)] leading-[40px] sm:leading-[60px]">Enhance Your <br> Music Experience</h1>
+            <div class="timer">
+                <div class="flash-sales-timer flex gap-3 sm:gap-5 font-[Inter] font-bold order-2 sm:order-1">
+                <!-- Days -->
+                <div class="flex flex-col items-center bg-white sm:w-[62px] sm:h-[62px] rounded-[100%] px-3 py-2 shadow">
+                    <span id="days" class="text-[18px] sm:text-[16px]">00</span>
+                    <p class="text-[10px] sm:text-[12px] sm:text-black">Days</p>
+                </div>
+
+                <!-- Hours -->
+                <div class="flex flex-col items-center bg-white sm:w-[62px] sm:h-[62px] rounded-[100%] px-3 py-2 shadow">
+                    <span id="hours" class="text-[18px] sm:text-[16px]">00</span>
+                    <p class="text-[10px] sm:text-[12px] sm:text-black">Hours</p>
+                </div>
+
+                <!-- Minutes -->
+                <div class="flex flex-col items-center bg-white sm:w-[62px] sm:h-[62px] rounded-[100%] px-3 py-2 shadow">
+                    <span id="minutes" class="text-[18px] sm:text-[16px]">00</span>
+                    <p class="text-[10px] sm:text-[12px] sm:text-black">Minutes</p>
+                </div>
+
+                <!-- Seconds -->
+                <div class="flex flex-col items-center bg-white sm:w-[62px] sm:h-[62px] rounded-[100%] px-3 py-2 shadow">
+                    <span id="seconds" class="text-[18px] sm:text-[16px]">00</span>
+                    <p class="text-[10px] sm:text-[12px] sm:text-black">Seconds</p>
+                </div>
+                </div>
+            </div>
+            <button><div class="button w-[171px] h-[56px] bg-[var(--green-color)] text-center flex justify-center items-center text-[#fff] rounded-[4px]">Buy Now!</div></button>
+        </div>
+        <div class="enhance-img">
+            <img class="w-[450px] h-[300px] lg:w-full lg:h-full" src="assets/images/card/cardImages/speaker.svg" alt="" srcset="">
+        </div>
+    </div>
+</section>
+
+
+<!-- _-_-_-_-_ Explore product Section _-_-_-_-_ -->
+    
+    <section class="explore-selling-section flex justify-center items-center">
+  <div class="explore-wrap w-[90%] sm:w-[75%] flex flex-col gap-[24px]">
+
+    <div class="explore-text flex flex-col flex-wrap gap-[20px]">
+        <div class="highlight flex items-center gap-2">
+          <div class="red-box h-[40px] w-[20px] bg-[var(--card-color)] rounded-[3px]"></div>
+          <p class="text-[var(--card-color)] font-[Poppins] font-600 text-[14px] sm:text-[16px] font-bold">Our Products</p>
+        </div>
+      <div class="text flex justify-between items-center gap-[16px]">
+        <div class="explore-sales-title">
+          <h1 class="font-[Inter] font-600 text-[24px] sm:text-[36px] tracking-wider">Explore Our Products</h1>
+        </div>
+        <!-- Navigation (desktop only) -->
+        <div class="browse-navigation hidden sm:flex items-center gap-3">
+          <button>
+            <div class="left-arrow h-[46px] w-[46px] rounded-full flex justify-center items-center bg-[var(--color-light-gray)]">
+              <img src="assets/images/card/arrows/icons_arrow-left.svg" alt="">
+            </div>
+          </button>
+          <button>
+            <div class="right-arrow h-[46px] w-[46px] rounded-full flex justify-center items-center bg-[var(--color-light-gray)]">
+              <img src="assets/images/card/arrows/icons arrow-right.svg" alt="">
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="explore-sales-card grid grid-cols-2 mt-[2rem] lg:grid-cols-4 gap-[20px] sm:gap-[40px]">
+
+      <div class="explore-card p-3 cursor-pointer transition-all duration-300 hover:shadow-2xl group">
+  
+    <div class="card relative h-[200px] sm:h-[250px] w-full bg-[var(--color-light-gray)] flex justify-center items-center overflow-hidden">
+    
+    <div class="actions">
+      <!-- <div class="sale-tag absolute top-[12px] left-[12px] bg-[var(--card-color)] h-[26px] w-[55px] text-white rounded-[4px] flex justify-center items-center">
+        <span class="font-[400] text-[12px] font-[Poppins]">-40%</span>
+      </div> -->
+      <div class="action-buttons absolute top-[12px] right-[12px] flex flex-col gap-[8px]">
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/wishlist.svg" alt=""></div></button>
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/view.svg" alt=""></div></button>
+      </div>
+    </div>
+ 
+    <div class="card-img flex justify-center items-center w-[140px] sm:w-[190px] h-[140px] sm:h-[180px]">
+      <img src="assets/images/card/cardImages/b1.png" alt="">
+    </div>
+ 
+    <a href="#" 
+       class="hidden lg:flex absolute bottom-[-100%] left-0 w-full bg-black text-white sm:justify-center py-2 transition-all duration-300 group-hover:bottom-0">
+      <p class="font-[Poppins] text-[14px] sm:text-[16px]">Add To Cart</p>
+    </a>
+  </div>
+ 
+  <div class="card-details flex flex-col gap-[6px] pt-[12px]">
+    <div class="card-title font-[Poppins] text-[17px] sm:text-[16px] text-[#000]">The North Coat</div>
+    <div class="card-price font-[Poppins] font-[600] text-[16px] sm:text-[16px] text-[var(--card-color)]">
+      $120 <span class="text-[#000] text-[14px] sm:text-[16px] pl-2 sm:pl-3 line-through">$160</span>
+    </div>
+    <div class="card-rate flex items-center gap-[6px]">
+      <div class="stars flex gap-[2px]">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+      </div>
+      <div class="customer-ratio"><p class="font-[Poppins] text-[12px] sm:text-[14px] text-[#000]">(88)</p></div>
+    </div>
+  </div>
+ 
+  <div class="card-cart block mt-4 lg:hidden">
+    <div class="best-button flex justify-center">
+      <button>
+        <div class="button h-[38px] sm:h-[56px] rounded-[4px] w-[120px] sm:w-[159px] bg-black flex justify-center items-center sm:mt-[2rem]">
+          <p class="font-[Poppins] text-[14px] sm:text-[16px] text-[#fff]">Add To Cart</p>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+
+      <div class="explore-card p-3 cursor-pointer transition-all duration-300 hover:shadow-2xl group">
+  
+    <div class="card relative h-[200px] sm:h-[250px] w-full bg-[var(--color-light-gray)] flex justify-center items-center overflow-hidden">
+    
+    <div class="actions">
+      <!-- <div class="sale-tag absolute top-[12px] left-[12px] bg-[var(--card-color)] h-[26px] w-[55px] text-white rounded-[4px] flex justify-center items-center">
+        <span class="font-[400] text-[12px] font-[Poppins]">-40%</span>
+      </div> -->
+      <div class="action-buttons absolute top-[12px] right-[12px] flex flex-col gap-[8px]">
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/wishlist.svg" alt=""></div></button>
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/view.svg" alt=""></div></button>
+      </div>
+    </div>
+ 
+    <div class="card-img flex justify-center items-center w-[140px] sm:w-[190px] h-[140px] sm:h-[180px]">
+      <img src="assets/images/card/cardImages/b2.png" alt="">
+    </div>
+ 
+    <a href="#" 
+       class="hidden lg:flex absolute bottom-[-100%] left-0 w-full bg-black text-white sm:justify-center py-2 transition-all duration-300 group-hover:bottom-0">
+      <p class="font-[Poppins] text-[14px] sm:text-[16px]">Add To Cart</p>
+    </a>
+  </div>
+ 
+  <div class="card-details flex flex-col gap-[6px] pt-[12px]">
+    <div class="card-title font-[Poppins] text-[17px] sm:text-[16px] text-[#000]">Gucci duffle bag</div>
+    <div class="card-price font-[Poppins] font-[600] text-[16px] sm:text-[16px] text-[var(--card-color)]">
+      $120 <span class="text-[#000] text-[14px] sm:text-[16px] pl-2 sm:pl-3 line-through">$160</span>
+    </div>
+    <div class="card-rate flex items-center gap-[6px]">
+      <div class="stars flex gap-[2px]">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+      </div>
+      <div class="customer-ratio"><p class="font-[Poppins] text-[12px] sm:text-[14px] text-[#000]">(88)</p></div>
+    </div>
+  </div>
+ 
+  <div class="card-cart block mt-4 lg:hidden">
+    <div class="best-button flex justify-center">
+      <button>
+        <div class="button h-[38px] sm:h-[56px] rounded-[4px] w-[120px] sm:w-[159px] bg-black flex justify-center items-center sm:mt-[2rem]">
+          <p class="font-[Poppins] text-[14px] sm:text-[16px] text-[#fff]">Add To Cart</p>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+
+      <div class="explore-card p-3 cursor-pointer transition-all duration-300 hover:shadow-2xl group">
+  
+    <div class="card relative h-[200px] sm:h-[250px] w-full bg-[var(--color-light-gray)] flex justify-center items-center overflow-hidden">
+    
+    <div class="actions">
+      <!-- <div class="sale-tag absolute top-[12px] left-[12px] bg-[var(--card-color)] h-[26px] w-[55px] text-white rounded-[4px] flex justify-center items-center">
+        <span class="font-[400] text-[12px] font-[Poppins]">-40%</span>
+      </div> -->
+      <div class="action-buttons absolute top-[12px] right-[12px] flex flex-col gap-[8px]">
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/wishlist.svg" alt=""></div></button>
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/view.svg" alt=""></div></button>
+      </div>
+    </div>
+ 
+    <div class="card-img flex justify-center items-center w-[140px] sm:w-[190px] h-[140px] sm:h-[180px]">
+      <img src="assets/images/card/cardImages/b3.png" alt="">
+    </div>
+ 
+    <a href="#" 
+       class="hidden lg:flex absolute bottom-[-100%] left-0 w-full bg-black text-white sm:justify-center py-2 transition-all duration-300 group-hover:bottom-0">
+      <p class="font-[Poppins] text-[14px] sm:text-[16px]">Add To Cart</p>
+    </a>
+  </div>
+ 
+  <div class="card-details flex flex-col gap-[6px] pt-[12px]">
+    <div class="card-title font-[Poppins] text-[17px] sm:text-[16px] text-[#000]">RGB liquid CPU Cooler</div>
+    <div class="card-price font-[Poppins] font-[600] text-[16px] sm:text-[16px] text-[var(--card-color)]">
+      $120 <span class="text-[#000] text-[14px] sm:text-[16px] pl-2 sm:pl-3 line-through">$160</span>
+    </div>
+    <div class="card-rate flex items-center gap-[6px]">
+      <div class="stars flex gap-[2px]">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+      </div>
+      <div class="customer-ratio"><p class="font-[Poppins] text-[12px] sm:text-[14px] text-[#000]">(88)</p></div>
+    </div>
+  </div>
+ 
+  <div class="card-cart block mt-4 lg:hidden">
+    <div class="best-button flex justify-center">
+      <button>
+        <div class="button h-[38px] sm:h-[56px] rounded-[4px] w-[120px] sm:w-[159px] bg-black flex justify-center items-center sm:mt-[2rem]">
+          <p class="font-[Poppins] text-[14px] sm:text-[16px] text-[#fff]">Add To Cart</p>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+
+      <div class="explore-card p-3 cursor-pointer transition-all duration-300 hover:shadow-2xl group">
+  
+    <div class="card relative h-[200px] sm:h-[250px] w-full bg-[var(--color-light-gray)] flex justify-center items-center overflow-hidden">
+    
+    <div class="actions">
+      <!-- <div class="sale-tag absolute top-[12px] left-[12px] bg-[var(--card-color)] h-[26px] w-[55px] text-white rounded-[4px] flex justify-center items-center">
+        <span class="font-[400] text-[12px] font-[Poppins]">-40%</span>
+      </div> -->
+      <div class="action-buttons absolute top-[12px] right-[12px] flex flex-col gap-[8px]">
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/wishlist.svg" alt=""></div></button>
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/view.svg" alt=""></div></button>
+      </div>
+    </div>
+ 
+    <div class="card-img flex justify-center items-center w-[140px] sm:w-[190px] h-[140px] sm:h-[180px]">
+      <img src="assets/images/card/cardImages/b4.png" alt="">
+    </div>
+ 
+    <a href="#" 
+       class="hidden lg:flex absolute bottom-[-100%] left-0 w-full bg-black text-white sm:justify-center py-2 transition-all duration-300 group-hover:bottom-0">
+      <p class="font-[Poppins] text-[14px] sm:text-[16px]">Add To Cart</p>
+    </a>
+  </div>
+ 
+  <div class="card-details flex flex-col gap-[6px] pt-[12px]">
+    <div class="card-title font-[Poppins] text-[17px] sm:text-[16px] text-[#000]">Small BookSelf</div>
+    <div class="card-price font-[Poppins] font-[600] text-[16px] sm:text-[16px] text-[var(--card-color)]">
+      $120 <span class="text-[#000] text-[14px] sm:text-[16px] pl-2 sm:pl-3 line-through">$160</span>
+    </div>
+    <div class="card-rate flex items-center gap-[6px]">
+      <div class="stars flex gap-[2px]">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+      </div>
+      <div class="customer-ratio"><p class="font-[Poppins] text-[12px] sm:text-[14px] text-[#000]">(88)</p></div>
+    </div>
+  </div>
+ 
+  <div class="card-cart block mt-4 lg:hidden">
+    <div class="best-button flex justify-center">
+      <button>
+        <div class="button h-[38px] sm:h-[56px] rounded-[4px] w-[120px] sm:w-[159px] bg-black flex justify-center items-center sm:mt-[2rem]">
+          <p class="font-[Poppins] text-[14px] sm:text-[16px] text-[#fff]">Add To Cart</p>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+
+     <div class="explore-card p-3 cursor-pointer transition-all duration-300 hover:shadow-2xl group">
+
+    <div class="card relative h-[200px] sm:h-[250px] w-full bg-[var(--color-light-gray)] flex justify-center items-center overflow-hidden">
+    
+    <div class="actions">
+    <div class="sale-tag absolute top-[12px] left-[12px] bg-[var(--green-color)] h-[26px] w-[55px] text-white rounded-[4px] flex justify-center items-center">
+        <span class="font-[400] text-[12px] font-[Poppins]">NEW!</span>
+    </div>
+    <div class="action-buttons absolute top-[12px] right-[12px] flex flex-col gap-[8px]">
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/wishlist.svg" alt=""></div></button>
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/view.svg" alt=""></div></button>
+    </div>
+    </div>
+
+    <div class="card-img flex justify-center items-center w-[140px] sm:w-[190px] h-[140px] sm:h-[180px]">
+    <img src="assets/images/card/cardImages/b1.png" alt="">
+    </div>
+
+    <a href="#" 
+    class="hidden lg:flex absolute bottom-[-100%] left-0 w-full bg-black text-white sm:justify-center py-2 transition-all duration-300 group-hover:bottom-0">
+    <p class="font-[Poppins] text-[14px] sm:text-[16px]">Add To Cart</p>
+    </a>
+</div>
+
+<div class="card-details flex flex-col gap-[6px] pt-[12px]">
+    <div class="card-title font-[Poppins] text-[17px] sm:text-[16px] text-[#000]">The North Coat</div>
+    <div class="card-price font-[Poppins] font-[600] text-[16px] sm:text-[16px] text-[var(--card-color)]">
+    $120 <span class="text-[#000] text-[14px] sm:text-[16px] pl-2 sm:pl-3 line-through">$160</span>
+    </div>
+    <div class="card-rate flex items-center gap-[6px]">
+    <div class="stars flex gap-[2px]">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+    </div>
+    <div class="customer-ratio"><p class="font-[Poppins] text-[12px] sm:text-[14px] text-[#000]">(88)</p></div>
+    </div>
+</div>
+
+<div class="card-cart block mt-4 lg:hidden">
+    <div class="best-button flex justify-center">
+    <button>
+        <div class="button h-[38px] sm:h-[56px] rounded-[4px] w-[120px] sm:w-[159px] bg-black flex justify-center items-center sm:mt-[2rem]">
+        <p class="font-[Poppins] text-[14px] sm:text-[16px] text-[#fff]">Add To Cart</p>
+        </div>
+    </button>
+    </div>
+</div>
+</div>
+
+      <div class="explore-card p-3 cursor-pointer transition-all duration-300 hover:shadow-2xl group">
+  
+    <div class="card relative h-[200px] sm:h-[250px] w-full bg-[var(--color-light-gray)] flex justify-center items-center overflow-hidden">
+    
+    <div class="actions">
+      <!-- <div class="sale-tag absolute top-[12px] left-[12px] bg-[var(--green-color)] h-[26px] w-[55px] text-white rounded-[4px] flex justify-center items-center">
+        <span class="font-[400] text-[12px] font-[Poppins]">NEW!</span>
+      </div> -->
+      <div class="action-buttons absolute top-[12px] right-[12px] flex flex-col gap-[8px]">
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/wishlist.svg" alt=""></div></button>
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/view.svg" alt=""></div></button>
+      </div>
+    </div>
+ 
+    <div class="card-img flex justify-center items-center w-[140px] sm:w-[190px] h-[140px] sm:h-[180px]">
+      <img src="assets/images/card/cardImages/b2.png" alt="">
+    </div>
+ 
+    <a href="#" 
+       class="hidden lg:flex absolute bottom-[-100%] left-0 w-full bg-black text-white sm:justify-center py-2 transition-all duration-300 group-hover:bottom-0">
+      <p class="font-[Poppins] text-[14px] sm:text-[16px]">Add To Cart</p>
+    </a>
+  </div>
+ 
+  <div class="card-details flex flex-col gap-[6px] pt-[12px]">
+    <div class="card-title font-[Poppins] text-[17px] sm:text-[16px] text-[#000]">Gucci duffle bag</div>
+    <div class="card-price font-[Poppins] font-[600] text-[16px] sm:text-[16px] text-[var(--card-color)]">
+      $120 <span class="text-[#000] text-[14px] sm:text-[16px] pl-2 sm:pl-3 line-through">$160</span>
+    </div>
+    <div class="card-rate flex items-center gap-[6px]">
+      <div class="stars flex gap-[2px]">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+      </div>
+      <div class="customer-ratio"><p class="font-[Poppins] text-[12px] sm:text-[14px] text-[#000]">(88)</p></div>
+    </div>
+  </div>
+ 
+  <div class="card-cart block mt-4 lg:hidden">
+    <div class="best-button flex justify-center">
+      <button>
+        <div class="button h-[38px] sm:h-[56px] rounded-[4px] w-[120px] sm:w-[159px] bg-black flex justify-center items-center sm:mt-[2rem]">
+          <p class="font-[Poppins] text-[14px] sm:text-[16px] text-[#fff]">Add To Cart</p>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+
+      <div class="explore-card p-3 cursor-pointer transition-all duration-300 hover:shadow-2xl group">
+  
+    <div class="card relative h-[200px] sm:h-[250px] w-full bg-[var(--color-light-gray)] flex justify-center items-center overflow-hidden">
+    
+    <div class="actions">
+      <div class="sale-tag absolute top-[12px] left-[12px] bg-[var(--green-color)] h-[26px] w-[55px] text-white rounded-[4px] flex justify-center items-center">
+        <span class="font-[400] text-[12px] font-[Poppins]">NEW!</span>
+      </div>
+      <div class="action-buttons absolute top-[12px] right-[12px] flex flex-col gap-[8px]">
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/wishlist.svg" alt=""></div></button>
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/view.svg" alt=""></div></button>
+      </div>
+    </div>
+ 
+    <div class="card-img flex justify-center items-center w-[140px] sm:w-[190px] h-[140px] sm:h-[180px]">
+      <img src="assets/images/card/cardImages/b3.png" alt="">
+    </div>
+ 
+    <a href="#" 
+       class="hidden lg:flex absolute bottom-[-100%] left-0 w-full bg-black text-white sm:justify-center py-2 transition-all duration-300 group-hover:bottom-0">
+      <p class="font-[Poppins] text-[14px] sm:text-[16px]">Add To Cart</p>
+    </a>
+  </div>
+ 
+  <div class="card-details flex flex-col gap-[6px] pt-[12px]">
+    <div class="card-title font-[Poppins] text-[17px] sm:text-[16px] text-[#000]">RGB liquid CPU Cooler</div>
+    <div class="card-price font-[Poppins] font-[600] text-[16px] sm:text-[16px] text-[var(--card-color)]">
+      $120 <span class="text-[#000] text-[14px] sm:text-[16px] pl-2 sm:pl-3 line-through">$160</span>
+    </div>
+    <div class="card-rate flex items-center gap-[6px]">
+      <div class="stars flex gap-[2px]">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+      </div>
+      <div class="customer-ratio"><p class="font-[Poppins] text-[12px] sm:text-[14px] text-[#000]">(88)</p></div>
+    </div>
+  </div>
+ 
+  <div class="card-cart block mt-4 lg:hidden">
+    <div class="best-button flex justify-center">
+      <button>
+        <div class="button h-[38px] sm:h-[56px] rounded-[4px] w-[120px] sm:w-[159px] bg-black flex justify-center items-center sm:mt-[2rem]">
+          <p class="font-[Poppins] text-[14px] sm:text-[16px] text-[#fff]">Add To Cart</p>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+
+      <div class="explore-card p-3 cursor-pointer transition-all duration-300 hover:shadow-2xl group">
+  
+    <div class="card relative h-[200px] sm:h-[250px] w-full bg-[var(--color-light-gray)] flex justify-center items-center overflow-hidden">
+    
+    <div class="actions">
+      <!-- <div class="sale-tag absolute top-[12px] left-[12px] bg-[var(--card-color)] h-[26px] w-[55px] text-white rounded-[4px] flex justify-center items-center">
+        <span class="font-[400] text-[12px] font-[Poppins]">-40%</span>
+      </div> -->
+      <div class="action-buttons absolute top-[12px] right-[12px] flex flex-col gap-[8px]">
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/wishlist.svg" alt=""></div></button>
+        <button><div class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center"><img src="assets/images/card/cardImages/view.svg" alt=""></div></button>
+      </div>
+    </div>
+ 
+    <div class="card-img flex justify-center items-center w-[140px] sm:w-[190px] h-[140px] sm:h-[180px]">
+      <img src="assets/images/card/cardImages/b4.png" alt="">
+    </div>
+ 
+    <a href="#" 
+       class="hidden lg:flex absolute bottom-[-100%] left-0 w-full bg-black text-white sm:justify-center py-2 transition-all duration-300 group-hover:bottom-0">
+      <p class="font-[Poppins] text-[14px] sm:text-[16px]">Add To Cart</p>
+    </a>
+  </div>
+ 
+  <div class="card-details flex flex-col gap-[6px] pt-[12px]">
+    <div class="card-title font-[Poppins] text-[17px] sm:text-[16px] text-[#000]">Small BookSelf</div>
+    <div class="card-price font-[Poppins] font-[600] text-[16px] sm:text-[16px] text-[var(--card-color)]">
+      $120 <span class="text-[#000] text-[14px] sm:text-[16px] pl-2 sm:pl-3 line-through">$160</span>
+    </div>
+    <div class="card-rate flex items-center gap-[6px]">
+      <div class="stars flex gap-[2px]">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+        <img src="assets/images/card/cardImages/star.svg" alt="">
+      </div>
+      <div class="customer-ratio"><p class="font-[Poppins] text-[12px] sm:text-[14px] text-[#000]">(88)</p></div>
+    </div>
+  </div>
+ 
+  <div class="card-cart block mt-4 lg:hidden">
+    <div class="best-button flex justify-center">
+      <button>
+        <div class="button h-[38px] sm:h-[56px] rounded-[4px] w-[120px] sm:w-[159px] bg-black flex justify-center items-center sm:mt-[2rem]">
+          <p class="font-[Poppins] text-[14px] sm:text-[16px] text-[#fff]">Add To Cart</p>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+          
+    </div>
+    <div class="explore-button flex justify-center items-center">
+      <button>
+        <div class="button h-[48px] sm:h-[56px] rounded-[4px] w-[180px] sm:w-[234px] bg-[var(--card-color)] flex justify-center items-center mt-[2rem]">
+          <p class="font-[Poppins] text-[14px] sm:text-[16px] text-[#fff]">View All Products</p>
+        </div>
+      </button>
+    </div>
+    
+    <div class="end flex justify-center items-center">
+      <hr class="mt-[2rem] mb-[2rem] w-[100%]">
+    </div>
+  </div>
+</section>
+
+
+    <!-- New Arrival Section -->
+
+    <section class="new-section flex justify-center items-center">
+  <div class="new-section flex flex-col gap-[40px] w-[90%] sm:w-[75%] sm:h-[768px]">
+
+    <div class="new-text flex flex-col gap-[24px] block">
+      <div class="highlight flex items-center gap-2">
+        <div class="red-box h-[40px] w-[20px] bg-[var(--card-color)] rounded-[3px]"></div>
+        <p class="text-[var(--card-color)] font-[Poppins] font-600 text-[14px] sm:text-[16px] font-bold">Featured</p>
+      </div>
+
+      <div class="text flex justify-between items-center">
+        <div class="new-title">
+          <h1 class="font-[Inter] font-[600] text-[24px] sm:text-[36px] tracking-wider">New Arrival</h1>
+        </div>
+        <div class="new-navigation hidden sm:flex items-center gap-3">
+          <button>
+            <div class="left-arrow h-[46px] w-[46px] rounded-full flex justify-center items-center bg-[var(--color-light-gray)]">
+              <img src="assets/images/card/arrows/icons_arrow-left.svg" alt="">
+            </div>
+          </button>
+          <button>
+            <div class="right-arrow h-[46px] w-[46px] rounded-full flex justify-center items-center bg-[var(--color-light-gray)]">
+              <img src="assets/images/card/arrows/icons arrow-right.svg" alt="">
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="new-card flex flex-col sm:flex-row justify-between items-center sm:w-[1170px] sm:h-[600px] gap-[20px]">
+ 
+      <div class="new-c1 h-[300px] w-full sm:w-[570px] sm:h-[600px] bg-black relative flex justify-end items-end">
+        <img class="h-[280px] w-[280px] sm:h-[511px] sm:w-[511px]" src="assets/images/card/cardImages/n1.svg" alt="">
+        <div class="card-text absolute bottom-[40px] sm:leading-[4rem] text-white left-[20px]">
+          <h1 class="font-[Inter] font-[600] text-[40px] sm:text-[36px] tracking-[3%]">PlayStation 5</h1>
+          <p class="font-[Poppins] font-[400] text-[20px] sm:text-[16px] sm:leading-[21px] tracking-[3%]">
+            Black and White version of the PS5 <br> coming out on sale.
+          </p>
+          <button class="sm:h-[24px] sm:w-[81px] font-[Poppins] font-[400] text-[16px] sm:text-[16px] underline underline-offset-[4px] decoration-[gray]">Shop Now</button>
+        </div>
+      </div>
+ 
+      <div class="new-c2 h-auto w-full sm:h-full sm:w-[570px] flex flex-col gap-[20px]">
+ 
+        <div class="new-top relative h-[300px] sm:h-full bg-black sm:bg-black">
+          <img class="absolute right-0 bottom-0 w-[380px] sm:h-full sm:w-full" src="assets/images/card/cardImages/n2.svg" alt="">
+          <div class="card-text absolute bottom-[40px] sm:bottom-[20px] leading-[4rem] sm:leading-[4rem] text-white left-[20px] ">
+            <h1 class="font-[Inter] font-[600] text-[40px] sm:text-[36px] tracking-[3%]">Women's Collection</h1>
+            <p class="font-[Poppins] font-[400] text-[20px] w-[70%] leading-[29px] sm:text-[16px] sm:leading-[21px] tracking-[3%]">
+              Featured woman collections that give you another vibe.
+            </p>
+            <button class="sm:h-[24px] sm:w-[81px] font-[Poppins] font-[400] text-[16px] sm:text-[16px] underline underline-offset-[4px] decoration-[gray]">Shop Now</button>
+          </div>
+        </div>
+ 
+        <div class="new-bottom flex flex-col sm:flex-row gap-[20px]">
+ 
+          <div class="new-b-l h-[300px] w-full bg-black sm:h-full sm:w-full">
+            <div class="new-top relative flex justify-center h-full sm:bg-black">
+              <img class="absolute right-0 bottom-0 w-[250px] h-[250px] sm:h-[175px] sm:w-[175px]" src="assets/images/card/cardImages/n3.svg" alt="">
+              <div class="card-text absolute bottom-[40px] sm:bottom-[20px] leading-[4rem] sm:leading-[4rem] text-white left-[20px]">
+                <h1 class="font-[Inter] text-[40px] font-[600] sm:text-[24px]">Speakers</h1>
+                <p class="font-[Poppins] font-[400] text-[20px] sm:text-[16px] sm:leading-[21px] tracking-[3%]">
+                  Amazon wireless speakers
+                </p>
+                <button class="sm:h-[24px] sm:w-[81px] font-[Poppins] sfont-[400] text-[16px] sm:text-[16px] underline underline-offset-[4px] decoration-[gray]">Shop Now</button>
+              </div>
+            </div>
+          </div>
+ 
+          <div class="new-b-r h-[300px] w-full sm:h-full sm:w-full sm:bg-gray-300">
+            <div class="new-top relative flex justify-center items-center h-full bg-black sm:bg-black">
+              <img class="sm:h-[203px] sm:w-[150px]" src="assets/images/card/cardImages/n4.svg" alt="">
+              <div class="card-text absolute bottom-[40px] sm:bottom-[20px] sm:leading-[4rem] text-white left-[20px]">
+                <h1 class="font-[Inter] font-[600] text-[40px] sm:text-[24px] tracking-[3%]">Perfume</h1>
+                <p class="font-[Poppins] font-[400] text-[20px] sm:text-[16px] sm:leading-[21px] tracking-[3%]">
+                  GUCCI INTENSE OUD EDP
+                </p>
+                <button class="sm:h-[24px] sm:w-[81px] font-[Poppins] font-[400] text-[16px] sm:text-[16px] underline underline-offset-[4px] decoration-[gray]">Shop Now</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+    
+    
+
+<section class="three-L's sm:mt-[4rem] w-full">
+    <div class="L flex flex-col sm:flex-row sm:justify-center gap-[88px] items-center">
+        <div class="l1 flex flex-col justify-center items-center gap-[24px]">
+                <img class="w-[80px] h-[80px] sm:w-[80px] sm:h-[80px]" src="assets/images/card/cardImages/Services1.svg" alt="">
+                <div class="l-text flex flex-col justify-center items-center">
+                    <h1 class="font-[Inter] font-[600] text-[18px] sm:text-[20px] tracking-[3%]">FREE AND FAST DELIVERY</h1>
+                    <p class="font-[Poppins] font-[400] sm:text-[14px] sm:leading-[21px] sm:text-[14px] tracking-[3%]">Free delivery for all orders over $140</p>
+                </div>
+        </div>
+        <div class="l2 flex flex-col justify-center items-center gap-[24px]">
+            <img class="w-[80px] h-[80px] sm:w-[80px] sm:h-[80px]" src="assets/images/card/cardImages/Services2.svg" alt="">
+            <div class="l-text flex flex-col justify-center items-center">
+                <h1 class="font-[Inter] font-[600] text-[24px] sm:text-[20px] tracking-[3%]">24/7 CUSTOMER SERVICE</h1>
+                <p class="font-[Poppins] font-[400] sm:text-[14px] sm:leading-[21px] sm:text-[14px] tracking-[3%]">Friendly 24/7 customer support</p>
+            </div>
+        </div>
+        <div class="l3 flex flex-col justify-center items-center gap-[24px]">
+            <img src="assets/images/card/cardImages/Services3.svg" alt="">
+            <div class="l-text flex flex-col justify-center items-center"><h1 class="font-[Inter] font-[600] text-[18px] sm:text-[20px] tracking-[3%]">MONEY BACK GUARANTEE</h1>
+            <p class="font-[Poppins] font-[400] sm:text-[14px] sm:leading-[21px] sm:text-[14px] tracking-[3%]">We return money within 30 days</p>
+        </div>
+        </div>
+    </div>
+</section>
+</div> <!-- All data div -->
+
+
+<footer class="w-full bg-black flex justify-center items-center py-10 sm:h-[440px]">
+  <div class="footer-data flex flex-col sm:flex-row sm:justify-between sm:w-[1170px] sm:h-[236px] text-white gap-10 sm:gap-0 text-center sm:text-left">
+ 
+    <div class="f-1 sm:w-[217px] flex flex-col gap-[24px] items-center sm:items-start">
+      <h1 class="f-head font-[Poppins] font-[500] text-[24px] tracking-[3%]">Exclusive</h1>
+      <button class="font-[Poppins] font-[400] text-[16px] leading-[24px] tracking-[3%]">Subscribe</button>
+      <p class="font-[Poppins] font-[400] text-[16px] leading-[24px] tracking-[3%]">Get 10% off your first order</p>
+      <div class="search flex items-center border-[1px] p-2 border-white rounded-[4px] w-full sm:w-auto">
+        <input class="outline-none bg-black placeholder:text-gray-600 indent-2 flex-1" type="text" placeholder="Enter your email">
+        <img class="w-[24px] h-[24px]" src="assets/images/card/cardImages/icon-send.svg" alt="">
+      </div>
+    </div>
+ 
+    <div class="f-2 sm:w-[175px] flex flex-col gap-[24px] items-center sm:items-start">
+      <h1 class="f-head font-[Poppins] font-[500] text-[24px] tracking-[3%]">Support</h1>
+      <p class="font-[Poppins] font-[400] text-[16px] leading-[24px] tracking-[3%]">111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</p>
+      <p class="font-[Poppins] font-[400] text-[16px] leading-[24px] tracking-[3%]">exclusive@gmail.com</p>
+      <p class="font-[Poppins] font-[400] text-[16px] leading-[24px] tracking-[3%]">+88015-0000-0000</p>
+    </div>
+ 
+    <div class="f-3 sm:w-[175px] flex flex-col gap-[24px] items-center sm:items-start">
+      <h1 class="f-head font-[Poppins] font-[500] text-[24px] tracking-[3%]">Account</h1>
+      <button><p class="font-[Poppins] text-[16px]">My Account</p></button>
+      <button><p class="font-[Poppins] text-[16px]">Login / Register</p></button>
+      <button><p class="font-[Poppins] text-[16px]">Cart</p></button>
+      <button><p class="font-[Poppins] text-[16px]">Wishlist</p></button>
+      <button><p class="font-[Poppins] text-[16px]">Shop</p></button>
+    </div>
+ 
+    <div class="f-4 sm:w-[175px] flex flex-col gap-[24px] items-center sm:items-start">
+      <h1 class="f-head font-[Poppins] font-[500] text-[24px] tracking-[3%]">Quick Link</h1>
+      <button><p class="font-[Poppins] text-[16px]">Privacy Policy</p></button>
+      <button><p class="font-[Poppins] text-[16px]">Terms Of Use</p></button>
+      <button><p class="font-[Poppins] text-[16px]">FAQ</p></button>
+      <button><p class="font-[Poppins] text-[16px]">Contact</p></button>
+    </div>
+ 
+    <div class="f-5 sm:w-[175px] flex flex-col gap-[24px] items-center sm:items-start">
+      <h1 class="f-head font-[Poppins] font-[500] text-[24px] tracking-[3%]">Download App</h1>
+      <p class="font-[Poppins] text-[12px] text-[var(--heading-color)]">Get 10% off your first order</p>
+      <div class="flex gap-[16px] justify-center sm:justify-between">
+        <div class="qr"><img src="assets/images/card/cardImages/QR Code.svg" alt=""></div>
+        <div class="store flex flex-col gap-[5px]">
+          <img src="assets/images/card/cardImages/appstore.svg" alt="">
+          <img src="assets/images/card/cardImages/googleplay.svg" alt="">
+        </div>
+      </div>
+      <div class="socials flex gap-4 justify-center sm:justify-between w-full">
+        <div class="fb"><img src="assets/images/card/cardImages/facebook.svg" alt=""></div>
+        <div class="twitter"><img src="assets/images/card/cardImages/twitter.svg" alt=""></div>
+        <div class="insta"><img src="assets/images/card/cardImages/instagram.svg" alt=""></div>
+        <div class="linkedin"><img src="assets/images/card/cardImages/linkedin.svg" alt=""></div>
+      </div>
+    </div>
+
+  </div>
+</footer>
 </body>
 <script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-element-bundle.min.js"></script>

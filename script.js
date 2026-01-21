@@ -63,6 +63,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  const profileToggle = document.getElementById("profileToggle");
+const profileDropdown = document.getElementById("profileDropdown");
+const profileMenu = document.getElementById("profileMenu");
+const closeMenu = document.getElementById("closeMenu");
+
+function isMobile() {
+  return window.innerWidth < 640; // Tailwind's sm breakpoint
+}
+
+profileToggle.addEventListener("click", () => {
+  if (isMobile()) {
+    profileMenu.classList.remove("hidden"); // show overlay
+  } else {
+    profileDropdown.classList.toggle("hidden"); // toggle dropdown below button
+  }
+});
+
+closeMenu.addEventListener("click", () => {
+  profileMenu.classList.add("hidden");
+});
+
+// Close dropdown when clicking outside
+document.addEventListener("click", (e) => {
+  if (!profileToggle.contains(e.target) && !profileDropdown.contains(e.target)) {
+    profileDropdown.classList.add("hidden");
+  }
+});
+
   // Timer Countdown
   const daysEl = document.getElementById('days');
   const hoursEl = document.getElementById('hours');
@@ -105,4 +133,5 @@ document.addEventListener('DOMContentLoaded', () => {
   }, 1000);
 
 });
+
 
