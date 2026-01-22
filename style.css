@@ -50,3 +50,43 @@
   font-display: swap;
   src: url("assets/fonts/Inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
 }
+
+*{
+    scroll-behavior: smooth;
+}
+
+/*Floating Button*/
+
+#goTopBtn,.goTopBtn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: none;
+
+  background-color: #fff;
+  border: 2px solid #000;
+  color: #000;
+  font-size: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  display: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#goTopBtn.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#goTopBtn:hover {
+  transform: translateY(-4px);
+}

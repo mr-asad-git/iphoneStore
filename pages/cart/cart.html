@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../tailwind.css">
+    <title>Cart</title>
+</head>
+
+<body class="relative">
+    <a id="pageTop" tabindex="-1"></a>
+    <!-- _-_-_-_-_ Top Header _-_-_-_-_ -->
+
+    <div class="topHeader bg-black w-full h-12 text-center flex justify-between items-center px-4 sm:justify-center">
+        <p
+            class="text-[var(--font-color)] text-[10px] leading-tight whitespace-nowrap overflow-hidden flex justify-center sm:text-sm font-[Poppins] font-[400]">
+            Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
+            <button class="font-bold font-[Poppins] font-[400] ml-2 underline">
+                ShopNow
+            </button>
+        </p>
+
+        <div class="language-select hidden sm:flex justify-center items-center sm:relative sm:left-[15rem]">
+            <img class="h-5 w-5 sm:h-8 sm:w-8" src="../../assets/images/topnavImg/langauge.png" alt="" />
+            <select class="bg-black text-white outline-none text-xs sm:text-sm" name="language" id="language">
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Main Nav  -->
+
+    <div class="mainNav w-full border-b border-gray-200">
+        <div class="flex items-center justify-between px-4 py-3 sm:px-[8%] sm:py-6">
+            <p class="font-Inter font-bold text-[27px] sm:text-2xl">Exclusive</p>
+            <div class="flex items-center gap-3 sm:hidden">
+                <div class="rounded bg-[var(--color-light-gray)] p-1">
+                    <div class="flex items-center gap-2">
+                        <input type="text"
+                            class="outline-none w-[8rem] h-[2rem] bg-[var(--color-light-gray)] indent-2 text-xs placeholder-black"
+                            placeholder="Search" />
+                        <img src="../../assets/images/mainNav/search.svg" alt="Search" />
+                    </div>
+                </div>
+                <button>
+                    <img class="h-6 w-6" src="../../assets/images/mainNav/cart.svg" alt="Cart" />
+                </button>
+                <div class="relative inline-block text-left" id="profileWrapper">
+                    <button id="profileToggleMobile" class="flex items-center">
+                        <img class="h-8 w-8" src="../../assets/images/mainNav/user.svg" alt="Profile" />
+                    </button>
+
+                    <!-- Dropdown -->
+                    <div id="profileDropdownMobile" class="absolute right-0 z-50 mt-2 w-52 rounded-md border border-gray-200 bg-white shadow-lg
+           opacity-0 invisible scale-95 transition-all duration-150 origin-top-right">
+                        <ul class="py-1 text-sm text-gray-700">
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Manage My Account</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">My Order</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">My Cancellations</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">My Reviews</a></li>
+                            <li>
+                                <button class="w-full text-left px-4 py-2 hover:bg-gray-100 text-red-600">
+                                    Logout
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="hidden sm:flex sm:items-center sm:gap-10">
+                <ul class="flex items-center gap-10">
+                    <li>
+                        <a href="../../index.html" class="font-[Poppins] font-[500]">Home</a>
+                    </li>
+                    <li><a href="#" class="font-[Poppins] font-[500]">Contact</a></li>
+                    <li><a href="#" class="font-[Poppins] font-[500]">About</a></li>
+                    <li><a href="#" class="font-[Poppins] font-[500]">Sign Up</a></li>
+                </ul>
+                <div class="rounded bg-[var(--color-light-gray)] p-2">
+                    <div class="flex items-center gap-3">
+                        <input type="text"
+                            class="outline-none w-[13rem] bg-[var(--color-light-gray)] indent-3 text-sm placeholder-black"
+                            placeholder="What are you looking for ?" />
+                        <img src="../../assets/images/mainNav/search.svg" alt="" />
+                    </div>
+                </div>
+                <div class="flex items-center gap-5">
+                    <button class="hidden relative sm:block">
+                        <a href="../wishlist/wishlist.html"><img class="h-5 w-5"
+                                src="../../assets/images/mainNav/favourite.svg" alt="Wishlist" /></a>
+                    </button>
+                    <button class="relative">
+                        <div
+                            class="notification-badge absolute top-[-5px] right-[-5px] w-[15px] h-[15px] rounded-full p-1 bg-[var(--card-color)] text-[12px] text-white flex justify-center items-center">
+                            2</div>
+                        <img class="h-6 w-6" src="../../assets/images/mainNav/cart.svg" alt="Cart" />
+                    </button>
+                    <div class="relative inline-block text-left z-10">
+                        <button id="profileToggleDesktop" class="flex items-center focus:outline-none">
+                            <img class="h-8 w-8" src="../../assets/images/mainNav/user.svg" alt="Profile">
+                        </button>
+
+                        <!-- Dropdown -->
+                        <div id="profileDropdownDesktop"
+                            class="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 invisible transition-all duration-200 origin-top">
+                            <ul class="divide-y divide-gray-100">
+                                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Manage My Account</a>
+                                </li>
+                                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">My Order</a></li>
+                                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">My Cancellations</a>
+                                </li>
+                                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">My Reviews</a></li>
+                                <li><button id="logoutBtn"
+                                        class="w-full text-left px-4 text-sm py-2 hover:bg-gray-100 text-red-600">Logout</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- All data  -->
+
+    <div class="all-data flex flex-col gap-[3rem] pt-[1rem] pb-[6rem] sm:py-[5rem]">
+
+        <div class="bread-hold max-w-[31%]">
+            <div class="breadcrumb flex justify-center items-center gap-2"><a href="../../index.html">
+                    <span class="font-[Poppins] font-[500] text-gray-400">Home /</span>
+                </a><span class="font-[Poppins] font-[400] text-black">Cart</span></div>
+        </div>
+
+        <!-- Cart table -->
+
+        <div class="flex justify-center">
+            <div class="table-div max-w-[75%] w-full">
+                <div class="overflow-x-auto sm:overflow-visible -mx-4 sm:mx-0">
+                    <table
+                        class="min-w-[640px] sm:min-w-0 text-center table-auto w-full border-separate border-spacing-y-10">
+                        <thead>
+                            <tr class="shadow-lg">
+                                <th class="py-5">Product</th>
+                                <th class="py-5">Price</th>
+                                <th class="py-5">Quantity</th>
+                                <th class="py-5">Subtotal</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr class="bg-white shadow-lg">
+                                <td class="py-5">
+                                    <div class="flex items-center gap-3 justify-center">
+                                        <div class="prod-img relative">
+                                            <img src="../../assets/images/card/cardImages/b1.png"
+                                                class="w-[54px] h-[54px]" alt="">
+                                            <div
+                                                class="notification-badge absolute top-[-5px] left-[1px] w-[15px] h-[15px] rounded-full p-1 bg-[var(--card-color)] text-[12px] text-white flex justify-center items-center">
+                                                <button class="button">x</button>
+                                            </div>
+                                        </div>
+                                        <p class="font-[Poppins] font-[500]">Men's Winter Coat</p>
+                                    </div>
+                                </td>
+                                <td class="py-5">$100</td>
+                                <td class="py-5">
+                                    <input type="number" min="1" value="1"
+                                        class="w-[48px] h-[40px] border-2 border-gray-400 text-center">
+                                </td>
+                                <td class="py-5">$100</td>
+                            </tr>
+
+                            <tr class="shadow-lg bg-white">
+                                <td class="py-5">
+                                    <div class="flex items-center gap-3 justify-center">
+                                        <div class="prod-img relative">
+                                            <img src="../../assets/images/card/cardImages/b2.png"
+                                                class="w-[54px] h-[54px]" alt="">
+                                            <div
+                                                class="notification-badge absolute top-[-5px] left-[1px] w-[15px] h-[15px] rounded-full p-1 bg-[var(--card-color)] text-[12px] text-white flex justify-center items-center">
+                                                <button class="button">x</button>
+                                            </div>
+                                        </div>
+                                        <p class="font-[Poppins] font-[500]">Women's bag</p>
+                                    </div>
+                                </td>
+                                <td class="py-5">$100</td>
+                                <td class="py-5">
+                                    <input type="number" min="1" value="1"
+                                        class="w-[48px] h-[40px] border-2 border-gray-400 text-center">
+                                </td>
+                                <td class="py-5">$100</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Actions -->
+                <div class="wrap flex justify-between mt-4">
+                    <button>
+                        <div
+                            class="button h-[38px] sm:h-[56px] rounded-[4px] w-[140px] sm:w-[170px] border-[1px] border-[#000] flex justify-center items-center">
+                            <p class="font-[Poppins] text-[14px] sm:text-[16px] text-[#000] font-bold">Return to Shop
+                            </p>
+                        </div>
+                    </button>
+                    <button>
+                        <div
+                            class="button h-[38px] sm:h-[56px] rounded-[4px] w-[140px] sm:w-[170px] border-[1px] border-[#000] flex justify-center items-center">
+                            <p class="font-[Poppins] text-[14px] sm:text-[16px] text-[#000] font-bold">Update Cart</p>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Checkout -->
+                <div class="checkout mt-[4rem] flex flex-col gap-10 sm:flex-row sm:justify-between">
+                    <div class="coupon flex flex-row sm:flex-row gap-5">
+                        <input type="text"
+                            class="border-2 border-gray-400 h-[48px] w-[250px] sm:h-[56px] rounded-[4px] sm:w-[300px] indent-4"
+                            placeholder="Coupon Code">
+                        <button
+                            class="bg-[var(--card-color)] rounded-[4px] font-[Poppins] font-[400] text-white text-[14px] w-[150px] h-[48px] sm:h-[56px] sm:w-[150px]">Apply
+                            Coupon</button>
+                    </div>
+
+                    <div
+                        class="main-checkout h-[324px] w-[370px] p-5 border-[2px] rounded-[4px] border-gray-700 flex flex-col text-start">
+                        <h1 class="font-[Poppins] font-[500] text-[20px] text-[#000]">Cart Total</h1>
+                        <div class="subtotal py-4 flex border-b border-gray-700 justify-between">
+                            <p>Subtotal</p>
+                            <p>$100</p>
+                        </div>
+                        <div class="shipping py-4 flex border-b border-gray-700 justify-between">
+                            <p>Shipping</p>
+                            <p>Free</p>
+                        </div>
+                        <div class="total py-4 flex justify-between">
+                            <p>Total</p>
+                            <p>$100</p>
+                        </div>
+                        <div class="check-button flex justify-center items-center">
+                            <button
+                                class="bg-[var(--card-color)] rounded-[4px] font-[Poppins] font-[400] text-white h-[56px] w-[250px]">Proceed
+                                to checkout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+    <!-- Footer  -->
+
+    <footer class="w-full bg-black flex justify-center items-center py-10 sm:h-[440px]">
+        <div
+            class="footer-data flex flex-col sm:flex-row sm:justify-between sm:w-[1170px] sm:h-[236px] text-white gap-10 sm:gap-0 text-center sm:text-left">
+            <div class="f-1 sm:w-[217px] flex flex-col gap-[24px] items-center sm:items-start">
+                <h1 class="f-head font-[Poppins] font-[500] text-[24px] tracking-[3%]">
+                    Exclusive
+                </h1>
+                <button class="font-[Poppins] font-[400] text-[16px] leading-[24px] tracking-[3%]">
+                    Subscribe
+                </button>
+                <p class="font-[Poppins] font-[400] text-[16px] leading-[24px] tracking-[3%]">
+                    Get 10% off your first order
+                </p>
+                <div class="search flex items-center border-[1px] p-2 border-white rounded-[4px] w-full sm:w-auto">
+                    <input class="outline-none bg-black placeholder:text-gray-600 indent-2 flex-1" type="text"
+                        placeholder="Enter your email" />
+                    <img class="w-[24px] h-[24px]" src="../../assets/images/card/cardImages/icon-send.svg" alt="" />
+                </div>
+            </div>
+
+            <div class="f-2 sm:w-[175px] flex flex-col gap-[24px] items-center sm:items-start">
+                <h1 class="f-head font-[Poppins] font-[500] text-[24px] tracking-[3%]">
+                    Support
+                </h1>
+                <p class="font-[Poppins] font-[400] text-[16px] leading-[24px] tracking-[3%]">
+                    111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.
+                </p>
+                <p class="font-[Poppins] font-[400] text-[16px] leading-[24px] tracking-[3%]">
+                    exclusive@gmail.com
+                </p>
+                <p class="font-[Poppins] font-[400] text-[16px] leading-[24px] tracking-[3%]">
+                    +88015-0000-0000
+                </p>
+            </div>
+
+            <div class="f-3 sm:w-[175px] flex flex-col gap-[24px] items-center sm:items-start">
+                <h1 class="f-head font-[Poppins] font-[500] text-[24px] tracking-[3%]">
+                    Account
+                </h1>
+                <button>
+                    <p class="font-[Poppins] text-[16px]">My Account</p>
+                </button>
+                <button>
+                    <p class="font-[Poppins] text-[16px]">Login / Register</p>
+                </button>
+                <button>
+                    <p class="font-[Poppins] text-[16px]">Cart</p>
+                </button>
+                <button>
+                    <p class="font-[Poppins] text-[16px]">Wishlist</p>
+                </button>
+                <button>
+                    <p class="font-[Poppins] text-[16px]">Shop</p>
+                </button>
+            </div>
+
+            <div class="f-4 sm:w-[175px] flex flex-col gap-[24px] items-center sm:items-start">
+                <h1 class="f-head font-[Poppins] font-[500] text-[24px] tracking-[3%]">
+                    Quick Link
+                </h1>
+                <button>
+                    <p class="font-[Poppins] text-[16px]">Privacy Policy</p>
+                </button>
+                <button>
+                    <p class="font-[Poppins] text-[16px]">Terms Of Use</p>
+                </button>
+                <button>
+                    <p class="font-[Poppins] text-[16px]">FAQ</p>
+                </button>
+                <button>
+                    <p class="font-[Poppins] text-[16px]">Contact</p>
+                </button>
+            </div>
+
+            <div class="f-5 sm:w-[175px] flex flex-col gap-[24px] items-center sm:items-start">
+                <h1 class="f-head font-[Poppins] font-[500] text-[24px] tracking-[3%]">
+                    Download App
+                </h1>
+                <p class="font-[Poppins] text-[12px] text-[var(--heading-color)]">
+                    Get 10% off your first order
+                </p>
+                <div class="flex gap-[16px] justify-center sm:justify-between">
+                    <div class="qr">
+                        <img src="../../assets/images/card/cardImages/QR Code.svg" alt="" />
+                    </div>
+                    <div class="store flex flex-col gap-[5px]">
+                        <img src="../../assets/images/card/cardImages/appstore.svg" alt="" />
+                        <img src="../../assets/images/card/cardImages/googleplay.svg" alt="" />
+                    </div>
+                </div>
+                <div class="socials flex gap-4 justify-center sm:justify-between w-full">
+                    <div class="fb">
+                        <img src="../../assets/images/card/cardImages/facebook.svg" alt="" />
+                    </div>
+                    <div class="twitter">
+                        <img src="../../assets/images/card/cardImages/twitter.svg" alt="" />
+                    </div>
+                    <div class="insta">
+                        <img src="../../assets/images/card/cardImages/instagram.svg" alt="" />
+                    </div>
+                    <div class="linkedin">
+                        <img src="../../assets/images/card/cardImages/linkedin.svg" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button id="goTopBtn"
+        class="fixed bottom-6 right-6 hidden h-11 w-11 rounded-full bg-black text-white text-xl z-[9999]">
+        ↑
+    </button>
+</body>
+<script src="../../script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-element-bundle.min.js"></script>
+
+</html>
