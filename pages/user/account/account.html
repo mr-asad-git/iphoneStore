@@ -2,15 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../style.css">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../../../style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../../tailwind.css">
-    <title>Cart</title>
+    <link rel="stylesheet" href="../../../tailwind.css">
 </head>
 
-<body class="relative">
+<body>
+
     <a id="pageTop" tabindex="-1"></a>
     <!-- _-_-_-_-_ Top Header _-_-_-_-_ -->
 
@@ -24,7 +23,7 @@
         </p>
 
         <div class="language-select hidden sm:flex justify-center items-center sm:relative sm:left-[15rem]">
-            <img class="h-5 w-5 sm:h-8 sm:w-8" src="../../assets/images/topnavImg/langauge.png" alt="" />
+            <img class="h-5 w-5 sm:h-8 sm:w-8" src="../../../assets/images/topnavImg/langauge.png" alt="" />
             <select class="bg-black text-white outline-none text-xs sm:text-sm" name="language" id="language">
                 <option value="en">English</option>
                 <option value="es">Spanish</option>
@@ -44,22 +43,25 @@
                         <input type="text"
                             class="outline-none w-[8rem] h-[2rem] bg-[var(--color-light-gray)] indent-2 text-xs placeholder-black"
                             placeholder="Search" />
-                        <img src="../../assets/images/mainNav/search.svg" alt="Search" />
+                        <img src="../../../assets/images/mainNav/search.svg" alt="Search" />
                     </div>
                 </div>
-                <button>
-                    <img class="h-6 w-6" src="../../assets/images/mainNav/cart.svg" alt="Cart" />
-                </button>
+                <a href="../../cart/cart.html">
+                    <button>
+                        <img class="h-6 w-6" src="../../../assets/images/mainNav/cart.svg" alt="Cart" />
+                    </button>
+                </a>
                 <div class="relative inline-block text-left" id="profileWrapper">
                     <button id="profileToggleMobile" class="flex items-center">
-                        <img class="h-8 w-8" src="../../assets/images/mainNav/user.svg" alt="Profile" />
+                        <img class="h-8 w-8" src="../../../assets/images/mainNav/user.svg" alt="Profile" />
                     </button>
 
                     <!-- Dropdown -->
                     <div id="profileDropdownMobile" class="absolute right-0 z-50 mt-2 w-52 rounded-md border border-gray-200 bg-white shadow-lg
            opacity-0 invisible scale-95 transition-all duration-150 origin-top-right">
                         <ul class="py-1 text-sm text-gray-700">
-                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Manage My Account</a></li>
+                            <li><a href="../account/account.html" class="block px-4 py-2 hover:bg-gray-100">Manage My
+                                    Account</a></li>
                             <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">My Order</a></li>
                             <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">My Cancellations</a></li>
                             <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">My Reviews</a></li>
@@ -77,7 +79,7 @@
             <div class="hidden sm:flex sm:items-center sm:gap-10">
                 <ul class="flex items-center gap-10">
                     <li>
-                        <a href="../../index.html" class="font-[Poppins] font-[500]">Home</a>
+                        <a href="../../../index.html" class="font-[Poppins] font-[500]">Home</a>
                     </li>
                     <li><a href="#" class="font-[Poppins] font-[500]">Contact</a></li>
                     <li><a href="#" class="font-[Poppins] font-[500]">About</a></li>
@@ -88,30 +90,33 @@
                         <input type="text"
                             class="outline-none w-[13rem] bg-[var(--color-light-gray)] indent-3 text-sm placeholder-black"
                             placeholder="What are you looking for ?" />
-                        <img src="../../assets/images/mainNav/search.svg" alt="" />
+                        <img src="../../../assets/images/mainNav/search.svg" alt="" />
                     </div>
                 </div>
                 <div class="flex items-center gap-5">
                     <button class="hidden relative sm:block">
-                        <a href="../wishlist/wishlist.html"><img class="h-5 w-5"
-                                src="../../assets/images/mainNav/favourite.svg" alt="Wishlist" /></a>
+                        <a href="../../wishlist/wishlist.html"><img class="h-5 w-5"
+                                src="../../../assets/images/mainNav/favourite.svg" alt="Wishlist" /></a>
                     </button>
-                    <button class="relative">
-                        <div
-                            class="notification-badge absolute top-[-5px] right-[-5px] w-[15px] h-[15px] rounded-full p-1 bg-[var(--card-color)] text-[12px] text-white flex justify-center items-center">
-                            2</div>
-                        <img class="h-6 w-6" src="../../assets/images/mainNav/cart.svg" alt="Cart" />
-                    </button>
+                    <a href="../../cart/cart.html">
+                        <button class="relative">
+                            <div
+                                class="notification-badge absolute top-[-5px] right-[-5px] w-[15px] h-[15px] rounded-full p-1 bg-[var(--card-color)] text-[12px] text-white flex justify-center items-center">
+                                2</div>
+                            <img class="h-6 w-6" src="../../../assets/images/mainNav/cart.svg" alt="Cart" />
+                        </button>
+                    </a>
                     <div class="relative inline-block text-left z-10">
                         <button id="profileToggleDesktop" class="flex items-center focus:outline-none">
-                            <img class="h-8 w-8" src="../../assets/images/mainNav/user.svg" alt="Profile">
+                            <img class="h-8 w-8" src="../../../assets/images/mainNav/user.svg" alt="Profile">
                         </button>
 
                         <!-- Dropdown -->
                         <div id="profileDropdownDesktop"
                             class="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 invisible transition-all duration-200 origin-top">
                             <ul class="divide-y divide-gray-100">
-                                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Manage My Account</a>
+                                <li><a href="../account/account.html"
+                                        class="block px-4 py-2 text-sm hover:bg-gray-100">Manage My Account</a>
                                 </li>
                                 <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">My Order</a></li>
                                 <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">My Cancellations</a>
@@ -129,141 +134,139 @@
         </div>
     </div>
 
+
+
     <!-- All data  -->
 
-    <div class="all-data flex flex-col gap-[3rem] pt-[1rem] pb-[6rem] sm:py-[5rem]">
+    <div class="all-data flex flex-col gap-[3rem] pt-[1rem] sm:pb-[10rem] sm:py-[5rem]">
 
-        <div class="bread-hold max-w-[31%]">
-            <div class="breadcrumb flex justify-center items-center gap-2"><a href="../../index.html">
-                    <span class="font-[Poppins] font-[500] text-gray-400">Home /</span>
-                </a><span class="font-[Poppins] font-[400] text-black">Cart</span></div>
-        </div>
-
-        <!-- Cart table -->
-
-        <div class="flex justify-center">
-            <div class="table-div max-w-[75%] w-full">
-                <div class="overflow-x-auto sm:overflow-visible -mx-4 sm:mx-0">
-                    <table
-                        class="min-w-[640px] sm:min-w-0 text-center table-auto w-full border-separate border-spacing-y-10">
-                        <thead>
-                            <tr class="shadow-lg">
-                                <th class="py-5">Product</th>
-                                <th class="py-5">Price</th>
-                                <th class="py-5">Quantity</th>
-                                <th class="py-5">Subtotal</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr class="bg-white shadow-lg">
-                                <td class="py-5">
-                                    <div class="flex items-center gap-3 justify-center">
-                                        <div class="prod-img relative">
-                                            <img src="../../assets/images/card/cardImages/b1.png"
-                                                class="w-[54px] h-[54px]" alt="">
-                                            <div
-                                                class="notification-badge absolute top-[-5px] left-[1px] w-[15px] h-[15px] rounded-full p-1 bg-[var(--card-color)] text-[12px] text-white flex justify-center items-center">
-                                                <button class="button">x</button>
-                                            </div>
-                                        </div>
-                                        <p class="font-[Poppins] font-[500]">Men's Winter Coat</p>
-                                    </div>
-                                </td>
-                                <td class="py-5">$100</td>
-                                <td class="py-5">
-                                    <input type="number" min="1" value="1"
-                                        class="w-[48px] h-[40px] border-2 border-gray-400 text-center">
-                                </td>
-                                <td class="py-5">$100</td>
-                            </tr>
-
-                            <tr class="shadow-lg bg-white">
-                                <td class="py-5">
-                                    <div class="flex items-center gap-3 justify-center">
-                                        <div class="prod-img relative">
-                                            <img src="../../assets/images/card/cardImages/b2.png"
-                                                class="w-[54px] h-[54px]" alt="">
-                                            <div
-                                                class="notification-badge absolute top-[-5px] left-[1px] w-[15px] h-[15px] rounded-full p-1 bg-[var(--card-color)] text-[12px] text-white flex justify-center items-center">
-                                                <button class="button">x</button>
-                                            </div>
-                                        </div>
-                                        <p class="font-[Poppins] font-[500]">Women's bag</p>
-                                    </div>
-                                </td>
-                                <td class="py-5">$100</td>
-                                <td class="py-5">
-                                    <input type="number" min="1" value="1"
-                                        class="w-[48px] h-[40px] border-2 border-gray-400 text-center">
-                                </td>
-                                <td class="py-5">$100</td>
-                            </tr>
-                        </tbody>
-                    </table>
+        <div class="bread-hold max-w-[100%] px-[10%] font-[Poppins]">
+            <div class="breadcrumb flex justify-between items-center gap-2">
+                <div class="bread-route">
+                    <span class="font-[500] text-gray-400">Account /</span>
+                    <span class="font-[400] text-black">My Account</span>
                 </div>
-
-                <!-- Actions -->
-                <div class="wrap flex justify-between mt-4">
-                    <button>
-                        <div
-                            class="button h-[38px] sm:h-[56px] rounded-[4px] w-[140px] sm:w-[170px] border-[1px] border-[#000] flex justify-center items-center">
-                            <p class="font-[Poppins] text-[14px] sm:text-[16px] text-[#000] font-bold">Return to Shop
-                            </p>
-                        </div>
-                    </button>
-                    <button>
-                        <div
-                            class="button h-[38px] sm:h-[56px] rounded-[4px] w-[140px] sm:w-[170px] border-[1px] border-[#000] flex justify-center items-center">
-                            <p class="font-[Poppins] text-[14px] sm:text-[16px] text-[#000] font-bold">Update Cart</p>
-                        </div>
-                    </button>
-                </div>
-
-                <!-- Checkout -->
-                <div class="checkout mt-[4rem] flex flex-col gap-10 sm:flex-row sm:justify-between">
-                    <div class="coupon flex flex-row sm:flex-row gap-5">
-                        <input type="text"
-                            class="border-2 border-gray-400 h-[48px] w-[250px] sm:h-[56px] rounded-[4px] sm:w-[300px] indent-4"
-                            placeholder="Coupon Code">
-                        <button
-                            class="bg-[var(--card-color)] rounded-[4px] font-[Poppins] font-[400] text-white text-[14px] w-[150px] h-[48px] sm:h-[56px] sm:w-[150px]">Apply
-                            Coupon</button>
-                    </div>
-
-                    <div
-                        class="main-checkout h-[324px] w-[370px] p-5 border-[2px] rounded-[4px] border-gray-700 flex flex-col text-start">
-                        <h1 class="font-[Poppins] font-[500] text-[20px] text-[#000]">Cart Total</h1>
-                        <div class="subtotal py-4 flex border-b border-gray-700 justify-between">
-                            <p>Subtotal</p>
-                            <p>$100</p>
-                        </div>
-                        <div class="shipping py-4 flex border-b border-gray-700 justify-between">
-                            <p>Shipping</p>
-                            <p>Free</p>
-                        </div>
-                        <div class="total py-4 flex justify-between">
-                            <p>Total</p>
-                            <p>$100</p>
-                        </div>
-                        <div class="check-button flex justify-center items-center">
-                            <a href="../checkout/checkout.html">
-                                <button
-                                    class="bg-[var(--card-color)] rounded-[4px] font-[Poppins] font-[400] text-white h-[56px] w-[250px]">Proceed
-                                    to checkout</button>
-                            </a>
-                        </div>
-                    </div>
+                <div class="bread-user">
+                    <p class="font-[400]">Welcome! <span class="font-[500] text-[var(--card-color)]">Mr Asad
+                            Ullah</span></p>
                 </div>
             </div>
         </div>
 
 
+        <div class="account-div w-full flex justify-center">
+            <div class="account-wrap flex flex-row w-[80%]">
+                <div class="account-nav w-[30%] h-[90vh] font-[Poppins] flex flex-col gap-2">
 
+                    <h1 class="font-[500] text-[16px]">Manage My Account</h1>
+
+                    <div class="manage-account ml-10 w-[60%] flex flex-col gap-2">
+                        <p
+                            class="font-[500] text-[16px] text-[var(--text-color)] hover:text-[var(--card-color)] cursor-pointer">
+                            My
+                            profile</p>
+                        <p
+                            class="font-[500] text-[16px] text-[var(--text-color)] hover:text-[var(--card-color)] cursor-pointer">
+                            Address
+                            Book</p>
+                        <p
+                            class="font-[500] text-[16px] text-[var(--text-color)] hover:text-[var(--card-color)] cursor-pointer">
+                            My Payment Options</p>
+                    </div>
+
+                    <h1 class="font-[500] text-[16px]">My Orders</h1>
+
+                    <div class="my-orders pl-10 w-[60%] flex flex-col gap-2">
+                        <p
+                            class="font-[500] text-[16px] text-[var(--text-color)] hover:text-[var(--card-color)] cursor-pointer">
+                            My
+                            Returns</p>
+                        <p
+                            class="font-[500] text-[16px] text-[var(--text-color)] hover:text-[var(--card-color)] cursor-pointer">
+                            My Cancellations</p>
+                    </div>
+
+                    <h1 class="font-[500] text-[16px]">My Wishlist</h1>
+
+                </div>
+                <div class="account-info w-[70%] h-[90vh] shadow-lg">
+                    <div class="profile sm:py-10 sm:px-20 flex justify-left items-center">
+                        <div class="profile-wrap flex flex-col gap-5">
+                            <div class="profile-head">
+                                <h1 class="font-[500] text-[20px] text-[var(--card-color)]">Edit Your Profile</h1>
+
+
+                                <form action="" class="flex flex-col gap-[32px]">
+
+                                    <div class="flex flex-row gap-[40px]">
+                                        <div class="form-group flex flex-col gap-1">
+                                            <label class="font-[Poppins] font-[500] text-[16px] text-gray-400"
+                                                for="">First
+                                                Name</label>
+                                            <input type="text"
+                                                class="font-[Poppins] font-[500] w-[330px] h-[50px] bg-[var(--color-light-gray)] rounded-[4px] outline-none indent-3"
+                                                placeholder="Muhammad">
+                                        </div>
+
+                                        <div class="form-group flex flex-col gap-1">
+                                            <label class="font-[Poppins] font-[500] text-[16px] text-gray-400"
+                                                for="">Last
+                                                Name</label>
+                                            <input type="text"
+                                                class="font-[Poppins] font-[500] w-[330px] h-[50px] bg-[var(--color-light-gray)] rounded-[4px] outline-none indent-3"
+                                                placeholder="Asad Ullah">
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-row gap-[40px]">
+                                        <div class="form-group flex flex-col gap-1">
+                                            <label class="font-[Poppins] font-[500] text-[16px] text-gray-400"
+                                                for="">Email
+                                            </label>
+                                            <input type="text"
+                                                class="font-[Poppins] font-[500] w-[330px] h-[50px] bg-[var(--color-light-gray)] rounded-[4px] outline-none indent-3"
+                                                placeholder="buttasad569@gmail.com">
+                                        </div>
+
+                                        <div class="form-group flex flex-col gap-1">
+                                            <label class="font-[Poppins] font-[500] text-[16px] text-gray-400"
+                                                for="">Address</label>
+                                            <input type="text"
+                                                class="font-[Poppins] font-[500] w-[330px] h-[50px] bg-[var(--color-light-gray)] rounded-[4px] outline-none indent-3"
+                                                placeholder="House No. 123, Street No. 456, City, State - 123456">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group flex flex-col gap-5">
+                                        <label class="font-[Poppins] font-[500] text-[16px] text-gray-400"
+                                            for="">Password Changes</label>
+                                        <input type="text"
+                                            class="font-[Poppins] font-[500] w-[470px] h-[50px] bg-[var(--color-light-gray)] rounded-[4px] outline-none indent-3"
+                                            placeholder="Current Password">
+                                        <input type="text"
+                                            class="font-[Poppins] font-[500] w-[470px] h-[50px] bg-[var(--color-light-gray)] rounded-[4px] outline-none indent-3"
+                                            placeholder="New Password">
+                                        <input type="text"
+                                            class="font-[Poppins] font-[500] w-[470px] h-[50px] bg-[var(--color-light-gray)] rounded-[4px] outline-none indent-3"
+                                            placeholder="Confirm New Password">
+                                    </div>
+
+                                    <div class="order-place-button flex justify-end gap-8">
+                                        <button
+                                            class="rounded-[4px] font-[Poppins] font-[400] text-black text-[14px] w-[120px] h-[56px]">Cancel</button>
+                                        <button
+                                            class="bg-[var(--card-color)] rounded-[4px] font-[Poppins] font-[400] text-white text-[14px] w-[214px] h-[56px]">Save
+                                            Changes</button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-
-
 
     <!-- Footer  -->
 
@@ -283,7 +286,7 @@
                 <div class="search flex items-center border-[1px] p-2 border-white rounded-[4px] w-full sm:w-auto">
                     <input class="outline-none bg-black placeholder:text-gray-600 indent-2 flex-1" type="text"
                         placeholder="Enter your email" />
-                    <img class="w-[24px] h-[24px]" src="../../assets/images/card/cardImages/icon-send.svg" alt="" />
+                    <img class="w-[24px] h-[24px]" src="../../../assets/images/card/cardImages/icon-send.svg" alt="" />
                 </div>
             </div>
 
@@ -350,25 +353,25 @@
                 </p>
                 <div class="flex gap-[16px] justify-center sm:justify-between">
                     <div class="qr">
-                        <img src="../../assets/images/card/cardImages/QR Code.svg" alt="" />
+                        <img src="../../../assets/images/card/cardImages/QR Code.svg" alt="" />
                     </div>
                     <div class="store flex flex-col gap-[5px]">
-                        <img src="../../assets/images/card/cardImages/appstore.svg" alt="" />
-                        <img src="../../assets/images/card/cardImages/googleplay.svg" alt="" />
+                        <img src="../../../assets/images/card/cardImages/appstore.svg" alt="" />
+                        <img src="../../../assets/images/card/cardImages/googleplay.svg" alt="" />
                     </div>
                 </div>
                 <div class="socials flex gap-4 justify-center sm:justify-between w-full">
                     <div class="fb">
-                        <img src="../../assets/images/card/cardImages/facebook.svg" alt="" />
+                        <img src="../../../assets/images/card/cardImages/facebook.svg" alt="" />
                     </div>
                     <div class="twitter">
-                        <img src="../../assets/images/card/cardImages/twitter.svg" alt="" />
+                        <img src="../../../assets/images/card/cardImages/twitter.svg" alt="" />
                     </div>
                     <div class="insta">
-                        <img src="../../assets/images/card/cardImages/instagram.svg" alt="" />
+                        <img src="../../../assets/images/card/cardImages/instagram.svg" alt="" />
                     </div>
                     <div class="linkedin">
-                        <img src="../../assets/images/card/cardImages/linkedin.svg" alt="" />
+                        <img src="../../../assets/images/card/cardImages/linkedin.svg" alt="" />
                     </div>
                 </div>
             </div>
@@ -378,8 +381,9 @@
         class="fixed bottom-6 right-6 hidden h-11 w-11 rounded-full bg-black text-white text-xl z-[9999]">
         ↑
     </button>
+
 </body>
-<script src="../../script.js"></script>
+<script src="../../../script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-element-bundle.min.js"></script>
 
 </html>
