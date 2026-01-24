@@ -50,9 +50,9 @@
           </div>
         </div>
         <button>
-          <a href="/pages/cart/cart.html"><img class="h-6 w-6" src="assets/images/mainNav/cart.svg" alt="Cart" /></a>
+          <a href="pages/cart/cart.html"><img class="h-6 w-6" src="assets/images/mainNav/cart.svg" alt="Cart" /></a>
         </button>
-        <div class="relative inline-block text-left" id="profileWrapper">
+        <div class="relative inline-block text-left" class="profileWrapper">
           <button id="profileToggleMobile" class="flex items-center">
             <img class="h-8 w-8" src="../../assets/images/mainNav/user.svg" alt="Profile" />
           </button>
@@ -61,7 +61,9 @@
           <div id="profileDropdownMobile" class="absolute right-0 z-50 mt-2 w-52 rounded-md border border-gray-200 bg-white shadow-lg
            opacity-0 invisible scale-95 transition-all duration-150 origin-top-right">
             <ul class="py-1 text-sm text-gray-700">
-              <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Manage My Account</a></li>
+              <li><a href="pages/user/userAccount.html" class="block px-4 py-2 hover:bg-gray-100">Manage
+                  My
+                  Account</a></li>
               <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">My Order</a></li>
               <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">My Cancellations</a></li>
               <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">My Reviews</a></li>
@@ -83,11 +85,12 @@
           <div id="menuDropdown" class="absolute right-0 z-50 mt-2 w-52 rounded-md border border-gray-200 bg-white shadow-lg
            opacity-0 invisible scale-95 transition-all duration-150 origin-top-right">
             <ul class="py-1 text-sm text-gray-700">
-              <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Home</a></li>
-              <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Contact</a></li>
-              <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">About</a></li>
-              <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Wishlist</a></li>
-              <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Cart</a></li>
+              <li><a href="#" class="block px-4 py-2 bg-gray-100">Home</a></li>
+              <li><a href="../../pages/contact/contact.html" class="block px-4 py-2 hover:bg-gray-100">Contact</a></li>
+              <li><a href="../../pages/about/about.html" class="block px-4 py-2 hover:bg-gray-100">About</a></li>
+              <li><a href="../../pages/wishlist/wishlist.html" class="block px-4 py-2 hover:bg-gray-100">Wishlist</a>
+              </li>
+              <li><a href="../../pages/cart/cart.html" class="block px-4 py-2 hover:bg-gray-100">Cart</a></li>
               <li>
                 <button class="w-full text-left px-4 py-2 hover:bg-gray-100 text-red-600">
                   Logout
@@ -103,8 +106,8 @@
           <li>
             <a href="#" class="underline underline-offset-8 font-[Poppins] font-[500]">Home</a>
           </li>
-          <li><a href="#" class="font-[Poppins] font-[500]">Contact</a></li>
-          <li><a href="#" class="font-[Poppins] font-[500]">About</a></li>
+          <li><a href="pages/contact/contact.html" class="font-[Poppins] font-[500]">Contact</a></li>
+          <li><a href="pages/about/about.html" class="font-[Poppins] font-[500]">About</a></li>
           <li><a href="#" class="font-[Poppins] font-[500]">Sign Up</a></li>
         </ul>
         <div class="rounded bg-[var(--color-light-gray)] p-2">
@@ -132,7 +135,8 @@
             <div id="profileDropdownDesktop"
               class="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 invisible transition-all duration-200 origin-top">
               <ul class="divide-y divide-gray-100">
-                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Manage My Account</a></li>
+                <li><a href="pages/user/userAccount.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Manage My
+                    Account</a></li>
                 <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">My Order</a></li>
                 <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">My Cancellations</a></li>
                 <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">My Reviews</a></li>
@@ -1860,7 +1864,7 @@
 
     <!-- New Arrival Section -->
 
-    <section class="new-section flex justify-center items-center">
+    <section class="new-section w-[100%] sm:w-full flex justify-center items-center">
       <div class="new-section flex flex-col gap-[40px] w-[90%] sm:w-[75%] sm:h-[768px]">
         <div class="new-text flex flex-col gap-[24px] block">
           <div class="highlight flex items-center gap-2">

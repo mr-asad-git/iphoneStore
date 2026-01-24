@@ -9,8 +9,8 @@
 </head>
 
 <body>
-
     <a id="pageTop" tabindex="-1"></a>
+
     <!-- _-_-_-_-_ Top Header _-_-_-_-_ -->
 
     <div class="topHeader bg-black w-full h-12 text-center flex justify-between items-center px-4 sm:justify-center">
@@ -22,7 +22,7 @@
             </button>
         </p>
 
-        <div class="language-select hidden sm:flex justify-center items-center sm:relative sm:left-[15rem]">
+        <div class="language-select sm:hidden sm:flex justify-center items-center sm:relative sm:left-[15rem]">
             <img class="h-5 w-5 sm:h-8 sm:w-8" src="../../../assets/images/topnavImg/langauge.png" alt="" />
             <select class="bg-black text-white outline-none text-xs sm:text-sm" name="language" id="language">
                 <option value="en">English</option>
@@ -32,7 +32,6 @@
         </div>
     </div>
 
-    <!-- Main Nav  -->
 
     <div class="mainNav w-full border-b border-gray-200">
         <div class="flex items-center justify-between px-4 py-3 sm:px-[8%] sm:py-6">
@@ -51,12 +50,11 @@
                         <img class="h-6 w-6" src="../../../assets/images/mainNav/cart.svg" alt="Cart" />
                     </button>
                 </a>
-                <div class="relative inline-block text-left" id="profileWrapper">
+                <div class="relative inline-block text-left" class="profileWrapper">
                     <button id="profileToggleMobile" class="flex items-center">
                         <img class="h-8 w-8" src="../../../assets/images/mainNav/user.svg" alt="Profile" />
                     </button>
 
-                    <!-- Dropdown -->
                     <div id="profileDropdownMobile" class="absolute right-0 z-50 mt-2 w-52 rounded-md border border-gray-200 bg-white shadow-lg
            opacity-0 invisible scale-95 transition-all duration-150 origin-top-right">
                         <ul class="py-1 text-sm text-gray-700">
@@ -81,9 +79,10 @@
                     <li>
                         <a href="../../../index.html" class="font-[Poppins] font-[500]">Home</a>
                     </li>
-                    <li><a href="#" class="font-[Poppins] font-[500]">Contact</a></li>
-                    <li><a href="#" class="font-[Poppins] font-[500]">About</a></li>
-                    <li><a href="#" class="font-[Poppins] font-[500]">Sign Up</a></li>
+                    <li><a href="../../../pages/contact/contact.html" class="font-[Poppins] font-[500]">Contact</a></li>
+                    <li><a href="../../../pages/about/about.html" class="font-[Poppins] font-[500]">About</a></li>
+                    <li><a href="../../../pages/user/signUp/signUp.html" class="font-[Poppins] font-[500]">Sign Up</a>
+                    </li>
                 </ul>
                 <div class="rounded bg-[var(--color-light-gray)] p-2">
                     <div class="flex items-center gap-3">
@@ -98,14 +97,14 @@
                         <a href="../../wishlist/wishlist.html"><img class="h-5 w-5"
                                 src="../../../assets/images/mainNav/favourite.svg" alt="Wishlist" /></a>
                     </button>
-                    <a href="../../cart/cart.html">
-                        <button class="relative">
+                    <button class="relative">
+                        <a href="../../cart/cart.html">
                             <div
                                 class="notification-badge absolute top-[-5px] right-[-5px] w-[15px] h-[15px] rounded-full p-1 bg-[var(--card-color)] text-[12px] text-white flex justify-center items-center">
                                 2</div>
                             <img class="h-6 w-6" src="../../../assets/images/mainNav/cart.svg" alt="Cart" />
-                        </button>
-                    </a>
+                        </a>
+                    </button>
                     <div class="relative inline-block text-left z-10">
                         <button id="profileToggleDesktop" class="flex items-center focus:outline-none">
                             <img class="h-8 w-8" src="../../../assets/images/mainNav/user.svg" alt="Profile">
@@ -115,9 +114,6 @@
                         <div id="profileDropdownDesktop"
                             class="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 invisible transition-all duration-200 origin-top">
                             <ul class="divide-y divide-gray-100">
-                                <li><a href="../account/account.html"
-                                        class="block px-4 py-2 text-sm hover:bg-gray-100">Manage My Account</a>
-                                </li>
                                 <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">My Order</a></li>
                                 <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">My Cancellations</a>
                                 </li>
@@ -138,124 +134,117 @@
 
     <!-- All data  -->
 
-    <div class="all-data flex flex-col gap-[3rem] pt-[1rem] sm:pb-[10rem] sm:py-[5rem]">
+    <div class="all-data flex flex-col gap-12 pt-4 sm:pb-40 py-20">
 
-        <div class="bread-hold max-w-[100%] px-[10%] font-[Poppins]">
-            <div class="breadcrumb flex justify-between items-center gap-2">
-                <div class="bread-route">
+        <!-- Breadcrumb -->
+        <div class="bread-hold w-full px-4 sm:px-[10%] font-[Poppins]">
+            <div class="breadcrumb flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
+                <div class="bread-route text-sm sm:text-base">
                     <span class="font-[500] text-gray-400">Account /</span>
                     <span class="font-[400] text-black">My Account</span>
                 </div>
-                <div class="bread-user">
-                    <p class="font-[400]">Welcome! <span class="font-[500] text-[var(--card-color)]">Mr Asad
-                            Ullah</span></p>
+                <div class="bread-user text-center text-sm sm:text-base">
+                    <p class="font-[400]">Welcome!
+                        <span class="font-[500] text-[var(--card-color)]">Mr Asad Ullah</span>
+                    </p>
                 </div>
             </div>
         </div>
 
+        <div class="account-div w-full flex justify-center sm:h-[100%]">
+            <div class="account-wrap flex flex-col sm:flex-row w-full sm:w-[80%] gap-6">
 
-        <div class="account-div w-full flex justify-center">
-            <div class="account-wrap flex flex-row w-[80%]">
-                <div class="account-nav w-[30%] h-[90vh] font-[Poppins] flex flex-col gap-2">
-
+                <div class="account-nav hidden sm:block sm:flex sm:w-[30%] h-auto font-[Poppins] flex-col gap-4">
                     <h1 class="font-[500] text-[16px]">Manage My Account</h1>
-
-                    <div class="manage-account ml-10 w-[60%] flex flex-col gap-2">
+                    <div class="manage-account ml-4 sm:ml-10 w-full sm:w-[60%] flex flex-col gap-2">
                         <p
                             class="font-[500] text-[16px] text-[var(--text-color)] hover:text-[var(--card-color)] cursor-pointer">
-                            My
-                            profile</p>
+                            My profile</p>
                         <p
                             class="font-[500] text-[16px] text-[var(--text-color)] hover:text-[var(--card-color)] cursor-pointer">
-                            Address
-                            Book</p>
+                            Address Book</p>
                         <p
                             class="font-[500] text-[16px] text-[var(--text-color)] hover:text-[var(--card-color)] cursor-pointer">
                             My Payment Options</p>
                     </div>
-
                     <h1 class="font-[500] text-[16px]">My Orders</h1>
-
-                    <div class="my-orders pl-10 w-[60%] flex flex-col gap-2">
+                    <div class="my-orders pl-4 sm:pl-10 w-full sm:w-[60%] flex flex-col gap-2">
                         <p
                             class="font-[500] text-[16px] text-[var(--text-color)] hover:text-[var(--card-color)] cursor-pointer">
-                            My
-                            Returns</p>
+                            My Returns</p>
                         <p
                             class="font-[500] text-[16px] text-[var(--text-color)] hover:text-[var(--card-color)] cursor-pointer">
                             My Cancellations</p>
                     </div>
-
                     <h1 class="font-[500] text-[16px]">My Wishlist</h1>
-
                 </div>
-                <div class="account-info w-[70%] h-[90vh] shadow-lg">
-                    <div class="profile sm:py-10 sm:px-20 flex justify-left items-center">
-                        <div class="profile-wrap flex flex-col gap-5">
-                            <div class="profile-head">
-                                <h1 class="font-[500] text-[20px] text-[var(--card-color)]">Edit Your Profile</h1>
 
+                <div class="account-info w-full sm:w-[70%] shadow-lg rounded-md">
+                    <div class="profile p-4 sm:py-10 sm:px-20 flex justify-center items-center">
+                        <div class="profile-wrap flex flex-col gap-5 w-full">
+                            <div class="profile-head flex flex-col gap-5">
+                                <h1 class="font-[500] text-lg sm:text-[20px] text-[var(--card-color)]">Edit Your Profile
+                                </h1>
 
-                                <form action="" class="flex flex-col gap-[32px]">
+                                <form action="" class="flex flex-col gap-8 w-full">
 
-                                    <div class="flex flex-row gap-[40px]">
-                                        <div class="form-group flex flex-col gap-1">
-                                            <label class="font-[Poppins] font-[500] text-[16px] text-gray-400"
-                                                for="">First
+                                    <div class="flex flex-col sm:flex-row gap-6 sm:gap-10 w-full">
+                                        <div class="form-group flex flex-col gap-1 w-full sm:w-[330px]">
+                                            <label
+                                                class="font-[Poppins] font-[500] text-sm sm:text-[16px] text-gray-400">First
                                                 Name</label>
                                             <input type="text"
-                                                class="font-[Poppins] font-[500] w-[330px] h-[50px] bg-[var(--color-light-gray)] rounded-[4px] outline-none indent-3"
+                                                class="font-[Poppins] font-[500] w-full sm:w-[330px] h-[45px] sm:h-[50px] bg-[var(--color-light-gray)] rounded-[4px] outline-none indent-3"
                                                 placeholder="Muhammad">
                                         </div>
-
-                                        <div class="form-group flex flex-col gap-1">
-                                            <label class="font-[Poppins] font-[500] text-[16px] text-gray-400"
-                                                for="">Last
+                                        <div class="form-group flex flex-col gap-1 w-full sm:w-[330px]">
+                                            <label
+                                                class="font-[Poppins] font-[500] text-sm sm:text-[16px] text-gray-400">Last
                                                 Name</label>
                                             <input type="text"
-                                                class="font-[Poppins] font-[500] w-[330px] h-[50px] bg-[var(--color-light-gray)] rounded-[4px] outline-none indent-3"
+                                                class="font-[Poppins] font-[500] w-full h-[45px] sm:h-[50px] bg-[var(--color-light-gray)] rounded-[4px] outline-none indent-3"
                                                 placeholder="Asad Ullah">
                                         </div>
                                     </div>
 
-                                    <div class="flex flex-row gap-[40px]">
-                                        <div class="form-group flex flex-col gap-1">
-                                            <label class="font-[Poppins] font-[500] text-[16px] text-gray-400"
-                                                for="">Email
-                                            </label>
+                                    <div class="flex flex-col sm:flex-row gap-6 sm:gap-10 w-full">
+                                        <div class="form-group flex flex-col gap-1 w-full sm:w-[330px]">
+                                            <label
+                                                class="font-[Poppins] font-[500] text-sm sm:text-[16px] text-gray-400">Email</label>
                                             <input type="text"
-                                                class="font-[Poppins] font-[500] w-[330px] h-[50px] bg-[var(--color-light-gray)] rounded-[4px] outline-none indent-3"
+                                                class="font-[Poppins] font-[500] w-full h-[45px] sm:h-[50px] bg-[var(--color-light-gray)] rounded-[4px] outline-none indent-3"
                                                 placeholder="buttasad569@gmail.com">
                                         </div>
-
-                                        <div class="form-group flex flex-col gap-1">
-                                            <label class="font-[Poppins] font-[500] text-[16px] text-gray-400"
-                                                for="">Address</label>
+                                        <div class="form-group flex flex-col gap-1 w-full sm:w-[330px]">
+                                            <label
+                                                class="font-[Poppins] font-[500] text-sm sm:text-[16px] text-gray-400">Address</label>
                                             <input type="text"
-                                                class="font-[Poppins] font-[500] w-[330px] h-[50px] bg-[var(--color-light-gray)] rounded-[4px] outline-none indent-3"
+                                                class="font-[Poppins] font-[500] w-full h-[45px] sm:h-[50px] bg-[var(--color-light-gray)] rounded-[4px] outline-none indent-3"
                                                 placeholder="House No. 123, Street No. 456, City, State - 123456">
                                         </div>
                                     </div>
 
-                                    <div class="form-group flex flex-col gap-5">
-                                        <label class="font-[Poppins] font-[500] text-[16px] text-gray-400"
-                                            for="">Password Changes</label>
+                                    <div class="form-group flex flex-col gap-5 w-full">
+                                        <label
+                                            class="font-[Poppins] font-[500] text-sm sm:text-[16px] text-gray-400">Password
+                                            Changes</label>
                                         <input type="text"
-                                            class="font-[Poppins] font-[500] w-[470px] h-[50px] bg-[var(--color-light-gray)] rounded-[4px] outline-none indent-3"
+                                            class="font-[Poppins] font-[500] w-full sm:w-[470px] h-[45px] sm:h-[50px] bg-[var(--color-light-gray)] rounded-[4px] outline-none indent-3"
                                             placeholder="Current Password">
                                         <input type="text"
-                                            class="font-[Poppins] font-[500] w-[470px] h-[50px] bg-[var(--color-light-gray)] rounded-[4px] outline-none indent-3"
+                                            class="font-[Poppins] font-[500] w-full sm:w-[470px] h-[45px] sm:h-[50px] bg-[var(--color-light-gray)] rounded-[4px] outline-none indent-3"
                                             placeholder="New Password">
                                         <input type="text"
-                                            class="font-[Poppins] font-[500] w-[470px] h-[50px] bg-[var(--color-light-gray)] rounded-[4px] outline-none indent-3"
+                                            class="font-[Poppins] font-[500] w-full sm:w-[470px] h-[45px] sm:h-[50px] bg-[var(--color-light-gray)] rounded-[4px] outline-none indent-3"
                                             placeholder="Confirm New Password">
                                     </div>
 
-                                    <div class="order-place-button flex justify-end gap-8">
+                                    <div
+                                        class="order-place-button flex flex-col sm:flex-row justify-end gap-4 sm:gap-8">
                                         <button
-                                            class="rounded-[4px] font-[Poppins] font-[400] text-black text-[14px] w-[120px] h-[56px]">Cancel</button>
+                                            class="rounded-[4px] font-[Poppins] font-[400] text-black text-[14px] w-full sm:w-[120px] h-[45px] sm:h-[56px]">Cancel</button>
                                         <button
-                                            class="bg-[var(--card-color)] rounded-[4px] font-[Poppins] font-[400] text-white text-[14px] w-[214px] h-[56px]">Save
+                                            class="bg-[var(--card-color)] rounded-[4px] font-[Poppins] font-[400] text-white text-[14px] w-full sm:w-[214px] h-[45px] sm:h-[56px]">Save
                                             Changes</button>
                                     </div>
 
@@ -264,15 +253,16 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
 
     <!-- Footer  -->
 
-    <footer class="w-full bg-black flex justify-center items-center py-10 sm:h-[440px]">
+    <footer class="w-full  bottom-0 bg-black flex justify-center items-center py-10 sm:h-[440px]">
         <div
-            class="footer-data flex flex-col sm:flex-row sm:justify-between sm:w-[1170px] sm:h-[236px] text-white gap-10 sm:gap-0 text-center sm:text-left">
+            class="footer-data flex flex-col sm:flex-row sm:justify-between max-w-[1170px] w-full mx-auto sm:h-[236px] text-white gap-10 sm:gap-0 text-center sm:text-left">
             <div class="f-1 sm:w-[217px] flex flex-col gap-[24px] items-center sm:items-start">
                 <h1 class="f-head font-[Poppins] font-[500] text-[24px] tracking-[3%]">
                     Exclusive

@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+  /* ==============================
+     DROPDOWNS
+  ============================== */
   function setupDropdown(toggleId, dropdownId) {
     const toggle = document.getElementById(toggleId);
     const dropdown = document.getElementById(dropdownId);
@@ -24,69 +27,76 @@ document.addEventListener("DOMContentLoaded", () => {
   setupDropdown("profileToggleDesktop", "profileDropdownDesktop");
   setupDropdown("menuToggle", "menuDropdown");
 
-  // Timer Countdown
+  /* ==============================
+     FAKE PLACEHOLDER LOGIC
+  ============================== */
+  const nameInput = document.getElementById("nameInput");
+  const namePlaceholder = document.getElementById("namePlaceholder");
+
+  if (nameInput && namePlaceholder) {
+    nameInput.addEventListener("input", () => {
+      namePlaceholder.style.opacity = nameInput.value ? "0" : "1";
+    });
+  }
+
+  /* ==============================
+     TEXTAREA CHARACTER COUNTER
+  ============================== */
+  const textarea = document.getElementById("messageBox");
+  const counter = document.getElementById("charCount");
+
+  if (textarea && counter) {
+    textarea.addEventListener("input", () => {
+      counter.textContent = `${textarea.value.length} / 300`;
+    });
+  }
+
+  /* ==============================
+     COUNTDOWN TIMER
+  ============================== */
   const daysEl = document.getElementById("days");
   const hoursEl = document.getElementById("hours");
   const minutesEl = document.getElementById("minutes");
   const secondsEl = document.getElementById("seconds");
 
-  // Set the date we're counting down to (e.g., end of the month)
-  const countDownDate = new Date();
-  countDownDate.setDate(countDownDate.getDate() + 30);
+  if (daysEl && hoursEl && minutesEl && secondsEl) {
+    const countDownDate = new Date();
+    countDownDate.setDate(countDownDate.getDate() + 30);
 
-  // Update the count down every 1 second
-  const x = setInterval(function () {
-    // Get today's date and time
-    const now = new Date().getTime();
+    setInterval(() => {
+      const now = Date.now();
+      const distance = countDownDate - now;
 
-    // Find the distance between now and the count down date
-    const distance = countDownDate - now;
+      if (distance <= 0) {
+        daysEl.textContent =
+          hoursEl.textContent =
+          minutesEl.textContent =
+          secondsEl.textContent =
+            "0";
+        return;
+      }
 
-    // Time calculations for days, hours, minutes and seconds
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor(
-      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      daysEl.textContent = Math.floor(distance / (1000 * 60 * 60 * 24));
+      hoursEl.textContent = Math.floor((distance / (1000 * 60 * 60)) % 24);
+      minutesEl.textContent = Math.floor((distance / (1000 * 60)) % 60);
+      secondsEl.textContent = Math.floor((distance / 1000) % 60);
+    }, 1000);
+  }
 
-    // Display the result in the elements
-    daysEl.innerHTML = days;
-    hoursEl.innerHTML = hours;
-    minutesEl.innerHTML = minutes;
-    secondsEl.innerHTML = seconds;
-
-    // If the count down is finished, write some text
-    if (distance < 0) {
-      clearInterval(x);
-      daysEl.innerHTML = "0";
-      hoursEl.innerHTML = "0";
-      minutesEl.innerHTML = "0";
-      secondsEl.innerHTML = "0";
-    }
-  }, 1000);
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  //Floating button js
-
+  /* ==============================
+     GO TO TOP BUTTON
+  ============================== */
   const goTopBtn = document.getElementById("goTopBtn");
+  const pageTop = document.getElementById("pageTop");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      goTopBtn.classList.add("show");
-    } else {
-      goTopBtn.classList.remove("show");
-    }
-  });
-
-  goTopBtn.addEventListener("click", () => {
-    document.getElementById("pageTop").scrollIntoView({
-      behavior: "smooth",
+  if (goTopBtn && pageTop) {
+    window.addEventListener("scroll", () => {
+      goTopBtn.classList.toggle("show", window.scrollY > 300);
     });
 
-    setTimeout(() => {
-      document.getElementById("pageTop").focus();
-    }, 400);
-  });
+    goTopBtn.addEventListener("click", () => {
+      pageTop.scrollIntoView({ behavior: "smooth" });
+      setTimeout(() => pageTop.focus(), 400);
+    });
+  }
 });

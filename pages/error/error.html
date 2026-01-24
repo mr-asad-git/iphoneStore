@@ -44,13 +44,14 @@
                         <input type="text"
                             class="outline-none w-[8rem] h-[2rem] bg-[var(--color-light-gray)] indent-2 text-xs placeholder-black"
                             placeholder="Search" />
-                        <img src="../../assets/images/mainNav/search.svg" alt="Search" />
+                        <img src="assets/images/mainNav/search.svg" alt="Search" />
                     </div>
                 </div>
                 <button>
-                    <img class="h-6 w-6" src="../../assets/images/mainNav/cart.svg" alt="Cart" />
+                    <a href="pages/cart/cart.html"><img class="h-6 w-6" src="assets/images/mainNav/cart.svg"
+                            alt="Cart" /></a>
                 </button>
-                <div class="relative inline-block text-left" id="profileWrapper">
+                <div class="relative inline-block text-left" class="profileWrapper">
                     <button id="profileToggleMobile" class="flex items-center">
                         <img class="h-8 w-8" src="../../assets/images/mainNav/user.svg" alt="Profile" />
                     </button>
@@ -59,7 +60,9 @@
                     <div id="profileDropdownMobile" class="absolute right-0 z-50 mt-2 w-52 rounded-md border border-gray-200 bg-white shadow-lg
            opacity-0 invisible scale-95 transition-all duration-150 origin-top-right">
                         <ul class="py-1 text-sm text-gray-700">
-                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Manage My Account</a></li>
+                            <li><a href="pages/user/userAccount.html" class="block px-4 py-2 hover:bg-gray-100">Manage
+                                    My
+                                    Account</a></li>
                             <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">My Order</a></li>
                             <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">My Cancellations</a></li>
                             <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">My Reviews</a></li>
@@ -72,6 +75,31 @@
                     </div>
                 </div>
 
+                <div class="relative inline-block text-left" id="profileWrapper">
+                    <button id="menuToggle" class="flex items-center">
+                        <img class="h-8 w-8" src="../../assets/images/mainNav/menu.svg" alt="Profile" />
+                    </button>
+
+                    <!-- Dropdown -->
+                    <div id="menuDropdown" class="absolute right-0 z-50 mt-2 w-52 rounded-md border border-gray-200 bg-white shadow-lg
+           opacity-0 invisible scale-95 transition-all duration-150 origin-top-right">
+                        <ul class="py-1 text-sm text-gray-700">
+                            <li><a href="../../index.html" class="block px-4 py-2 bg-gray-100">Home</a></li>
+                            <li><a href="../contact/contact.html" class="block px-4 py-2 hover:bg-gray-100">Contact</a>
+                            </li>
+                            <li><a href="../about/about.html" class="block px-4 py-2 hover:bg-gray-100">About</a></li>
+                            <li><a href="../wishlist/wishlist.html"
+                                    class="block px-4 py-2 hover:bg-gray-100">Wishlist</a>
+                            </li>
+                            <li><a href="../cart/cart.html" class="block px-4 py-2 hover:bg-gray-100">Cart</a></li>
+                            <li>
+                                <button class="w-full text-left px-4 py-2 hover:bg-gray-100 text-red-600">
+                                    Logout
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:gap-10">
@@ -132,7 +160,7 @@
     <div class="bread-hold max-w-[31%] pt-[4rem]">
         <div class="breadcrumb flex justify-center items-center gap-2"><a href="../../index.html">
                 <span class="font-[Poppins] font-[500] text-gray-400">Home /</span>
-            </a><span class="font-[Poppins] font-[400] text-black">Cart</span></div>
+            </a><span class="font-[Poppins] font-[400] text-black">404 Error</span></div>
     </div>
     <div class="all-data flex justify-center items-center h-[75vh] w-full ">
 
@@ -143,9 +171,11 @@
                     <p class="font-[Inter] font-[400] text-[16px] leading-[24px] tracking-[3%]">Your visited page not
                         found.
                         You may go home page.</p>
-                    <button
-                        class="bg-[var(--card-color)] rounded-[4px] font-[Poppins] font-[400] text-white text-[14px] w-[214px] h-[56px]">Back
-                        to home page</button>
+                    <a href="../../index.html">
+                        <button
+                            class="bg-[var(--card-color)] rounded-[4px] font-[Poppins] font-[400] text-white text-[14px] w-[214px] h-[56px]">Back
+                            to home page</button>
+                    </a>
                 </div>
             </div>
         </div>

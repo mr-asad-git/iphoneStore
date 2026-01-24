@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../tailwind.css">
+    <title>Checkout</title>
+</head>
+
+<body class="relative">
+    <a id="pageTop" tabindex="-1"></a>
+    <!-- _-_-_-_-_ Top Header _-_-_-_-_ -->
+
+    <div class="topHeader bg-black w-full h-12 text-center flex justify-between items-center px-4 sm:justify-center">
+        <p
+            class="text-[var(--font-color)] text-[10px] leading-tight whitespace-nowrap overflow-hidden flex justify-center sm:text-sm font-[Poppins] font-[400]">
+            Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
+            <button class="font-bold font-[Poppins] font-[400] ml-2 underline">
+                ShopNow
+            </button>
+        </p>
+
+        <div class="language-select hidden sm:flex justify-center items-center sm:relative sm:left-[15rem]">
+            <img class="h-5 w-5 sm:h-8 sm:w-8" src="../../assets/images/topnavImg/langauge.png" alt="" />
+            <select class="bg-black text-white outline-none text-xs sm:text-sm" name="language" id="language">
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Main Nav  -->
+
+    <div class="mainNav w-full border-b border-gray-200">
+        <div class="flex items-center justify-between px-4 py-3 sm:px-[8%] sm:py-6">
+            <p class="font-Inter font-bold text-[27px] sm:text-2xl">Exclusive</p>
+            <div class="flex items-center gap-3 sm:hidden">
+                <div class="rounded bg-[var(--color-light-gray)] p-1">
+                    <div class="flex items-center gap-2">
+                        <input type="text"
+                            class="outline-none w-[8rem] h-[2rem] bg-[var(--color-light-gray)] indent-2 text-xs placeholder-black"
+                            placeholder="Search" />
+                        <img src="../../assets/images/mainNav/search.svg" alt="Search" />
+                    </div>
+                </div>
+                <button>
+                    <a href="pages/cart/cart.html"><img class="h-6 w-6" src="../../assets/images/mainNav/cart.svg"
+                            alt="Cart" /></a>
+                </button>
+                <div class="relative inline-block text-left" class="profileWrapper">
+                    <button id="profileToggleMobile" class="flex items-center">
+                        <img class="h-8 w-8" src="../../assets/images/mainNav/user.svg" alt="Profile" />
+                    </button>
+
+                    <!-- Dropdown -->
+                    <div id="profileDropdownMobile" class="absolute right-0 z-50 mt-2 w-52 rounded-md border border-gray-200 bg-white shadow-lg
+           opacity-0 invisible scale-95 transition-all duration-150 origin-top-right">
+                        <ul class="py-1 text-sm text-gray-700">
+                            <li><a href="pages/user/userAccount.html" class="block px-4 py-2 hover:bg-gray-100">Manage
+                                    My
+                                    Account</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">My Order</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">My Cancellations</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">My Reviews</a></li>
+                            <li>
+                                <button class="w-full text-left px-4 py-2 hover:bg-gray-100 text-red-600">
+                                    Logout
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative inline-block text-left" id="profileWrapper">
+                    <button id="menuToggle" class="flex items-center">
+                        <img class="h-8 w-8" src="../../assets/images/mainNav/menu.svg" alt="Profile" />
+                    </button>
+
+                    <!-- Dropdown -->
+                    <div id="menuDropdown" class="absolute right-0 z-50 mt-2 w-52 rounded-md border border-gray-200 bg-white shadow-lg
+           opacity-0 invisible scale-95 transition-all duration-150 origin-top-right">
+                        <ul class="py-1 text-sm text-gray-700">
+                            <li><a href="../../index.html" class="block px-4 py-2 hover:bg-gray-100">Home</a></li>
+                            <li><a href="../../pages/contact/contact.html"
+                                    class="block px-4 py-2 hover:bg-gray-100">Contact</a></li>
+                            <li><a href="../../pages/about/about.html" class="block px-4 py-2 bg-gray-100">About</a>
+                            </li>
+                            <li><a href="../wishlist/wishlist.html"
+                                    class="block px-4 py-2 hover:bg-gray-100">Wishlist</a></li>
+                            <li><a href="../cart/cart.html" class="block px-4 py-2 hover:bg-gray-100">Cart</a></li>
+                            <li>
+                                <button class="w-full text-left px-4 py-2 hover:bg-gray-100 text-red-600">
+                                    Logout
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hidden sm:flex sm:items-center sm:gap-10">
+                <ul class="flex items-center gap-10">
+                    <li>
+                        <a href="../../index.html" class="font-[Poppins] font-[500]">Home</a>
+                    </li>
+                    <li><a href="../../pages/contact/contact.html" class="font-[Poppins] font-[500]">Contact</a></li>
+                    <li><a href="#" class="underline underline-offset-8 font-[Poppins] font-[500]">About</a></li>
+                    <li><a href="#" class="font-[Poppins] font-[500]">Sign Up</a></li>
+                </ul>
+                <div class="rounded bg-[var(--color-light-gray)] p-2">
+                    <div class="flex items-center gap-3">
+                        <input type="text"
+                            class="outline-none w-[13rem] bg-[var(--color-light-gray)] indent-3 text-sm placeholder-black"
+                            placeholder="What are you looking for ?" />
+                        <img src="../../assets/images/mainNav/search.svg" alt="" />
+                    </div>
+                </div>
+                <div class="flex items-center gap-5">
+                    <button class="hidden relative sm:block">
+                        <a href="../wishlist/wishlist.html"><img class="h-5 w-5"
+                                src="../../assets/images/mainNav/favourite.svg" alt="Wishlist" /></a>
+                    </button>
+                    <button class="relative">
+                        <a href="../../pages/cart/cart.html">
+                            <div
+                                class="notification-badge absolute top-[-5px] right-[-5px] w-[15px] h-[15px] rounded-full p-1 bg-[var(--card-color)] text-[12px] text-white flex justify-center items-center">
+                                2</div>
+                            <img class="h-6 w-6" src="../../assets/images/mainNav/cart.svg" alt="Cart" />
+                        </a>
+                    </button>
+                    <div class="relative inline-block text-left z-10">
+                        <button id="profileToggleDesktop" class="flex items-center focus:outline-none">
+                            <img class="h-8 w-8" src="../../assets/images/mainNav/user.svg" alt="Profile">
+                        </button>
+
+                        <!-- Dropdown -->
+                        <div id="profileDropdownDesktop"
+                            class="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 invisible transition-all duration-200 origin-top">
+                            <ul class="divide-y divide-gray-100">
+                                <li><a href="../user/userAccount.html"
+                                        class="block px-4 py-2 text-sm hover:bg-gray-100">Manage My Account</a>
+                                </li>
+                                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">My Order</a></li>
+                                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">My Cancellations</a>
+                                </li>
+                                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">My Reviews</a></li>
+                                <li><button id="logoutBtn"
+                                        class="w-full text-left px-4 text-sm py-2 hover:bg-gray-100 text-red-600">Logout</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- All Data -->
+
+    <div class="bread-hold max-w-[31%] pt-[4rem]">
+        <div class="breadcrumb flex justify-center items-center gap-2"><a href="../../index.html">
+                <span class="font-[Poppins] font-[500] text-gray-400">Home /</span>
+            </a><span class="font-[Poppins] font-[500] text-black">About</span></div>
+    </div>
+    <div class="all-data flex flex-col gap-[5rem] pt-[1rem] pb-[6rem] sm:gap-[10rem]">
+
+        <!-- About Us -->
+        <section class="about-us flex justify-center items-center w-full">
+            <div
+                class="about-us-text w-[80%] sm:w-[77%] flex flex-col sm:flex-row items-center gap-[2rem] sm:gap-[5rem]">
+                <div class="about-text flex flex-col gap-[2rem]">
+                    <h1
+                        class="font-[Inter] text-center sm:text-left text-[32px] sm:text-[54px] font-[600] text-[24px] sm:text-[20px] tracking-[3%]">
+                        Our Story
+                    </h1>
+                    <p
+                        class="font-[Poppins] font-[400] text-[20px] sm:text-[16px] sm:w-[525px] sm:leading-[21px] sm:text-[14px] tracking-[3%]">
+                        Launced in 2015, Exclusive is South Asia’s premier online shopping makterplace with an active
+                        presense in Bangladesh. Supported by wide range of tailored marketing, data and service
+                        solutions,
+                        Exclusive has 10,500 sallers and 300 brands and serves 3 millioons customers across the region.
+                    </p>
+                    <p
+                        class="font-[Poppins] font-[400] text-[20px] sm:text-[16px] sm:w-[525px] sm:leading-[21px] sm:text-[14px] tracking-[3%]">
+                        Exclusive has more than 1 Million products to offer, growing at a very fast. Exclusive offers a
+                        diverse assotment in categories ranging from consumer.</p>
+                </div>
+                <div class="about-image">
+                    <img src="./images/i1.svg" alt="">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Actors Section -->
+        <section class="actors flex flex-col gap-[2rem]">
+            <div class="act-wrap flex justify-center items-center w-full">
+                <div
+                    class="actors-div sm:w-[70%] flex flex-col sm:flex-row sm:justify-center items-center gap-[2rem] sm:gap-[5rem]">
+                    <div class="actor">
+                        <div class="act-img sm:h-[100%] sm:w-[100%] flex justify-center items-end bg-gray-100 px-6">
+                            <img src=" images/actors/a1.svg" alt="">
+                        </div>
+                        <div
+                            class="act-text flex flex-col text-center sm:text-left items-center sm:items-start p-3 gap-5 font-[Poppins]">
+
+                            <div class="header-text">
+                                <h1
+                                    class="font-[600] text-[24px] sm:text-[32px] sm:leading-[48px] sm:text-[20px] tracking-[3%]">
+                                    Bill Gates</h1>
+                                <p class="font-[400] text-[16px] sm:leading-[21px] sm:text-[14px] tracking-[3%]">Founder
+                                    &
+                                    Chairman</p>
+                            </div>
+                            <div class="act-social flex justify-center sm:justify-start w-full gap-[1rem]">
+                                <div class="social">
+                                    <img src="images/social/twitter.svg" alt="">
+                                </div>
+                                <div class="social">
+                                    <img src="images/social/instagram.svg" alt="">
+                                </div>
+                                <div class="social">
+                                    <img src="images/social/linkedin.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor">
+                        <div class="act-img sm:h-[100%] sm:w-[100%] flex justify-center items-end bg-gray-100 px-6">
+                            <img src=" images/actors/a2.svg" alt="">
+                        </div>
+                        <div
+                            class="act-text flex flex-col text-center sm:text-left items-center sm:items-start p-3 gap-5 font-[Poppins]">
+
+                            <div class="header-text">
+                                <h1
+                                    class="font-[600] text-[24px] sm:text-[32px] sm:leading-[48px] sm:text-[20px] tracking-[3%]">
+                                    Emma Watson</h1>
+                                <p class="font-[400] text-[16px] sm:leading-[21px] sm:text-[14px] tracking-[3%]">Founder
+                                    &
+                                    Chairman</p>
+                            </div>
+                            <div class="act-social flex justify-center sm:justify-start w-full gap-[1rem]">
+                                <div class="social">
+                                    <img src="images/social/twitter.svg" alt="">
+                                </div>
+                                <div class="social">
+                                    <img src="images/social/instagram.svg" alt="">
+                                </div>
+                                <div class="social">
+                                    <img src="images/social/linkedin.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actor">
+                        <div class="act-img sm:h-[100%] sm:w-[100%] flex justify-center items-end bg-gray-100 px-6">
+                            <img src=" images/actors/a3.svg" alt="">
+                        </div>
+                        <div
+                            class="act-text flex flex-col text-center sm:text-left items-center sm:items-start p-3 gap-5 font-[Poppins]">
+
+                            <div class="header-text">
+                                <h1
+                                    class="font-[600] text-[24px] sm:text-[32px] sm:leading-[48px] sm:text-[20px] tracking-[3%]">
+                                    Thomas Sherby</h1>
+                                <p class="font-[400] text-[16px] sm:leading-[21px] sm:text-[14px] tracking-[3%]">Founder
+                                    &
+                                    Chairman</p>
+                            </div>
+                            <div class="act-social flex justify-center sm:justify-start w-full gap-[1rem]">
+                                <div class="social">
+                                    <img src="images/social/twitter.svg" alt="">
+                                </div>
+                                <div class="social">
+                                    <img src="images/social/instagram.svg" alt="">
+                                </div>
+                                <div class="social">
+                                    <img src="images/social/linkedin.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="nav-bars flex justify-center items-center gap-3">
+                <div class="rounded-full w-[12px] h-[12px] bg-gray-300"></div>
+                <div class="rounded-full w-[12px] h-[12px] bg-gray-300"></div>
+                <div class="rounded-full w-[15px] h-[15px] bg-gray-300 relative">
+                    <div
+                        class="rounded-full w-[10px] h-[10px] bg-red-500 border border-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    </div>
+                </div>
+                <div class="rounded-full w-[12px] h-[12px] bg-gray-300"></div>
+                <div class="rounded-full w-[12px] h-[12px] bg-gray-300"></div>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- Services -->
+        <section class="about-us flex justify-center items-center w-full">
+            <div class="about-us-text w-[80%] sm:w-[77%] flex justify-center items-center gap-[2rem] sm:gap-[5rem]">
+                <div class="service flex flex-col gap-[2rem] sm:flex-row items-center">
+                    <div
+                        class="s flex flex-col p-10 sm:gap-[10px] border w-[400px] h-full sm:w-[270px] sm:h-[230px] justify-center items-center">
+                        <img src="images/services/s1.svg" alt="">
+                        <h1
+                            class="font-[Inter] font-[700] text-[32px] sm:text-[40px] sm:leading-[48px] sm:text-[24px] tracking-[3%]">
+                            10.5K</h1>
+                        <p class="font-[Poppins] font-[400] text-[16px] sm:leading-[21px] sm:text-[14px] tracking-[3%]">
+                            Sellers active on our site</p>
+                    </div>
+                    <div
+                        class="s flex flex-col gap-[10px] border w-[400px] h-full sm:w-[270px] sm:h-[230px] bg-[var(--card-color)] justify-center items-center">
+                        <img src="images/services/s2.svg" alt="">
+                        <h1 class="font-[Inter] font-[700] text-[32px] sm:text-[40px] sm:leading-[48px]  tracking-[3%]">
+                            10.5K</h1>
+                        <p class="font-[Poppins] font-[400] text-[16px] sm:leading-[21px] sm:text-[14px] tracking-[3%]">
+                        </p>Monthly Product Sale</p>
+                    </div>
+                    <div
+                        class="s flex flex-col gap-[10px] border w-[400px] h-full sm:w-[270px] sm:h-[230px] justify-center items-center">
+                        <img src="images/services/s3.svg" alt="">
+                        <h1 class="font-[Inter] font-[700] text-[32px] sm:text-[40px] sm:leading-[48px] tracking-[3%]">
+                            10.5K</h1>
+                        <p
+                            class="font-[Poppins] font-[400] text-[16px]  sm:leading-[21px] sm:text-[14px] tracking-[3%]">
+                        </p>Customer active in our site</p>
+                    </div>
+                    <div
+                        class="s flex flex-col gap-[10px] border w-[400px] h-full sm:w-[270px] sm:h-[230px] justify-center items-center">
+                        <img src="images/services/s4.svg" alt="">
+                        <h1 class="font-[Inter] font-[700] text-[32px] sm:text-[40px] sm:leading-[48px] tracking-[3%]">
+                            10.5K</h1>
+                        <p
+                            class="font-[Poppins] font-[400] text-[16px]  sm:leading-[21px] sm:text-[14px] tracking-[3%]">
+                            Anual gross sale in our site</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="three-L's sm:mt-[4rem] w-full">
+            <div class="L flex flex-col sm:flex-row sm:justify-center gap-[88px] items-center">
+                <div class="l1 flex flex-col justify-center items-center gap-[24px]">
+                    <img class="w-[80px] h-[80px] sm:w-[80px] sm:h-[80px]"
+                        src="../../assets/images/card/cardImages/Services1.svg" alt="" />
+                    <div class="l-text flex flex-col justify-center items-center">
+                        <h1 class="font-[Inter] font-[600] text-[18px] sm:text-[20px] tracking-[3%]">
+                            FREE AND FAST DELIVERY
+                        </h1>
+                        <p
+                            class="font-[Poppins] font-[400] sm:text-[14px] sm:leading-[21px] sm:text-[14px] tracking-[3%]">
+                            Free delivery for all orders over $140
+                        </p>
+                    </div>
+                </div>
+                <div class="l2 flex flex-col justify-center items-center gap-[24px]">
+                    <img class="w-[80px] h-[80px] sm:w-[80px] sm:h-[80px]"
+                        src="../../assets/images/card/cardImages/Services2.svg" alt="" />
+                    <div class="l-text flex flex-col justify-center items-center">
+                        <h1 class="font-[Inter] font-[600] text-[24px] sm:text-[20px] tracking-[3%]">
+                            24/7 CUSTOMER SERVICE
+                        </h1>
+                        <p
+                            class="font-[Poppins] font-[400] sm:text-[14px] sm:leading-[21px] sm:text-[14px] tracking-[3%]">
+                            Friendly 24/7 customer support
+                        </p>
+                    </div>
+                </div>
+                <div class="l3 flex flex-col justify-center items-center gap-[24px]">
+                    <img src="../../assets/images/card/cardImages/Services3.svg" alt="" />
+                    <div class="l-text flex flex-col justify-center items-center">
+                        <h1 class="font-[Inter] font-[600] text-[18px] sm:text-[20px] tracking-[3%]">
+                            MONEY BACK GUARANTEE
+                        </h1>
+                        <p
+                            class="font-[Poppins] font-[400] sm:text-[14px] sm:leading-[21px] sm:text-[14px] tracking-[3%]">
+                            We return money within 30 days
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- Footer  -->
+
+    <footer class="w-full bg-black flex justify-center items-center py-10 sm:h-[440px]">
+        <div
+            class="footer-data flex flex-col sm:flex-row sm:justify-between sm:w-[1170px] sm:h-[236px] text-white gap-10 sm:gap-0 text-center sm:text-left">
+            <div class="f-1 sm:w-[217px] flex flex-col gap-[24px] items-center sm:items-start">
+                <h1 class="f-head font-[Poppins] font-[500] text-[24px] tracking-[3%]">
+                    Exclusive
+                </h1>
+                <button class="font-[Poppins] font-[400] text-[16px] leading-[24px] tracking-[3%]">
+                    Subscribe
+                </button>
+                <p class="font-[Poppins] font-[400] text-[16px] leading-[24px] tracking-[3%]">
+                    Get 10% off your first order
+                </p>
+                <div class="search flex items-center border-[1px] p-2 border-white rounded-[4px] w-full sm:w-auto">
+                    <input class="outline-none bg-black placeholder:text-gray-600 indent-2 flex-1" type="text"
+                        placeholder="Enter your email" />
+                    <img class="w-[24px] h-[24px]" src="../../assets/images/card/cardImages/icon-send.svg" alt="" />
+                </div>
+            </div>
+
+            <div class="f-2 sm:w-[175px] flex flex-col gap-[24px] items-center sm:items-start">
+                <h1 class="f-head font-[Poppins] font-[500] text-[24px] tracking-[3%]">
+                    Support
+                </h1>
+                <p class="font-[Poppins] font-[400] text-[16px] leading-[24px] tracking-[3%]">
+                    111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.
+                </p>
+                <p class="font-[Poppins] font-[400] text-[16px] leading-[24px] tracking-[3%]">
+                    exclusive@gmail.com
+                </p>
+                <p class="font-[Poppins] font-[400] text-[16px] leading-[24px] tracking-[3%]">
+                    +88015-0000-0000
+                </p>
+            </div>
+
+            <div class="f-3 sm:w-[175px] flex flex-col gap-[24px] items-center sm:items-start">
+                <h1 class="f-head font-[Poppins] font-[500] text-[24px] tracking-[3%]">
+                    Account
+                </h1>
+                <button>
+                    <p class="font-[Poppins] text-[16px]">My Account</p>
+                </button>
+                <button>
+                    <p class="font-[Poppins] text-[16px]">Login / Register</p>
+                </button>
+                <button>
+                    <p class="font-[Poppins] text-[16px]">Cart</p>
+                </button>
+                <button>
+                    <p class="font-[Poppins] text-[16px]">Wishlist</p>
+                </button>
+                <button>
+                    <p class="font-[Poppins] text-[16px]">Shop</p>
+                </button>
+            </div>
+
+            <div class="f-4 sm:w-[175px] flex flex-col gap-[24px] items-center sm:items-start">
+                <h1 class="f-head font-[Poppins] font-[500] text-[24px] tracking-[3%]">
+                    Quick Link
+                </h1>
+                <button>
+                    <p class="font-[Poppins] text-[16px]">Privacy Policy</p>
+                </button>
+                <button>
+                    <p class="font-[Poppins] text-[16px]">Terms Of Use</p>
+                </button>
+                <button>
+                    <p class="font-[Poppins] text-[16px]">FAQ</p>
+                </button>
+                <button>
+                    <p class="font-[Poppins] text-[16px]">Contact</p>
+                </button>
+            </div>
+
+            <div class="f-5 sm:w-[175px] flex flex-col gap-[24px] items-center sm:items-start">
+                <h1 class="f-head font-[Poppins] font-[500] text-[24px] tracking-[3%]">
+                    Download App
+                </h1>
+                <p class="font-[Poppins] text-[12px] text-[var(--heading-color)]">
+                    Get 10% off your first order
+                </p>
+                <div class="flex gap-[16px] justify-center sm:justify-between">
+                    <div class="qr">
+                        <img src="../../assets/images/card/cardImages/QR Code.svg" alt="" />
+                    </div>
+                    <div class="store flex flex-col gap-[5px]">
+                        <img src="../../assets/images/card/cardImages/appstore.svg" alt="" />
+                        <img src="../../assets/images/card/cardImages/googleplay.svg" alt="" />
+                    </div>
+                </div>
+                <div class="socials flex gap-4 justify-center sm:justify-between w-full">
+                    <div class="fb">
+                        <img src="../../assets/images/card/cardImages/facebook.svg" alt="" />
+                    </div>
+                    <div class="twitter">
+                        <img src="../../assets/images/card/cardImages/twitter.svg" alt="" />
+                    </div>
+                    <div class="insta">
+                        <img src="../../assets/images/card/cardImages/instagram.svg" alt="" />
+                    </div>
+                    <div class="linkedin">
+                        <img src="../../assets/images/card/cardImages/linkedin.svg" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button id="goTopBtn"
+        class="fixed bottom-6 right-6 hidden h-11 w-11 rounded-full bg-black text-white text-xl z-[9999]">
+        ↑
+    </button>
+
+</body>
+<script src="../../script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-element-bundle.min.js"></script>
+
+</html>
