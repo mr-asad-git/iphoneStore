@@ -38,9 +38,17 @@
 @font-face {
   font-family: Inter;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-display: swap;
   src: url("assets/fonts/Inter/static/Inter_28pt-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/Inter/static/Inter_28pt-SemiBold.ttf") format("truetype");
 }
 
 
@@ -53,13 +61,14 @@
   src: url("assets/fonts/Inter/static/Inter_24pt-Bold.ttf") format("truetype");
 }
 
-*{
-    scroll-behavior: smooth;
+* {
+  scroll-behavior: smooth;
 }
 
 /*Floating Button*/
 
-#goTopBtn,.goTopBtn {
+#goTopBtn,
+.goTopBtn {
   position: fixed;
   bottom: 24px;
   right: 24px;
