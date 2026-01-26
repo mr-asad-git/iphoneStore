@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../tailwind.css">
+    <title>Wishlist</title>
+</head>
+
+<body>
+    <a id="pageTop" tabindex="-1"></a>
+    <!-- _-_-_-_-_ Top Header _-_-_-_-_ -->
+
+    <div class="topHeader bg-black w-full h-12 text-center flex justify-between items-center px-4 sm:justify-center">
+        <p
+            class="text-[var(--font-color)] text-[10px] leading-tight whitespace-nowrap overflow-hidden flex justify-center sm:text-sm font-[Poppins] font-[400]">
+            Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
+            <button class="font-bold font-[Poppins] font-[400] ml-2 underline">ShopNow</button>
+        </p>
+
+        <div class="language-select hidden sm:flex justify-center items-center sm:relative sm:left-[15rem]">
+            <img class="h-5 w-5 sm:h-8 sm:w-8" src="../../assets/images/topnavImg/langauge.png" alt="">
+            <select class="bg-black text-white outline-none text-xs sm:text-sm" name="language" id="language">
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- _-_-_-_-_ Main Nav Code  _-_-_-_-_ -->
+
+    <div class="mainNav w-full border-b border-gray-200">
+        <div class="flex items-center justify-between px-4 py-3 sm:px-[8%] sm:py-6">
+            <p class="font-Inter font-bold text-[27px] sm:text-2xl">Exclusive</p>
+            <div class="flex items-center gap-3 sm:hidden">
+                <div class="rounded bg-[var(--color-light-gray)] p-1">
+                    <div class="flex items-center gap-2">
+                        <input type="text"
+                            class="outline-none w-[8rem] h-[2rem] bg-[var(--color-light-gray)] indent-2 text-xs placeholder-black"
+                            placeholder="Search" />
+                        <img src="../../assets/images/mainNav/search.svg" alt="Search" />
+                    </div>
+                </div>
+                <button>
+                    <a href="pages/cart/cart.html"><img class="h-6 w-6" src="../../assets/images/mainNav/cart.svg"
+                            alt="Cart" /></a>
+                </button>
+                <div class="relative inline-block text-left" class="profileWrapper">
+                    <button id="profileToggleMobile" class="flex items-center">
+                        <img class="h-8 w-8" src="../../assets/images/mainNav/user.svg" alt="Profile" />
+                    </button>
+
+                    <!-- Dropdown -->
+                    <div id="profileDropdownMobile" class="absolute right-0 z-50 mt-2 w-52 rounded-md border border-gray-200 bg-white shadow-lg
+           opacity-0 invisible scale-95 transition-all duration-150 origin-top-right">
+                        <ul class="py-1 text-sm text-gray-700">
+                            <li><a href="../user/userAccount.html" class="block px-4 py-2 hover:bg-gray-100">Manage
+                                    My
+                                    Account</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">My Order</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">My Cancellations</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">My Reviews</a></li>
+                            <li>
+                                <button class="w-full text-left px-4 py-2 hover:bg-gray-100 text-red-600">
+                                    Logout
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative inline-block text-left" id="profileWrapper">
+                    <button id="menuToggle" class="flex items-center">
+                        <img class="h-8 w-8" src="../../assets/images/mainNav/menu.svg" alt="Profile" />
+                    </button>
+
+                    <!-- Dropdown -->
+                    <div id="menuDropdown" class="absolute right-0 z-50 mt-2 w-52 rounded-md border border-gray-200 bg-white shadow-lg
+           opacity-0 invisible scale-95 transition-all duration-150 origin-top-right">
+                        <ul class="py-1 text-sm text-gray-700">
+                            <li><a href="../index.html" class="block px-4 py-2 hover:bg-gray-100">Home</a></li>
+                            <li><a href="../pages/contact/contact.html"
+                                    class="block px-4 py-2 hover:bg-gray-100">Contact</a>
+                            </li>
+                            <li><a href="../pages/about/about.html" class="block px-4 py-2 hover:bg-gray-100">About</a>
+                            </li>
+                            <li><a href="#" class="block px-4 py-2 bg-gray-100">Wishlist</a>
+                            </li>
+                            <li><a href="../pages/cart/cart.html" class="block px-4 py-2 hover:bg-gray-100">Cart</a>
+                            </li>
+                            <li>
+                                <button class="w-full text-left px-4 py-2 hover:bg-gray-100 text-red-600">
+                                    Logout
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hidden sm:flex sm:items-center sm:gap-10">
+                <ul class="flex items-center gap-10">
+                    <li>
+                        <a href="../../index.html" class=" font-[Poppins] font-[500] ">Home</a>
+                    </li>
+                    <li><a href="../../pages/contact/contact.html" class="font-[Poppins] font-[500] ">Contact</a></li>
+                    <li><a href="#" class="font-[Poppins] font-[500] ">About</a></li>
+                    <li><a href="#" class="font-[Poppins] font-[500] ">Sign Up</a></li>
+                </ul>
+                <div class="rounded bg-[var(--color-light-gray)] p-2">
+                    <div class="flex items-center gap-3">
+                        <input type="text"
+                            class="outline-none w-[13rem] bg-[var(--color-light-gray)] indent-3 text-sm placeholder-black"
+                            placeholder="What are you looking for ?" />
+                        <img src="../../assets/images/mainNav/search.svg" alt="" />
+                    </div>
+                </div>
+                <div class="flex items-center gap-5">
+                    <button class="hidden relative sm:block">
+                        <div
+                            class="notification-badge absolute top-[-5px] right-[-5px] w-[15px] h-[15px] rounded-full p-1 bg-[var(--card-color)] text-[12px] text-white flex justify-center items-center">
+                            4</div>
+                        <a href="wishlist.html"><img class="h-5 w-5" src="../../assets/images/mainNav/favourite.svg"
+                                alt="Wishlist" /></a>
+                    </button>
+                    <button>
+                        <a href="../cart/cart.html"><img class="h-6 w-6" src="../../assets/images/mainNav/cart.svg"
+                                alt="Cart" /></a>
+                    </button>
+                    <div class="relative inline-block text-left z-10">
+                        <button id="profileToggleDesktop" class="flex items-center focus:outline-none">
+                            <img class="h-8 w-8" src="../../assets/images/mainNav/user.svg" alt="Profile">
+                        </button>
+
+                        <!-- Dropdown -->
+                        <div id="profileDropdownDesktop"
+                            class="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 invisible transition-all duration-200 origin-top">
+                            <ul class="divide-y divide-gray-100">
+                                <li><a href="../user/userAccount.html"
+                                        class="block px-4 py-2 text-sm hover:bg-gray-100">Manage My Account</a>
+                                </li>
+                                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">My Order</a></li>
+                                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">My Cancellations</a>
+                                </li>
+                                <li><a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">My Reviews</a></li>
+                                <li><button id="logoutBtn"
+                                        class="w-full text-left px-4 text-sm py-2 hover:bg-gray-100 text-red-600">Logout</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="all-data flex flex-col gap-[3rem] pt-[1rem] pb-[6rem] sm:py-[4rem]">
+
+
+        <!-- _-_-_-_-_ Wishlist Section  _-_-_-_-_ -->
+        <div class="bread-hold max-w-[88%] sm:max-w-[50%] ">
+            <div class="breadcrumb flex justify-center items-center gap-2"><a href="../../index.html">
+                    <span class="font-[Poppins] font-[500] text-gray-400">Account / Gaming</span>
+                </a><span class="font-[Poppins] font-[500] text-black">Havic HV G-92 Gamepad</span></div>
+        </div>
+        <section class="product-selling-section flex justify-center items-center">
+            <div class="product-wrap w-[90%] sm:w-[75%] flex flex-col sm:flex-row gap-[3rem]">
+                <div class="reverse-product flex flex-col sm:flex-row flex-col-reverse gap-[24px]">
+                    <div class="product-display flex flex-row sm:flex-col gap-[16px]">
+                        <div
+                            class="display1 w-[170px] h-[100px] rounded-[4px] flex justify-center items-center sm:w-[170px] sm:h-[138px] bg-gray-100">
+                            <div class="prod-img w-[70px] sm:w-[121px]">
+                                <img src="../assets/images/card/cardImages/MainHero(d1).svg" alt="" srcset="">
+                            </div>
+                        </div>
+                        <div
+                            class="display2 w-[170px] h-[100px] rounded-[4px] flex justify-center items-center sm:w-[170px] sm:h-[138px] bg-gray-100">
+                            <div class="prod-img w-[70px] sm:w-[121px]">
+                                <img src="../assets/images/card/cardImages/MainHero(d2).svg" alt="" srcset="">
+                            </div>
+                        </div>
+                        <div
+                            class="display3 w-[170px] h-[100px] rounded-[4px] flex justify-center items-center sm:w-[170px] sm:h-[138px] bg-gray-100">
+                            <div class="prod-img w-[70px] sm:w-[121px]">
+                                <img src="../assets/images/card/cardImages/MainHero(d3).svg" alt="" srcset="">
+                            </div>
+                        </div>
+                        <div
+                            class="display4 w-[170px] h-[100px] rounded-[4px] flex justify-center items-center sm:w-[170px] sm:h-[138px] bg-gray-100">
+                            <div class="prod-img w-[70px] sm:w-[121px]">
+                                <img src="../assets/images/card/cardImages/MainHero(d4).svg" alt="" srcset="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-heroimg">
+                        <div
+                            class="wrap w-[100%] h-[300px] rounded-[4px] sm:w-[500px] sm:h-[600px] bg-gray-100 flex justify-center items-center">
+                            <div class="prod-img w-[350px] sm:w-[446px]">
+                                <img src="../assets/images/card/cardImages/MainHero.svg" alt="" srcset="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-buy flex flex-col gap-[1rem]">
+                    <div class="product-heading">
+                        <h1 class="font-Inter font-800 font-bold text-[24px] leading-[24px]">Havic HV G-92 Gamepad
+                        </h1>
+                    </div>
+                    <div class="product-rating">
+                        <div class="rating flex flex-row gap-[1rem] items-center">
+                            <div class="rating-star flex gap-[2px]">
+                                <img src="../assets/images/card/cardImages/star.svg" alt="">
+                                <img src="../assets/images/card/cardImages/star.svg" alt="">
+                                <img src="../assets/images/card/cardImages/star.svg" alt="">
+                                <img src="../assets/images/card/cardImages/star.svg" alt="">
+                                <img src="../assets/images/card/cardImages/half-star.svg" alt="">
+                            </div>
+                            <div class="rating-reviews">
+                                <p class="font-[Poppins] font-[400] text-[14px] sm:text-[16px]">(150
+                                    Reviews)</p>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="w-[2px] h-[20px] bg-gray-300"></span>
+                            </div>
+                            <div class="product-availability">
+                                <p
+                                    class="font-[Poppins] font-[400] text-[14px] leading-[21px] text-[var(--green-color)]">
+                                    In-Stock</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-price">
+                        <p class="font-Inter font-400 text-[24px] leading-[24px]">$192.00</p>
+                    </div>
+                    <div class="product-description">
+                        <p class="font-[Poppins] font-[400] text-[14px] sm:text-[14px] leading-[21px]">PlayStation 5
+                            Controller Skin
+                            High quality vinyl with air channel adhesive for easy bubble free install & mess free
+                            removal Pressure sensitive.</p>
+                    </div>
+                    <div class="end flex justify-center items-center">
+                        <hr class="w-[100%] border-black" />
+                    </div>
+
+                    <div class="wrap flex flex-col gap-[2.4rem]">
+                        <div class="color-selection flex flex-row items-center gap-[10px]">
+                            <div class="select-text font-Inter font-400 text-[20px] leading-[20px]">Colours:</div>
+                            <div class="color-boxes flex flex-row gap-[10px]">
+                                <button>
+                                    <div
+                                        class="color-box border-2 border-black bg-white w-[20px] flex justify-center items-center h-[20px] rounded-full">
+                                        <div
+                                            class="color-box border-2 border-green-600 bg-green-400 w-[12px] h-[12px] rounded-full">
+                                        </div>
+                                    </div>
+                                </button>
+                                <button>
+                                    <div
+                                        class="color-box border-2 border-black bg-white w-[20px] flex justify-center items-center h-[20px] rounded-full">
+                                        <div
+                                            class="color-box border-2 border-red-600 bg-red-400 w-[12px] h-[12px] rounded-full">
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="size-boxes flex flex-row items-center gap-[10px]">
+                            <div class="size-text flex flex-row items-center">
+                                <p class="font-Inter font-400 text-[20px] leading-[20px]">Size:</p>
+                            </div>
+                            <div class="size-boxes flex flex-row gap-[10px]">
+                                <button
+                                    class="font-[Poppins] font-[500] text-[14px] leading-[20px] border border-gray-800 w-[32px] h-[32px] rounded-[4px] flex justify-center items-center">XS</button>
+                                <button
+                                    class="font-[Poppins] font-[500] text-[14px] leading-[20px] border border-gray-800 w-[32px] h-[32px] rounded-[4px] flex justify-center items-center">S</button>
+                                <button
+                                    class="font-[Poppins] font-[500] text-[14px] leading-[20px] border border-red-600 bg-red-600 w-[32px] h-[32px] rounded-[4px] flex justify-center items-center text-white">M</button>
+                                <button
+                                    class="font-[Poppins] font-[500] text-[14px] leading-[20px] border border-gray-800 w-[32px] h-[32px] rounded-[4px] flex justify-center items-center">L</button>
+                                <button
+                                    class="font-[Poppins] font-[500] text-[14px] leading-[20px] border border-gray-800 w-[32px] h-[32px] rounded-[4px] flex justify-center items-center">XL</button>
+                            </div>
+                        </div>
+                        <div class="quantity-button flex flex-row items-center gap-[18px]">
+                            <div class="quantity flex flex-row items-center">
+                                <button id="decreaseBtn"
+                                    class="w-[44px] h-[40px] border-l border-t border-b border-black flex justify-center items-center rounded-l-[4px]">
+                                    <p class="font-[Poppins] font-[500] text-[24px]">-</p>
+                                </button>
+
+                                <input id="quantityInput" class="w-[80px] h-[40px] border border-black text-center"
+                                    type="text" value="1" readonly>
+
+                                <button id="increaseBtn"
+                                    class="w-[44px] h-[40px] border border-red-600 bg-red-600 text-white flex justify-center items-center rounded-r-[4px]">
+                                    <p class="font-[Poppins] font-[500] text-[24px]">+</p>
+                                </button>
+                            </div>
+
+                            <div class="button">
+                                <button
+                                    class="font-[Poppins] font-[500] text-[14px] leading-[20px] bg-[var(--card-color)] text-white w-[165px] h-[44px] rounded-[4px] flex justify-center items-center">Buy
+                                    Now</button>
+                            </div>
+                            <div
+                                class="wishlist w-[40px] h-[40px] border-2 border-gray-400 flex justify-center items-center rounded-[4px]">
+                                <img src="../assets/images/mainNav/favourite.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="delivery-details w-[100%] flex flex-col items-left">
+                            <div
+                                class="delivery flex flex-row items-left gap-[10px] w-full items-center border border-gray-300 p-5">
+                                <div class="delivery-image"><img src="images/icon-delivery.svg" alt=""></div>
+                                <div class="delivery-text w-full">
+                                    <h1 class="font-[Poppins] font-[500] text-[16px] leading-[20px]">Free Delivery</h1>
+                                    <p class="font-[Poppins] font-[500] text-[12px] leading-[24px]">Enter your postal
+                                        code
+                                        for Delivery Availability</p>
+                                </div>
+                            </div>
+                            <div
+                                class="delivery flex flex-row items-left gap-[10px] w-full items-center border-r border-l border-b border-gray-300 p-5">
+                                <div class="delivery-image"><img src="images/Icon-return.svg" alt=""></div>
+                                <div class="delivery-text w-full">
+                                    <h1 class="font-[Poppins] font-[500] text-[16px] leading-[20px]">Return Delivery
+                                    </h1>
+                                    <p class="font-[Poppins] font-[500] text-[12px] leading-[24px]">Free 30 Days
+                                        Delivery
+                                        Returns. Details</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Just for You -->
+
+        <section class="flash-sales-section mt-[20px] sm:mt-[4rem] flex justify-center items-center">
+            <div class="flash-wrap w-[90%] sm:w-[75%] flex flex-col gap-[40px]">
+                <div class="flash-text flex flex-col gap-[24px]">
+                    <div class="highlight flex items-center gap-2">
+                        <div class="red-box h-[40px] w-[20px] bg-[var(--card-color)] rounded-[3px]"></div>
+                        <p
+                            class="text-[var(--card-color)] font-[Poppins] font-[600] text-[14px] sm:text-[16px] font-bold">
+                            Related Item
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flash-sales-card grid grid-cols-2 lg:grid-cols-4 gap-[20px] sm:gap-[40px]">
+                    <div class="sale-card p-3 cursor-pointer transition-all duration-300 hover:shadow-2xl group">
+                        <a href="./product/product.html">
+                            <div
+                                class="card relative h-[200px] sm:h-[250px] w-full bg-[var(--color-light-gray)] flex justify-center items-center overflow-hidden">
+                                <div class="actions">
+                                    <div
+                                        class="sale-tag absolute top-[12px] left-[12px] bg-[var(--card-color)] h-[26px] w-[55px] text-white rounded-[4px] flex justify-center items-center">
+                                        <span class="font-[400] text-[12px] font-[Poppins]">-40%</span>
+                                    </div>
+                                    <div
+                                        class="action-buttons absolute top-[12px] right-[12px] flex flex-col gap-[8px]">
+                                        <button>
+                                            <div
+                                                class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center">
+                                                <img src="../assets/images/card/cardImages/wishlist.svg" alt="" />
+                                            </div>
+                                        </button>
+                                        <button>
+                                            <div
+                                                class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center">
+                                                <img src="../assets/images/card/cardImages/view.svg" alt="" />
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="card-img flex justify-center items-center w-[140px] sm:w-[190px] h-[140px] sm:h-[180px]">
+                                    <img src="../assets/images/card/cardImages/i1.png" alt="" />
+                                </div>
+
+                                <a href="#"
+                                    class="hidden lg:flex absolute bottom-[-100%] left-0 w-full bg-black text-white sm:justify-center py-2 transition-all duration-300 group-hover:bottom-0">
+                                    <p class="font-[Poppins] text-[14px] sm:text-[16px]">
+                                        Add To Cart
+                                    </p>
+                                </a>
+                            </div>
+
+                            <div class="card-details flex flex-col gap-[6px] pt-[12px]">
+                                <div
+                                    class="card-title font-[Poppins] font-[500]  font-[500]  text-[17px] sm:text-[16px] text-[#000]">
+                                    HAVIT HV-G92 Gamepad
+                                </div>
+                                <div
+                                    class="card-price font-[Poppins] font-[600] text-[16px] sm:text-[16px] text-[var(--card-color)]">
+                                    $120
+                                    <span
+                                        class="text-[#000] text-[14px] sm:text-[16px] pl-2 sm:pl-3 line-through">$160</span>
+                                </div>
+                                <div class="card-rate flex items-center gap-[6px]">
+                                    <div class="stars flex gap-[2px]">
+                                        <img src="../assets/images/card/cardImages/star.svg" alt="" />
+                                        <img src="../assets/images/card/cardImages/star.svg" alt="" />
+                                        <img src="../assets/images/card/cardImages/star.svg" alt="" />
+                                        <img src="../assets/images/card/cardImages/star.svg" alt="" />
+                                        <img src="../assets/images/card/cardImages/star.svg" alt="" />
+                                    </div>
+                                    <div class="customer-ratio">
+                                        <p class="font-[Poppins] text-[12px] sm:text-[14px] text-[#000]">
+                                            (88)
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-cart block mt-4 lg:hidden">
+                                <div class="best-button flex justify-center">
+                                    <button>
+                                        <div
+                                            class="button h-[38px] sm:h-[56px] rounded-[4px] w-[120px] sm:w-[159px] bg-black flex justify-center items-center sm:mt-[2rem]">
+                                            <p class="font-[Poppins] text-[14px] sm:text-[16px] text-[#fff]">
+                                                Add To Cart
+                                            </p>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="sale-card p-3 cursor-pointer transition-all duration-300 hover:shadow-2xl group">
+                        <div
+                            class="card relative h-[200px] sm:h-[250px] w-full bg-[var(--color-light-gray)] flex justify-center items-center overflow-hidden">
+                            <div class="actions">
+                                <div
+                                    class="sale-tag absolute top-[12px] left-[12px] bg-[var(--card-color)] h-[26px] w-[55px] text-white rounded-[4px] flex justify-center items-center">
+                                    <span class="font-[400] text-[12px] font-[Poppins]">-40%</span>
+                                </div>
+                                <div class="action-buttons absolute top-[12px] right-[12px] flex flex-col gap-[8px]">
+                                    <button>
+                                        <div
+                                            class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center">
+                                            <img src="../assets/images/card/cardImages/wishlist.svg" alt="" />
+                                        </div>
+                                    </button>
+                                    <button>
+                                        <div
+                                            class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center">
+                                            <img src="../assets/images/card/cardImages/view.svg" alt="" />
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div
+                                class="card-img flex justify-center items-center w-[140px] sm:w-[190px] h-[140px] sm:h-[180px]">
+                                <img src="../assets/images/card/cardImages/i2.png" alt="" />
+                            </div>
+
+                            <a href="#"
+                                class="hidden lg:flex absolute bottom-[-100%] left-0 w-full bg-black text-white sm:justify-center py-2 transition-all duration-300 group-hover:bottom-0">
+                                <p class="font-[Poppins] text-[14px] sm:text-[16px]">
+                                    Add To Cart
+                                </p>
+                            </a>
+                        </div>
+
+                        <div class="card-details flex flex-col gap-[6px] pt-[12px]">
+                            <div
+                                class="card-title font-[Poppins] font-[500]  font-[500]  text-[17px] sm:text-[16px] text-[#000]">
+                                AK-900 Wired Keyboard
+                            </div>
+                            <div
+                                class="card-price font-[Poppins] font-[600] text-[16px] sm:text-[16px] text-[var(--card-color)]">
+                                $120
+                                <span
+                                    class="text-[#000] text-[14px] sm:text-[16px] pl-2 sm:pl-3 line-through">$160</span>
+                            </div>
+                            <div class="card-rate flex items-center gap-[6px]">
+                                <div class="stars flex gap-[2px]">
+                                    <img src="../assets/images/card/cardImages/star.svg" alt="" />
+                                    <img src="../assets/images/card/cardImages/star.svg" alt="" />
+                                    <img src="../assets/images/card/cardImages/star.svg" alt="" />
+                                    <img src="../assets/images/card/cardImages/star.svg" alt="" />
+                                    <img src="../assets/images/card/cardImages/star.svg" alt="" />
+                                </div>
+                                <div class="customer-ratio">
+                                    <p class="font-[Poppins] text-[12px] sm:text-[14px] text-[#000]">
+                                        (88)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-cart block mt-4 lg:hidden">
+                            <div class="best-button flex justify-center">
+                                <button>
+                                    <div
+                                        class="button h-[38px] sm:h-[56px] rounded-[4px] w-[120px] sm:w-[159px] bg-black flex justify-center items-center sm:mt-[2rem]">
+                                        <p class="font-[Poppins] text-[14px] sm:text-[16px] text-[#fff]">
+                                            Add To Cart
+                                        </p>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sale-card p-3 cursor-pointer transition-all duration-300 hover:shadow-2xl group">
+                        <div
+                            class="card relative h-[200px] sm:h-[250px] w-full bg-[var(--color-light-gray)] flex justify-center items-center overflow-hidden">
+                            <div class="actions">
+                                <div
+                                    class="sale-tag absolute top-[12px] left-[12px] bg-[var(--card-color)] h-[26px] w-[55px] text-white rounded-[4px] flex justify-center items-center">
+                                    <span class="font-[400] text-[12px] font-[Poppins]">-40%</span>
+                                </div>
+                                <div class="action-buttons absolute top-[12px] right-[12px] flex flex-col gap-[8px]">
+                                    <button>
+                                        <div
+                                            class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center">
+                                            <img src="../assets/images/card/cardImages/wishlist.svg" alt="" />
+                                        </div>
+                                    </button>
+                                    <button>
+                                        <div
+                                            class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center">
+                                            <img src="../assets/images/card/cardImages/view.svg" alt="" />
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div
+                                class="card-img flex justify-center items-center w-[140px] sm:w-[190px] h-[140px] sm:h-[180px]">
+                                <img src="../assets/images/card/cardImages/i3.png" alt="" />
+                            </div>
+
+                            <a href="#"
+                                class="hidden lg:flex absolute bottom-[-100%] left-0 w-full bg-black text-white sm:justify-center py-2 transition-all duration-300 group-hover:bottom-0">
+                                <p class="font-[Poppins] text-[14px] sm:text-[16px]">
+                                    Add To Cart
+                                </p>
+                            </a>
+                        </div>
+
+                        <div class="card-details flex flex-col gap-[6px] pt-[12px]">
+                            <div
+                                class="card-title font-[Poppins] font-[500]  font-[500]  text-[17px] sm:text-[16px] text-[#000]">
+                                IPS LCD Gaming Monitor
+                            </div>
+                            <div
+                                class="card-price font-[Poppins] font-[600] text-[16px] sm:text-[16px] text-[var(--card-color)]">
+                                $120
+                                <span
+                                    class="text-[#000] text-[14px] sm:text-[16px] pl-2 sm:pl-3 line-through">$160</span>
+                            </div>
+                            <div class="card-rate flex items-center gap-[6px]">
+                                <div class="stars flex gap-[2px]">
+                                    <img src="../assets/images/card/cardImages/star.svg" alt="" />
+                                    <img src="../assets/images/card/cardImages/star.svg" alt="" />
+                                    <img src="../assets/images/card/cardImages/star.svg" alt="" />
+                                    <img src="../assets/images/card/cardImages/star.svg" alt="" />
+                                    <img src="../assets/images/card/cardImages/star.svg" alt="" />
+                                </div>
+                                <div class="customer-ratio">
+                                    <p class="font-[Poppins] text-[12px] sm:text-[14px] text-[#000]">
+                                        (88)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-cart block mt-4 lg:hidden">
+                            <div class="best-button flex justify-center">
+                                <button>
+                                    <div
+                                        class="button h-[38px] sm:h-[56px] rounded-[4px] w-[120px] sm:w-[159px] bg-black flex justify-center items-center sm:mt-[2rem]">
+                                        <p class="font-[Poppins] text-[14px] sm:text-[16px] text-[#fff]">
+                                            Add To Cart
+                                        </p>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sale-card p-3 cursor-pointer transition-all duration-300 hover:shadow-2xl group">
+                        <div
+                            class="card relative h-[200px] sm:h-[250px] w-full bg-[var(--color-light-gray)] flex justify-center items-center overflow-hidden">
+                            <div class="actions">
+                                <div
+                                    class="sale-tag absolute top-[12px] left-[12px] bg-[var(--card-color)] h-[26px] w-[55px] text-white rounded-[4px] flex justify-center items-center">
+                                    <span class="font-[400] text-[12px] font-[Poppins]">-40%</span>
+                                </div>
+                                <div class="action-buttons absolute top-[12px] right-[12px] flex flex-col gap-[8px]">
+                                    <button>
+                                        <div
+                                            class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center">
+                                            <img src="../assets/images/card/cardImages/wishlist.svg" alt="" />
+                                        </div>
+                                    </button>
+                                    <button>
+                                        <div
+                                            class="bg-white h-[28px] w-[28px] sm:h-[34px] sm:w-[34px] rounded-full flex justify-center items-center">
+                                            <img src="../assets/images/card/cardImages/view.svg" alt="" />
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div
+                                class="card-img flex justify-center items-center w-[140px] sm:w-[190px] h-[140px] sm:h-[180px]">
+                                <img src="../assets/images/card/cardImages/i4.png" alt="" />
+                            </div>
+
+                            <a href="#"
+                                class="hidden lg:flex absolute bottom-[-100%] left-0 w-full bg-black text-white sm:justify-center py-2 transition-all duration-300 group-hover:bottom-0">
+                                <p class="font-[Poppins] text-[14px] sm:text-[16px]">
+                                    Add To Cart
+                                </p>
+                            </a>
+                        </div>
+
+                        <div class="card-details flex flex-col gap-[6px] pt-[12px]">
+                            <div
+                                class="card-title font-[Poppins] font-[500]  font-[500]  text-[17px] sm:text-[16px] text-[#000]">
+                                S-Series Comfort Chair
+                            </div>
+                            <div
+                                class="card-price font-[Poppins] font-[600] text-[16px] sm:text-[16px] text-[var(--card-color)]">
+                                $120
+                                <span
+                                    class="text-[#000] text-[14px] sm:text-[16px] pl-2 sm:pl-3 line-through">$160</span>
+                            </div>
+                            <div class="card-rate flex items-center gap-[6px]">
+                                <div class="stars flex gap-[2px]">
+                                    <img src="../assets/images/card/cardImages/star.svg" alt="" />
+                                    <img src="../assets/images/card/cardImages/star.svg" alt="" />
+                                    <img src="../assets/images/card/cardImages/star.svg" alt="" />
+                                    <img src="../assets/images/card/cardImages/star.svg" alt="" />
+                                    <img src="../assets/images/card/cardImages/star.svg" alt="" />
+                                </div>
+                                <div class="customer-ratio">
+                                    <p class="font-[Poppins] text-[12px] sm:text-[14px] text-[#000]">
+                                        (88)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-cart block mt-4 lg:hidden">
+                            <div class="best-button flex justify-center">
+                                <button>
+                                    <div
+                                        class="button h-[38px] sm:h-[56px] rounded-[4px] w-[120px] sm:w-[159px] bg-black flex justify-center items-center sm:mt-[2rem]">
+                                        <p class="font-[Poppins] text-[14px] sm:text-[16px] text-[#fff]">
+                                            Add To Cart
+                                        </p>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flash-button flex justify-center items-center">
+                    <button>
+                        <div
+                            class="button h-[48px] sm:h-[56px] rounded-[4px] w-[180px] sm:w-[234px] bg-[var(--card-color)] flex justify-center items-center mt-[2rem]">
+                            <p class="font-[Poppins] text-[14px] sm:text-[16px] text-[#fff]">
+                                View All Products
+                            </p>
+                        </div>
+                    </button>
+                </div>
+
+                <div class="end flex justify-center items-center">
+                    <hr class="mt-[2rem] w-[100%]" />
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="w-full bg-black flex justify-center items-center py-10 sm:h-[440px]">
+        <div
+            class="footer-data flex flex-col sm:flex-row sm:justify-between sm:w-[1170px] sm:h-[236px] text-white gap-10 sm:gap-0 text-center sm:text-left">
+
+            <div class="f-1 sm:w-[217px] flex flex-col gap-[24px] items-center sm:items-start">
+                <h1 class="f-head font-[Poppins] font-[500] text-[24px] tracking-[3%]">Exclusive</h1>
+                <button class="font-[Poppins] font-[400] text-[16px] leading-[24px] tracking-[3%]">Subscribe</button>
+                <p class="font-[Poppins] font-[400] text-[16px] leading-[24px] tracking-[3%]">Get 10% off your first
+                    order</p>
+                <div class="search flex items-center border-[1px] p-2 border-white rounded-[4px] w-full sm:w-auto">
+                    <input class="outline-none bg-black placeholder:text-gray-600 indent-2 flex-1" type="text"
+                        placeholder="Enter your email">
+                    <img class="w-[24px] h-[24px]" src="../../assets/images/card/cardImages/icon-send.svg" alt="">
+                </div>
+            </div>
+
+            <div class="f-2 sm:w-[175px] flex flex-col gap-[24px] items-center sm:items-start">
+                <h1 class="f-head font-[Poppins] font-[500] text-[24px] tracking-[3%]">Support</h1>
+                <p class="font-[Poppins] font-[400] text-[16px] leading-[24px] tracking-[3%]">111 Bijoy sarani, Dhaka,
+                    DH 1515, Bangladesh.</p>
+                <p class="font-[Poppins] font-[400] text-[16px] leading-[24px] tracking-[3%]">exclusive@gmail.com</p>
+                <p class="font-[Poppins] font-[400] text-[16px] leading-[24px] tracking-[3%]">+88015-0000-0000</p>
+            </div>
+
+            <div class="f-3 sm:w-[175px] flex flex-col gap-[24px] items-center sm:items-start">
+                <h1 class="f-head font-[Poppins] font-[500] text-[24px] tracking-[3%]">Account</h1>
+                <button>
+                    <p class="font-[Poppins] text-[16px]">My Account</p>
+                </button>
+                <button>
+                    <p class="font-[Poppins] text-[16px]">Login / Register</p>
+                </button>
+                <button>
+                    <p class="font-[Poppins] text-[16px]">Cart</p>
+                </button>
+                <button>
+                    <p class="font-[Poppins] text-[16px]">Wishlist</p>
+                </button>
+                <button>
+                    <p class="font-[Poppins] text-[16px]">Shop</p>
+                </button>
+            </div>
+
+            <div class="f-4 sm:w-[175px] flex flex-col gap-[24px] items-center sm:items-start">
+                <h1 class="f-head font-[Poppins] font-[500] text-[24px] tracking-[3%]">Quick Link</h1>
+                <button>
+                    <p class="font-[Poppins] text-[16px]">Privacy Policy</p>
+                </button>
+                <button>
+                    <p class="font-[Poppins] text-[16px]">Terms Of Use</p>
+                </button>
+                <button>
+                    <p class="font-[Poppins] text-[16px]">FAQ</p>
+                </button>
+                <button>
+                    <p class="font-[Poppins] text-[16px]">Contact</p>
+                </button>
+            </div>
+
+            <div class="f-5 sm:w-[175px] flex flex-col gap-[24px] items-center sm:items-start">
+                <h1 class="f-head font-[Poppins] font-[500] text-[24px] tracking-[3%]">Download App</h1>
+                <p class="font-[Poppins] text-[12px] text-[var(--heading-color)]">Get 10% off your first order</p>
+                <div class="flex gap-[16px] justify-center sm:justify-between">
+                    <div class="qr"><img src="../../assets/images/card/cardImages/QR Code.svg" alt=""></div>
+                    <div class="store flex flex-col gap-[5px]">
+                        <img src="../../assets/images/card/cardImages/appstore.svg" alt="">
+                        <img src="../../assets/images/card/cardImages/googleplay.svg" alt="">
+                    </div>
+                </div>
+                <div class="socials flex gap-4 justify-center sm:justify-between w-full">
+                    <div class="fb"><img src="../../assets/images/card/cardImages/facebook.svg" alt=""></div>
+                    <div class="twitter"><img src="../../assets/images/card/cardImages/twitter.svg" alt=""></div>
+                    <div class="insta"><img src="../../assets/images/card/cardImages/instagram.svg" alt=""></div>
+                    <div class="linkedin"><img src="../../assets/images/card/cardImages/linkedin.svg" alt=""></div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <button id="goTopBtn"
+        class="fixed bottom-6 right-6 hidden h-11 w-11 rounded-full bg-black text-white text-xl z-[9999]">
+        ↑
+    </button>
+</body>
+
+<script src="../script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-element-bundle.min.js"></script>
+
+</html>

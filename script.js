@@ -99,4 +99,27 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => pageTop.focus(), 400);
     });
   }
+
+
+  /* ==============================
+     QUANTITY BUTTON
+  ============================== */
+
+ const decreaseBtn = document.getElementById("decreaseBtn");
+  const increaseBtn = document.getElementById("increaseBtn");
+  const quantityInput = document.getElementById("quantityInput");
+
+  decreaseBtn.addEventListener("click", () => {
+    let currentValue = parseInt(quantityInput.value);
+    if (currentValue > 1) {
+      quantityInput.value = currentValue - 1;
+    }
+  });
+
+  increaseBtn.addEventListener("click", () => {
+    let currentValue = parseInt(quantityInput.value);
+    quantityInput.value = currentValue + 1;
+  });
+
+
 });
