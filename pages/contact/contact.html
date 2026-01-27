@@ -47,9 +47,8 @@
                         <img src="../../assets/images/mainNav/search.svg" alt="Search" />
                     </div>
                 </div>
-                <button>
-                    <a href="pages/cart/cart.html"><img class="h-6 w-6" src="../../assets/images/mainNav/cart.svg"
-                            alt="Cart" /></a>
+                <button class="relative cart-toggle">
+                    <img class="h-6 w-6" src="../../assets/images/mainNav/cart.svg" alt="Cart" />
                 </button>
                 <div class="relative inline-block text-left" class="profileWrapper">
                     <button id="profileToggleMobile" class="flex items-center">
@@ -75,28 +74,10 @@
                     </div>
                 </div>
 
-                <div class="relative inline-block text-left" id="profileWrapper">
-                    <button id="menuToggle" class="flex items-center">
-                        <img class="h-8 w-8" src="../../assets/images/mainNav/menu.svg" alt="Profile" />
+                <div class="relative inline-block text-left">
+                    <button class="flex items-center menu-toggle">
+                        <img class="h-8 w-8" src="../../assets/images/mainNav/menu.svg" alt="Menu" />
                     </button>
-
-                    <!-- Dropdown -->
-                    <div id="menuDropdown" class="absolute right-0 z-50 mt-2 w-52 rounded-md border border-gray-200 bg-white shadow-lg
-           opacity-0 invisible scale-95 transition-all duration-150 origin-top-right">
-                        <ul class="py-1 text-sm text-gray-700">
-                            <li><a href="../../index.html" class="block px-4 py-2 hover:bg-gray-100">Home</a></li>
-                            <li><a href="../contact/contact.html" class="block px-4 py-2 bg-gray-100">Contact</a></li>
-                            <li><a href="../about/about.html" class="block px-4 py-2 hover:bg-gray-100">About</a></li>
-                            <li><a href="../wishlist/wishlist.html"
-                                    class="block px-4 py-2 hover:bg-gray-100">Wishlist</a></li>
-                            <li><a href="../cart/cart.html" class="block px-4 py-2 hover:bg-gray-100">Cart</a></li>
-                            <li>
-                                <button class="w-full text-left px-4 py-2 hover:bg-gray-100 text-red-600">
-                                    Logout
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
 
@@ -122,13 +103,11 @@
                         <a href="../wishlist/wishlist.html"><img class="h-5 w-5"
                                 src="../../assets/images/mainNav/favourite.svg" alt="Wishlist" /></a>
                     </button>
-                    <button class="relative">
-                        <a href="../../pages/cart/cart.html">
-                            <div
-                                class="notification-badge absolute top-[-5px] right-[-5px] w-[15px] h-[15px] rounded-full p-1 bg-[var(--card-color)] text-[12px] text-white flex justify-center items-center">
-                                2</div>
-                            <img class="h-6 w-6" src="../../assets/images/mainNav/cart.svg" alt="Cart" />
-                        </a>
+                    <button class="relative cart-toggle">
+                        <div
+                            class="notification-badge absolute top-[-5px] right-[-5px] w-[15px] h-[15px] rounded-full p-1 bg-[var(--card-color)] text-[12px] text-white flex justify-center items-center">
+                            2</div>
+                        <img class="h-6 w-6" src="../../assets/images/mainNav/cart.svg" alt="Cart" />
                     </button>
                     <div class="relative inline-block text-left z-10">
                         <button id="profileToggleDesktop" class="flex items-center focus:outline-none">
